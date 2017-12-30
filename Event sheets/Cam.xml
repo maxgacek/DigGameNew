@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Cam</name>
+    <events>
+        <event-block sid="432317924443556">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="103732580691654" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="269038423690028" type="Cam">
+                    <param id="0" name="X">OriginalWindowWidth/2</param>
+                    <param id="1" name="Y">lerp(Self.Y , Player.Y, 0.05)</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

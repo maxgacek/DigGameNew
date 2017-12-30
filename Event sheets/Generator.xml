@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Generator</name>
+    <events>
+        <event-group description="" sid="859777576420127" title="Start">
+            <sub-events>
+                <event-block sid="652689906425914">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="812789531592685" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="607819422208997">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="793738531620030" type="Dirt">
+                                    <param id="0" name="Comparison">5</param>
+                                    <param id="1" name="Y co-ordinate">260</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="735472472589931" type="Dirt">
+                                    <param id="0" name="Instance variable">Type</param>
+                                    <param id="1" name="Value">ceil(random(0,100))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="883095275782226" title="Generator">
+            <sub-events>
+                <event-block sid="752701656320016">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="729035566267971" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="887186074006119">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="973025145986361" type="Dirt">
+                                    <param id="0" name="Instance variable">Type</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">60</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="869421578439813" type="Dirt">
+                                    <param id="0" name="Animation">&quot;DIRT&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="848342392824793">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="227725010976356" type="Dirt">
+                                    <param id="0" name="Instance variable">Type</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">60</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="770648001244265" type="Dirt">
+                                    <param id="0" name="Instance variable">Type</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">90</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="777370244118694" type="Dirt">
+                                    <param id="0" name="Animation">&quot;IRON&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="800403988052873" type="Dirt">
+                                    <param id="0" name="Instance variable">Hp</param>
+                                    <param id="1" name="Value">20</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="412449855316595">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="831702978349591" type="Dirt">
+                                    <param id="0" name="Instance variable">Type</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">90</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="951119860162224" type="Dirt">
+                                    <param id="0" name="Instance variable">Type</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">100</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="581130984630176" type="Dirt">
+                                    <param id="0" name="Animation">&quot;GOLD&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="512038631266425" type="Dirt">
+                                    <param id="0" name="Instance variable">Hp</param>
+                                    <param id="1" name="Value">30</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

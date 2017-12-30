@@ -9,15 +9,25 @@
     <app-id>com.mycompany.myapp</app-id>
     <unique-id>32plxzxazuiq6</unique-id>
     <saved-with-version>24400</saved-with-version>
-    <used-plugins />
-    <used-behaviors />
+    <used-plugins>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
     <used-effects />
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
     <window-size>
-        <width>854</width>
-        <height>480</height>
+        <width>320</width>
+        <height>180</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
@@ -33,19 +43,169 @@
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
         <prop name="Preload sounds">Yes</prop>
-        <prop name="Preview browser">(default)</prop>
-        <prop name="Sampling">Linear</prop>
+        <prop name="Preview browser">NW.js</prop>
+        <prop name="Sampling">Point</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
-    <object-folder />
-    <families />
+    <object-folder>
+        <object-folder name="Inputs">
+            <object-type name="Mouse" sid="482535596047912">
+                <plugin id="Mouse" />
+            </object-type>
+            <object-type name="Keyboard" sid="823749782662456">
+                <plugin id="Keyboard" />
+            </object-type>
+            <object-type name="Function" sid="482720716756378">
+                <plugin id="Function" />
+            </object-type>
+        </object-folder>
+        <object-folder name="Objects">
+            <object-type name="Dirt" sid="784195009554064">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Hp" sid="821038107181686" type="number" />
+                    <instance-variable name="Type" sid="889799996949009" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Solid" sid="838464809522936">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="DIRT" pingpong="0" repeatcount="1" repeatto="0" sid="924082366041184" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Max\Desktop\Dig To China New\Graphics\Dirt_Block.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="IRON" pingpong="0" repeatcount="1" repeatto="0" sid="189484697062362" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Max\Desktop\Dig To China New\Graphics\Dirt_Block_Iron.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="GOLD" pingpong="0" repeatcount="1" repeatto="0" sid="923684883406371" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Max\Desktop\Dig To China New\Graphics\Dirt_Block_Gold.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Player" sid="728956283713470">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Platform" sid="466575942591755">
+                        <behavior id="Platform" />
+                    </behavior-type>
+                    <behavior-type name="BoundToLayout" sid="298646692717137">
+                        <behavior id="bound" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="3" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="820452934928379" speed="4">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.222656" y="0" />
+                                <point x="0.695313" y="0" />
+                                <point x="0.691406" y="1" />
+                                <point x="0.242188" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.222656" y="0" />
+                                <point x="0.695313" y="0" />
+                                <point x="0.691406" y="1" />
+                                <point x="0.242188" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.222656" y="0" />
+                                <point x="0.695313" y="0" />
+                                <point x="0.691406" y="1" />
+                                <point x="0.242188" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Dirt2" sid="267652577888985">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Hp" sid="108532774488701" type="number" />
+                    <instance-variable name="Type" sid="196530239904090" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Solid" sid="935012480558990">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="DIRT" pingpong="0" repeatcount="1" repeatto="0" sid="945102025539238" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Max\Desktop\Dig To China New\Graphics\Stone_Block.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="IRON" pingpong="0" repeatcount="1" repeatto="0" sid="935567194499357" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Max\Desktop\Dig To China New\Graphics\Dirt_Block_Iron.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="GOLD" pingpong="0" repeatcount="1" repeatto="0" sid="916249382297926" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Max\Desktop\Dig To China New\Graphics\Dirt_Block_Gold.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="DirtConnect" sid="723790227191807">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Hp" sid="515158628580335" type="number" />
+                    <instance-variable name="Type" sid="210148831910646" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Solid" sid="265060402403388">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="DIRT" pingpong="0" repeatcount="1" repeatto="0" sid="434541669993785" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Max\Desktop\Dig To China New\Graphics\Dirt_Block_Conect.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="IRON" pingpong="0" repeatcount="1" repeatto="0" sid="553783074035612" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Max\Desktop\Dig To China New\Graphics\Dirt_Block_Iron.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="GOLD" pingpong="0" repeatcount="1" repeatto="0" sid="973118364228410" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Max\Desktop\Dig To China New\Graphics\Dirt_Block_Gold.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-type name="Cam" sid="509992588001253">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="ScrollTo" sid="726888698715592">
+                    <behavior id="scrollto" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="703161605721260" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
+    <families>
+        <family name="Blocks" plugin-id="Sprite" sid="597737190612101">
+            <members>
+                <member>Dirt</member>
+                <member>Dirt2</member>
+                <member>DirtConnect</member>
+            </members>
+        </family>
+    </families>
     <layout-folder>
         <layout>Layout 1.xml</layout>
     </layout-folder>
     <event-folder>
-        <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>Main.xml</event-sheet>
+        <event-sheet>Controls.xml</event-sheet>
+        <event-sheet>Generator.xml</event-sheet>
+        <event-sheet>Cam.xml</event-sheet>
     </event-folder>
-    <global-instances />
+    <global-instances>
+        <global-instance type="Keyboard" uid="1" />
+        <global-instance type="Mouse" uid="2" />
+        <global-instance type="Function" uid="103" />
+    </global-instances>
     <sounds-folder />
     <music-folder />
     <files-folder>

@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Controls</name>
+    <events>
+        <event-block sid="324523145303248">
+            <conditions>
+                <condition id="0" name="On function" sid="167043989532931" type="Function">
+                    <param id="0" name="Name">&quot;PlayerLeft&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="400748011904438" type="Player">
+                    <param id="0" name="Control">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="190254610987324">
+            <conditions>
+                <condition id="0" name="On function" sid="864946631456812" type="Function">
+                    <param id="0" name="Name">&quot;PlayerRight&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="510673323278951" type="Player">
+                    <param id="0" name="Control">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="134776785767488" title="Keyboard">
+            <sub-events>
+                <event-block sid="494923227284674">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="846970420294482" type="Keyboard">
+                            <param id="0" name="Key">65 (A)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="671739609706512" type="Function">
+                            <param id="0" name="Name">&quot;PlayerLeft&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="397149448799772">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="898202333321400" type="Keyboard">
+                            <param id="0" name="Key">68 (D)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="829875595652410" type="Function">
+                            <param id="0" name="Name">&quot;PlayerRight&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="191261706830003">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="892782801452319" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Dirt</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="477815517890097" type="Dirt" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
