@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Generator</name>
     <events>
+        <variable constant="0" name="Margin" sid="487279062768885" static="0" type="number">10</variable>
         <event-group description="" sid="859777576420127" title="Start">
             <sub-events>
                 <event-block sid="652689906425914">
@@ -15,7 +16,7 @@
                             <conditions>
                                 <condition id="-2" name="Compare Y" sid="793738531620030" type="Dirt">
                                     <param id="0" name="Comparison">5</param>
-                                    <param id="1" name="Y co-ordinate">260</param>
+                                    <param id="1" name="Y co-ordinate">Dirt.Width * Margin</param>
                                 </condition>
                             </conditions>
                             <actions>
