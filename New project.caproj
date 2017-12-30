@@ -14,6 +14,7 @@
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
@@ -38,7 +39,7 @@
         <prop name="Enable WebGL">On</prop>
         <prop name="Fullscreen in browser">Letterbox scale</prop>
         <prop name="Fullscreen scaling">High quality</prop>
-        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Loader style">Progress bar only</prop>
         <prop name="Orientations">Any</prop>
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
@@ -138,10 +139,10 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Max\Desktop\Dig To China New\Graphics\Stone_Block.png" />
                     </animation>
                     <animation framecount="1" loop="0" name="IRON" pingpong="0" repeatcount="1" repeatto="0" sid="935567194499357" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Max\Desktop\Dig To China New\Graphics\Dirt_Block_Iron.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Max\Desktop\Dig To China New\Graphics\Stone_Block_Iron.png" />
                     </animation>
                     <animation framecount="1" loop="0" name="GOLD" pingpong="0" repeatcount="1" repeatto="0" sid="916249382297926" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Max\Desktop\Dig To China New\Graphics\Dirt_Block_Gold.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Max\Desktop\Dig To China New\Graphics\Stone_Block_Gold.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -168,19 +169,22 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="Cam" sid="509992588001253">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="ScrollTo" sid="726888698715592">
+                        <behavior id="scrollto" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="703161605721260" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
-        <object-type name="Cam" sid="509992588001253">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="ScrollTo" sid="726888698715592">
-                    <behavior id="scrollto" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="703161605721260" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
+        <object-type name="Timer" sid="951056290897021">
+            <plugin id="Text" />
         </object-type>
     </object-folder>
     <families>
@@ -200,6 +204,7 @@
         <event-sheet>Controls.xml</event-sheet>
         <event-sheet>Generator.xml</event-sheet>
         <event-sheet>Cam.xml</event-sheet>
+        <event-sheet>Timer.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="1" />
