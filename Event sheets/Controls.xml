@@ -16,6 +16,16 @@
                 <action id="7" name="Set mirrored" sid="228833423782083" type="Player">
                     <param id="0" name="State">0</param>
                 </action>
+                <action id="7" name="Set mirrored" sid="194692912109911" type="Pickaxe">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="175911312403343" type="ArmRight">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="186329206846974" type="Player">
+                    <param id="0" name="Animation">&quot;Walk&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="190254610987324">
@@ -30,6 +40,16 @@
                 </action>
                 <action id="7" name="Set mirrored" sid="737380989788970" type="Player">
                     <param id="0" name="State">1</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="788716160877555" type="Pickaxe">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="876623810917379" type="ArmRight">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="296238439497622" type="Player">
+                    <param id="0" name="Animation">&quot;Walk&quot;</param>
+                    <param id="1" name="From">1</param>
                 </action>
             </actions>
         </event-block>
@@ -205,6 +225,21 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="545580762704417" title="Animation Control">
+            <sub-events>
+                <event-block sid="388709256062017">
+                    <conditions>
+                        <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="546237932872607" type="Player" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="805491885268526" type="Player">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
