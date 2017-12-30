@@ -142,7 +142,7 @@
                             <actions>
                                 <action id="-4" name="Set position to another object" sid="346406386744899" type="ArmRight">
                                     <param id="0" name="Object">Player</param>
-                                    <param id="1" name="Image point (optional)">2</param>
+                                    <param id="1" name="Image point (optional)">1</param>
                                 </action>
                                 <action id="-4" name="Set position to another object" sid="296097387149973" type="Pickaxe">
                                     <param id="0" name="Object">ArmRight</param>
