@@ -13,6 +13,9 @@
                 <action behavior="Platform" id="7" name="Simulate control" sid="400748011904438" type="Player">
                     <param id="0" name="Control">0</param>
                 </action>
+                <action id="7" name="Set mirrored" sid="228833423782083" type="Player">
+                    <param id="0" name="State">0</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="190254610987324">
@@ -24,6 +27,9 @@
             <actions>
                 <action behavior="Platform" id="7" name="Simulate control" sid="510673323278951" type="Player">
                     <param id="0" name="Control">1</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="737380989788970" type="Player">
+                    <param id="0" name="State">1</param>
                 </action>
             </actions>
         </event-block>
@@ -57,17 +63,150 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="191261706830003">
-            <conditions>
-                <condition id="6" name="On object clicked" sid="892782801452319" type="Mouse">
-                    <param id="0" name="Mouse button">0</param>
-                    <param id="1" name="Click type">0</param>
-                    <param id="2" name="Object clicked">Dirt</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="477815517890097" type="Dirt" />
-            </actions>
-        </event-block>
+        <event-group description="" sid="386032833998473" title="Arms">
+            <sub-events>
+                <event-block sid="191261706830003">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="892782801452319" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">Dirt</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="477815517890097" type="Dirt" />
+                    </actions>
+                </event-block>
+                <event-block sid="493264707919656">
+                    <conditions>
+                        <condition id="0" name="On click" sid="306287672672416" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="369322019133455">
+                            <conditions />
+                            <actions>
+                                <action behavior="Sine" id="0" name="Set active" sid="769493000400032" type="Pickaxe">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="458449634722679" type="System">
+                                    <param id="0" name="Seconds">0.25</param>
+                                </action>
+                                <action behavior="Sine" id="0" name="Set active" sid="526437343187245" type="Pickaxe">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block disabled="1" sid="493828134288608">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="968293762140786" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-8" name="Set angle" sid="351347818307057" type="ArmRight">
+                            <param id="0" name="Angle">lerp (angle(Self.X, Self.Y , Mouse.X , Mouse.Y), Self.Angle , 0.001 )</param>
+                        </action>
+                        <action disabled="1" id="-8" name="Set angle" sid="835340919299261" type="Pickaxe">
+                            <param id="0" name="Angle">lerp (angle(Self.X, Self.Y , Mouse.X , Mouse.Y), Self.Angle , 0.001 )</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block disabled="1" sid="593123297890431">
+                            <conditions />
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="948873645154868" type="ArmRight">
+                                    <param id="0" name="Object">Player</param>
+                                    <param id="1" name="Image point (optional)">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="152916579659708" type="Pickaxe">
+                                    <param id="0" name="Object">ArmRight</param>
+                                    <param id="1" name="Image point (optional)">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment></comment>
+                <event-block sid="876710171736017">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="761378533705071" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="527369222743295">
+                            <conditions />
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="346406386744899" type="ArmRight">
+                                    <param id="0" name="Object">Player</param>
+                                    <param id="1" name="Image point (optional)">2</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="296097387149973" type="Pickaxe">
+                                    <param id="0" name="Object">ArmRight</param>
+                                    <param id="1" name="Image point (optional)">1</param>
+                                </action>
+                                <action disabled="1" id="-8" name="Set angle" sid="237658969351130" type="Pickaxe">
+                                    <param id="0" name="Angle">ArmRight.Angle</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="689697360818665">
+                            <conditions>
+                                <condition id="7" inverted="1" name="Is mirrored" sid="148373231508115" type="Player" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="810651987935589">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="134030782636110" type="System">
+                                            <param id="0" name="First value">angle(ArmRight.X , ArmRight.Y , Mouse.X , Mouse.Y)</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Second value">90</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="783475604361886" type="System">
+                                            <param id="0" name="First value">angle(ArmRight.X , ArmRight.Y , Mouse.X , Mouse.Y)</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Second value">-90</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-8" name="Set angle" sid="864274275912006" type="ArmRight">
+                                            <param id="0" name="Angle">lerp (angle(Self.X, Self.Y , Mouse.X , Mouse.Y), Self.Angle , 0.001 )</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="267533916289223">
+                            <conditions>
+                                <condition id="7" name="Is mirrored" sid="409031460192514" type="Player" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="582925378891383">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-8" name="Set angle" sid="841873857732357" type="ArmRight">
+                                            <param id="0" name="Angle">lerp (angle(Self.X, Self.Y , Mouse.X , Mouse.Y), Self.Angle , 0.001 )</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="587882265303679">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Set text" sid="961792012736491" type="DebugText">
+                                    <param id="0" name="Text">angle(ArmRight.X , ArmRight.Y , Mouse.X , Mouse.Y)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

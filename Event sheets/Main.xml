@@ -7,5 +7,38 @@
         <include>Cam</include>
         <include>Generator</include>
         <include>Controls</include>
+        <event-block disabled="1" sid="898252803150470">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="860438485048168" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block disabled="1" sid="370587373236279">
+                    <conditions />
+                    <actions>
+                        <action behavior="Physics" id="11" name="Create revolute joint" sid="803270135498147" type="Body">
+                            <param id="0" name="This image point">&quot;left arm&quot;</param>
+                            <param id="1" name="Object">LeftArm</param>
+                        </action>
+                        <action behavior="Physics" id="11" name="Create revolute joint" sid="594012314354912" type="Body">
+                            <param id="0" name="This image point">&quot;right arm&quot;</param>
+                            <param id="1" name="Object">RightArm</param>
+                        </action>
+                        <action behavior="Physics" id="11" name="Create revolute joint" sid="684412386814593" type="RightArm">
+                            <param id="0" name="This image point">&quot;pick&quot;</param>
+                            <param id="1" name="Object">Pickaxe</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block disabled="1" sid="491785293611134">
+            <conditions>
+                <condition id="2" name="Mouse button is down" sid="137947178729719" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
     </events>
 </c2eventsheet>

@@ -17,7 +17,9 @@
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
@@ -27,8 +29,8 @@
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
     <window-size>
-        <width>320</width>
-        <height>180</height>
+        <width>1280</width>
+        <height>720</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
@@ -71,6 +73,9 @@
                     <behavior-type name="Solid" sid="838464809522936">
                         <behavior id="solid" />
                     </behavior-type>
+                    <behavior-type name="Physics" sid="837139016943952">
+                        <behavior id="Physics" />
+                    </behavior-type>
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="DIRT" pingpong="0" repeatcount="1" repeatto="0" sid="924082366041184" speed="5">
@@ -97,25 +102,31 @@
                 <animation-folder>
                     <animation framecount="3" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="820452934928379" speed="4">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="right arm" x="0.640625" y="0.296875" />
+                            <image-point name="left arm" x="0.28125" y="0.25" />
                             <collision-poly>
-                                <point x="0.222656" y="0" />
-                                <point x="0.695313" y="0" />
+                                <point x="0.367188" y="0" />
+                                <point x="0.542969" y="0" />
                                 <point x="0.691406" y="1" />
                                 <point x="0.242188" y="1" />
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="right arm" x="0.640625" y="0.296875" />
+                            <image-point name="left arm" x="0.28125" y="0.25" />
                             <collision-poly>
-                                <point x="0.222656" y="0" />
-                                <point x="0.695313" y="0" />
+                                <point x="0.367188" y="0" />
+                                <point x="0.542969" y="0" />
                                 <point x="0.691406" y="1" />
                                 <point x="0.242188" y="1" />
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="right arm" x="0.640625" y="0.296875" />
+                            <image-point name="left arm" x="0.28125" y="0.25" />
                             <collision-poly>
-                                <point x="0.222656" y="0" />
-                                <point x="0.695313" y="0" />
+                                <point x="0.367188" y="0" />
+                                <point x="0.542969" y="0" />
                                 <point x="0.691406" y="1" />
                                 <point x="0.242188" y="1" />
                             </collision-poly>
@@ -182,9 +193,92 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="ArmRight" sid="282391726294427">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="695558878403113" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="0.96875" y="0.5" />
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Pickaxe" sid="532833636677012">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Sine" sid="653311334818692">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="385420160995993" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.535156" y="0.177734" />
+                                <point x="0.636719" y="0.0849609" />
+                                <point x="0.96875" y="0.505859" />
+                                <point x="0.683594" y="0.900391" />
+                                <point x="0.554688" y="0.776367" />
+                                <point x="0.753906" y="0.564453" />
+                                <point x="0.746094" y="0.439453" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="RightArm" sid="243766618627709">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Physics" sid="591242587945336">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="772361804130318" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0.5">
+                            <image-point name="pick" x="1" y="0.5" />
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="LeftArm" sid="568002611589651">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Physics" sid="655595422086128">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="545709689713840" speed="5">
+                        <frame duration="1" hotspotX="1" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-type name="Timer" sid="951056290897021">
             <plugin id="Text" />
+        </object-type>
+        <object-type name="DebugText" sid="509563084602206">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Body" sid="574745917053310">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Physics" sid="374328240814733">
+                    <behavior id="Physics" />
+                </behavior-type>
+                <behavior-type name="Platform" sid="647242044356884">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="957256416806246" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="right arm" x="1" y="0" />
+                        <image-point name="left arm" x="0" y="0" />
+                    </frame>
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families>
