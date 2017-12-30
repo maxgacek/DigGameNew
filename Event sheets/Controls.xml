@@ -65,18 +65,6 @@
         </event-group>
         <event-group description="" sid="386032833998473" title="Arms">
             <sub-events>
-                <event-block sid="415322147440162">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="408661640464913" type="Dirt">
-                            <param id="0" name="Instance variable">Hp</param>
-                            <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" sid="175824353797939" type="Dirt" />
-                    </actions>
-                </event-block>
                 <event-block sid="191261706830003">
                     <conditions>
                         <condition id="6" name="On object clicked" sid="892782801452319" type="Mouse">
@@ -86,15 +74,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-12" name="Subtract from" sid="726076118810498" type="Dirt">
-                            <param id="0" name="Instance variable">Hp</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="0" name="Spawn another object" sid="683269802775249" type="Dirt">
-                            <param id="0" name="Object">Particles</param>
-                            <param id="1" name="Layer">0</param>
-                            <param id="2" name="Image point">0</param>
-                        </action>
+                        <action id="-9" name="Destroy" sid="477815517890097" type="Dirt" />
                     </actions>
                 </event-block>
                 <event-block sid="493264707919656">
