@@ -4,99 +4,45 @@
     <name>Controls</name>
     <events>
         <variable constant="0" name="PlayerDigging" sid="378195906636973" static="0" type="number">0</variable>
-        <event-block sid="324523145303248">
-            <conditions>
-                <condition id="0" name="On function" sid="167043989532931" type="Function">
-                    <param id="0" name="Name">&quot;PlayerLeft&quot;</param>
-                </condition>
-                <condition id="-14" name="Compare variable" sid="443398129891621" type="System">
-                    <param id="0" name="Variable">PlayerDigging</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">0</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Platform" id="7" name="Simulate control" sid="400748011904438" type="Player">
-                    <param id="0" name="Control">0</param>
-                </action>
-                <action id="7" name="Set mirrored" sid="228833423782083" type="Player">
-                    <param id="0" name="State">0</param>
-                </action>
-                <action id="7" name="Set mirrored" sid="194692912109911" type="Pickaxe">
-                    <param id="0" name="State">0</param>
-                </action>
-                <action id="8" name="Set flipped" sid="175911312403343" type="ArmRight">
-                    <param id="0" name="State">0</param>
-                </action>
-                <action id="8" name="Set flipped" sid="900365308777284" type="ArmLeft">
-                    <param id="0" name="State">0</param>
-                </action>
-                <action id="4" name="Set animation" sid="186329206846974" type="Player">
-                    <param id="0" name="Animation">&quot;Walk&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-            </actions>
+        <event-group description="" sid="822550327493921" title="Functions Move">
             <sub-events>
-                <event-block sid="569261439214493">
-                    <conditions />
+                <event-block sid="324523145303248">
+                    <conditions>
+                        <condition id="0" name="On function" sid="167043989532931" type="Function">
+                            <param id="0" name="Name">&quot;PlayerLeft&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="443398129891621" type="System">
+                            <param id="0" name="Variable">PlayerDigging</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
                     <actions>
-                        <action id="-8" name="Set angle" sid="508391667806868" type="ArmRight">
-                            <param id="0" name="Angle">-180</param>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="400748011904438" type="Player">
+                            <param id="0" name="Control">0</param>
                         </action>
-                        <action id="-8" name="Set angle" sid="434482035877461" type="ArmLeft">
-                            <param id="0" name="Angle">-140</param>
+                    </actions>
+                </event-block>
+                <comment></comment>
+                <event-block sid="190254610987324">
+                    <conditions>
+                        <condition id="0" name="On function" sid="864946631456812" type="Function">
+                            <param id="0" name="Name">&quot;PlayerRight&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="456265810923912" type="System">
+                            <param id="0" name="Variable">PlayerDigging</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="510673323278951" type="Player">
+                            <param id="0" name="Control">1</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
-        </event-block>
-        <comment></comment>
-        <event-block sid="190254610987324">
-            <conditions>
-                <condition id="0" name="On function" sid="864946631456812" type="Function">
-                    <param id="0" name="Name">&quot;PlayerRight&quot;</param>
-                </condition>
-                <condition id="-14" name="Compare variable" sid="456265810923912" type="System">
-                    <param id="0" name="Variable">PlayerDigging</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">0</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Platform" id="7" name="Simulate control" sid="510673323278951" type="Player">
-                    <param id="0" name="Control">1</param>
-                </action>
-                <action id="7" name="Set mirrored" sid="737380989788970" type="Player">
-                    <param id="0" name="State">1</param>
-                </action>
-                <action id="7" name="Set mirrored" sid="788716160877555" type="Pickaxe">
-                    <param id="0" name="State">1</param>
-                </action>
-                <action id="8" name="Set flipped" sid="519547848685156" type="ArmRight">
-                    <param id="0" name="State">1</param>
-                </action>
-                <action id="8" name="Set flipped" sid="473801742433918" type="ArmLeft">
-                    <param id="0" name="State">1</param>
-                </action>
-                <action id="4" name="Set animation" sid="296238439497622" type="Player">
-                    <param id="0" name="Animation">&quot;Walk&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-            </actions>
-            <sub-events>
-                <event-block sid="129300157401185">
-                    <conditions />
-                    <actions>
-                        <action id="-8" name="Set angle" sid="424037652490012" type="ArmRight">
-                            <param id="0" name="Angle">0</param>
-                        </action>
-                        <action id="-8" name="Set angle" sid="942328613565420" type="ArmLeft">
-                            <param id="0" name="Angle">320</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
+        </event-group>
         <event-group description="" sid="134776785767488" title="Keyboard">
             <sub-events>
                 <event-block sid="494923227284674">
@@ -127,6 +73,189 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="565517532005879" title="Mirroring Player with Mouse">
+            <sub-events>
+                <event-block sid="226587591283917">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="245239983740359" type="Player">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="X co-ordinate">Mouse.X</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="515269766120566">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="225866141259444" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="518488796634288" type="Player">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="7" name="Set mirrored" sid="215533960816980" type="Pickaxe">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="8" name="Set flipped" sid="267556893600140" type="ArmRight">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="8" name="Set flipped" sid="786072250094222" type="ArmLeft">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="471359976819521" type="ArmLeft">
+                                    <param id="0" name="Angle">-150</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="720668051282239">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="462139605813263" type="Keyboard">
+                                    <param id="0" name="Key">68 (D)</param>
+                                </condition>
+                                <condition behavior="Platform" id="10" inverted="1" name="Is by wall" sid="364032722721577" type="Player">
+                                    <param id="0" name="Side">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="422840351053501">
+                                    <conditions />
+                                    <actions>
+                                        <action behavior="Platform" id="1" name="Set max speed" sid="491237574410551" type="Player">
+                                            <param id="0" name="Max Speed">80</param>
+                                        </action>
+                                        <action id="6" name="Set speed" sid="878054127644832" type="Player">
+                                            <param id="0" name="Speed">8</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="146239087022328" type="Player">
+                                            <param id="0" name="Animation">&quot;Walk&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="920333344153687">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="839003275303460" type="Keyboard">
+                                    <param id="0" name="Key">65 (A)</param>
+                                </condition>
+                                <condition behavior="Platform" id="10" inverted="1" name="Is by wall" sid="449706587723128" type="Player">
+                                    <param id="0" name="Side">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="286813567739394">
+                                    <conditions />
+                                    <actions>
+                                        <action behavior="Platform" id="1" name="Set max speed" sid="956883191306001" type="Player">
+                                            <param id="0" name="Max Speed">100</param>
+                                        </action>
+                                        <action id="6" name="Set speed" sid="468988079975958" type="Player">
+                                            <param id="0" name="Speed">10</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="861669834723136" type="Player">
+                                            <param id="0" name="Animation">&quot;Walk&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment></comment>
+                <event-block sid="345660133074230">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="323360430197742" type="Player">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="X co-ordinate">Mouse.X</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="939250476117186">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="641270358528869" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="959413307198397" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="7" name="Set mirrored" sid="766743585241480" type="Pickaxe">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="8" name="Set flipped" sid="618719426177586" type="ArmRight">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="8" name="Set flipped" sid="773041400643193" type="ArmLeft">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="329916707729304" type="ArmLeft">
+                                    <param id="0" name="Angle">330</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="975026796434320">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="520413302770554" type="Keyboard">
+                                    <param id="0" name="Key">65 (A)</param>
+                                </condition>
+                                <condition behavior="Platform" id="10" inverted="1" name="Is by wall" sid="677792488604417" type="Player">
+                                    <param id="0" name="Side">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="521220513594199">
+                                    <conditions />
+                                    <actions>
+                                        <action behavior="Platform" id="1" name="Set max speed" sid="609236429732170" type="Player">
+                                            <param id="0" name="Max Speed">80</param>
+                                        </action>
+                                        <action id="6" name="Set speed" sid="337953574072278" type="Player">
+                                            <param id="0" name="Speed">8</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="128221562558688" type="Player">
+                                            <param id="0" name="Animation">&quot;Walk&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="653122451376970">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="555913971398555" type="Keyboard">
+                                    <param id="0" name="Key">68 (D)</param>
+                                </condition>
+                                <condition behavior="Platform" id="10" inverted="1" name="Is by wall" sid="767856891233134" type="Player">
+                                    <param id="0" name="Side">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="365216002112711">
+                                    <conditions />
+                                    <actions>
+                                        <action behavior="Platform" id="1" name="Set max speed" sid="188787576108945" type="Player">
+                                            <param id="0" name="Max Speed">100</param>
+                                        </action>
+                                        <action id="6" name="Set speed" sid="563570834844807" type="Player">
+                                            <param id="0" name="Speed">10</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="640751645573865" type="Player">
+                                            <param id="0" name="Animation">&quot;Walk&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-group description="" sid="545580762704417" title="Animation Control">
             <sub-events>
                 <event-block sid="388709256062017">
@@ -138,11 +267,14 @@
                             <param id="0" name="Animation">&quot;Default&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
+                        <action id="6" name="Set speed" sid="531426901789443" type="Player">
+                            <param id="0" name="Speed">5</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <variable constant="0" name="Pickaxe_DMG" sid="633289371934704" static="0" type="number">5</variable>
+        <variable constant="0" name="Pickaxe_DMG" sid="633289371934704" static="0" type="number">1</variable>
         <event-group description="" sid="386032833998473" title="Arms">
             <sub-events>
                 <event-block sid="493264707919656">
@@ -164,75 +296,96 @@
                     <sub-events>
                         <event-block sid="369322019133455">
                             <conditions>
-                                <condition id="7" name="Cursor is over object" sid="306287672672416" type="Mouse">
-                                    <param id="0" name="Object">Dirt</param>
-                                </condition>
                                 <condition id="2" name="Mouse button is down" sid="620683899461943" type="Mouse">
                                     <param id="0" name="Mouse button">0</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="-9" name="Set value" sid="575465244609612" type="System">
-                                    <param id="0" name="Variable">PlayerDigging</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
+                            <actions />
                             <sub-events>
-                                <event-block sid="158732555326236">
-                                    <conditions />
-                                    <actions>
-                                        <action behavior="Sine" id="0" name="Set active" sid="587384427809303" type="Pickaxe">
-                                            <param id="0" name="State">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
                                 <event-block sid="597202574000609">
                                     <conditions>
+                                        <condition id="7" name="Cursor is over object" sid="306287672672416" type="Mouse">
+                                            <param id="0" name="Object">Dirt</param>
+                                        </condition>
                                         <condition id="1" name="Is overlapping another object" sid="576043769530242" type="HitBoxLeft">
                                             <param id="0" name="Object">Dirt</param>
                                         </condition>
                                         <condition id="7" name="Is mirrored" sid="873637017096821" type="Player" />
                                     </conditions>
                                     <actions>
-                                        <action id="-12" name="Subtract from" sid="406828565753921" type="Dirt">
-                                            <param id="0" name="Instance variable">Hp</param>
-                                            <param id="1" name="Value">Pickaxe_DMG</param>
+                                        <action behavior="Sine" id="0" name="Set active" sid="587384427809303" type="Pickaxe">
+                                            <param id="0" name="State">1</param>
                                         </action>
-                                        <action id="0" name="Spawn another object" sid="309006696443497" type="Dirt">
-                                            <param id="0" name="Object">DirtParticles</param>
-                                            <param id="1" name="Layer">1</param>
-                                            <param id="2" name="Image point">0</param>
+                                        <action id="-9" name="Set value" sid="575465244609612" type="System">
+                                            <param id="0" name="Variable">PlayerDigging</param>
+                                            <param id="1" name="Value">1</param>
                                         </action>
                                     </actions>
+                                    <sub-events>
+                                        <event-block sid="494711802848776">
+                                            <conditions />
+                                            <actions>
+                                                <action id="-12" name="Subtract from" sid="406828565753921" type="Dirt">
+                                                    <param id="0" name="Instance variable">Hp</param>
+                                                    <param id="1" name="Value">Pickaxe_DMG</param>
+                                                </action>
+                                                <action id="0" name="Spawn another object" sid="309006696443497" type="Dirt">
+                                                    <param id="0" name="Object">DirtDigging</param>
+                                                    <param id="1" name="Layer">&quot;Blocks&quot;</param>
+                                                    <param id="2" name="Image point">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                                 <event-block sid="444704081750282">
                                     <conditions>
+                                        <condition id="7" name="Cursor is over object" sid="544761451615114" type="Mouse">
+                                            <param id="0" name="Object">Dirt</param>
+                                        </condition>
                                         <condition id="1" name="Is overlapping another object" sid="170736268840762" type="HitBoxRight">
                                             <param id="0" name="Object">Dirt</param>
                                         </condition>
                                         <condition id="7" inverted="1" name="Is mirrored" sid="620037611015017" type="Player" />
                                     </conditions>
                                     <actions>
-                                        <action id="-12" name="Subtract from" sid="175065566490441" type="Dirt">
-                                            <param id="0" name="Instance variable">Hp</param>
-                                            <param id="1" name="Value">Pickaxe_DMG</param>
+                                        <action behavior="Sine" id="0" name="Set active" sid="446956162656538" type="Pickaxe">
+                                            <param id="0" name="State">1</param>
                                         </action>
-                                        <action id="0" name="Spawn another object" sid="267639477116330" type="Dirt">
-                                            <param id="0" name="Object">DirtParticles</param>
-                                            <param id="1" name="Layer">1</param>
-                                            <param id="2" name="Image point">0</param>
+                                        <action id="-9" name="Set value" sid="538034274072483" type="System">
+                                            <param id="0" name="Variable">PlayerDigging</param>
+                                            <param id="1" name="Value">1</param>
                                         </action>
                                     </actions>
+                                    <sub-events>
+                                        <event-block sid="367668209783295">
+                                            <conditions />
+                                            <actions>
+                                                <action id="-12" name="Subtract from" sid="175065566490441" type="Dirt">
+                                                    <param id="0" name="Instance variable">Hp</param>
+                                                    <param id="1" name="Value">Pickaxe_DMG</param>
+                                                </action>
+                                                <action id="0" name="Spawn another object" sid="267639477116330" type="Dirt">
+                                                    <param id="0" name="Object">DirtDigging</param>
+                                                    <param id="1" name="Layer">&quot;Blocks&quot;</param>
+                                                    <param id="2" name="Image point">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
                 <comment></comment>
-                <event-block sid="524309977783320">
+                <event-block any="1" sid="524309977783320">
                     <conditions>
                         <condition id="2" inverted="1" name="Mouse button is down" sid="981693036539308" type="Mouse">
                             <param id="0" name="Mouse button">0</param>
+                        </condition>
+                        <condition id="7" inverted="1" name="Cursor is over object" sid="910529085735639" type="Mouse">
+                            <param id="0" name="Object">Dirt</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -246,6 +399,7 @@
                     </actions>
                 </event-block>
                 <comment>Arm position</comment>
+                <variable constant="0" name="PickAngleSpeed" sid="893175652844008" static="0" type="number">0.05</variable>
                 <event-block sid="876710171736017">
                     <conditions>
                         <condition id="-1" name="Every tick" sid="761378533705071" type="System" />
@@ -256,7 +410,7 @@
                             <conditions />
                             <actions>
                                 <action id="0" name="Set text" sid="961792012736491" type="DebugText">
-                                    <param id="0" name="Text">fps</param>
+                                    <param id="0" name="Text">round(angle(ArmRight.X , ArmRight.Y , Mouse.X , Mouse.Y)) &amp; newline &amp;&#x0D;&#x0A;&#x0D;&#x0A;&quot;pick Angle: &quot; &amp; Pickaxe.Angle</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -293,20 +447,30 @@
                             <sub-events>
                                 <event-block sid="810651987935589">
                                     <conditions>
-                                        <condition id="-8" name="Compare two values" sid="134030782636110" type="System">
-                                            <param id="0" name="First value">angle(ArmRight.X , ArmRight.Y , Mouse.X , Mouse.Y)</param>
-                                            <param id="1" name="Comparison">2</param>
-                                            <param id="2" name="Second value">80</param>
+                                        <condition id="-8" name="Compare two values" sid="413584201133857" type="System">
+                                            <param id="0" name="First value">round(angle(ArmRight.X , ArmRight.Y , Mouse.X , Mouse.Y))</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Second value">90</param>
                                         </condition>
-                                        <condition id="-8" name="Compare two values" sid="783475604361886" type="System">
-                                            <param id="0" name="First value">angle(ArmRight.X , ArmRight.Y , Mouse.X , Mouse.Y)</param>
-                                            <param id="1" name="Comparison">4</param>
+                                        <condition id="-8" name="Compare two values" sid="238424336692113" type="System">
+                                            <param id="0" name="First value">round(angle(ArmRight.X , ArmRight.Y , Mouse.X , Mouse.Y))</param>
+                                            <param id="1" name="Comparison">5</param>
                                             <param id="2" name="Second value">0</param>
                                         </condition>
                                     </conditions>
                                     <actions>
                                         <action id="-8" name="Set angle" sid="864274275912006" type="ArmRight">
                                             <param id="0" name="Angle">lerp (angle(Self.X, Self.Y , Mouse.X , Mouse.Y), Self.Angle , 0.001 )</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="337615337281295">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="256162694233799" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-8" name="Set angle" sid="166449957525632" type="ArmRight">
+                                            <param id="0" name="Angle">0</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -320,15 +484,25 @@
                             <sub-events>
                                 <event-block sid="582925378891383">
                                     <conditions>
-                                        <condition id="-8" name="Compare two values" sid="130244031344182" type="System">
-                                            <param id="0" name="First value">angle(ArmRight.X , ArmRight.Y , Mouse.X , Mouse.Y)</param>
+                                        <condition id="-8" name="Compare two values" sid="502552057188801" type="System">
+                                            <param id="0" name="First value">round(angle(ArmRight.X , ArmRight.Y , Mouse.X , Mouse.Y))</param>
                                             <param id="1" name="Comparison">4</param>
-                                            <param id="2" name="Second value">110</param>
+                                            <param id="2" name="Second value">90</param>
                                         </condition>
                                     </conditions>
                                     <actions>
                                         <action id="-8" name="Set angle" sid="841873857732357" type="ArmRight">
                                             <param id="0" name="Angle">lerp (angle(Self.X, Self.Y , Mouse.X , Mouse.Y), Self.Angle , 0.001 )</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="530111368301817">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="455659368223409" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-8" name="Set angle" sid="393689334223823" type="ArmRight">
+                                            <param id="0" name="Angle">180</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -338,6 +512,7 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <comment></comment>
         <event-block sid="112750739163007">
             <conditions>
                 <condition id="1" inverted="1" name="Is overlapping another object" sid="383764343962478" type="Pickaxe">
@@ -351,21 +526,5 @@
                 </action>
             </actions>
         </event-block>
-        <event-group description="" sid="532465981872268" title="Dirt">
-            <sub-events>
-                <event-block sid="690489115893259">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="907645185522590" type="Dirt">
-                            <param id="0" name="Instance variable">Hp</param>
-                            <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" sid="226116742827818" type="Dirt" />
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-group>
     </events>
 </c2eventsheet>

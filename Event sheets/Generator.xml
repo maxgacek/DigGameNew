@@ -225,13 +225,40 @@
                 </event-group>
             </sub-events>
         </event-group>
+        <event-group description="" sid="608960137330299" title="Dirt">
+            <sub-events>
+                <event-block sid="845581392421094">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="247973909070759" type="Dirt">
+                            <param id="0" name="Instance variable">Hp</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="404194755100525" type="Dirt" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-group description="" sid="269823516574915" title="Walls Generator">
             <sub-events>
                 <event-block sid="853130966899762">
                     <conditions>
                         <condition id="-19" name="On destroyed" sid="611667681762360" type="Dirt" />
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="640826071171018" type="Dirt">
+                            <param id="0" name="Object">DirtParticles</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="941961562909680" type="Dirt">
+                            <param id="0" name="Object">DirtParticles</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
                     <sub-events>
                         <event-block sid="746264192538274">
                             <conditions />

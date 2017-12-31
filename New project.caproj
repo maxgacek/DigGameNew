@@ -28,7 +28,6 @@
     </used-behaviors>
     <used-effects>
         <effect author="Scirra" id="pixellate">Pixellate</effect>
-        <effect author="Brad Larson" id="toon">Toon</effect>
     </used-effects>
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
@@ -194,7 +193,31 @@
                         <animation framecount="1" loop="0" name="DIRT" pingpong="0" repeatcount="1" repeatto="0" sid="924082366041184" speed="5">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Max\Desktop\Dig To China New\Graphics\Dirt_Block.png">
                                 <image-point name="Top" x="0.5" y="0" />
-                                <image-point name="Down" x="0.5" y="1" />
+                                <image-point name="Down" x="0.5" y="1.03125" />
+                                <image-point name="Left" x="0" y="0.5" />
+                                <image-point name="Right" x="1" y="0.5" />
+                                <image-point name="TopLeft" x="1" y="1" />
+                                <image-point name="TopRight" x="0" y="1" />
+                                <image-point name="Imagepoint 7" x="1" y="0" />
+                                <image-point name="Imagepoint 8" x="0" y="0" />
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="COAL" pingpong="0" repeatcount="1" repeatto="0" sid="608230847671110" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Max\Desktop\Dig To China New\Graphics\IMG_31122017_114620_0.png">
+                                <image-point name="Top" x="0.5" y="0" />
+                                <image-point name="Down" x="0.5" y="1.03125" />
+                                <image-point name="Left" x="0" y="0.5" />
+                                <image-point name="Right" x="1" y="0.5" />
+                                <image-point name="TopLeft" x="1" y="1" />
+                                <image-point name="TopRight" x="0" y="1" />
+                                <image-point name="Imagepoint 7" x="1" y="0" />
+                                <image-point name="Imagepoint 8" x="0" y="0" />
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="COPPER" pingpong="0" repeatcount="1" repeatto="0" sid="205742368633659" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Max\Desktop\Dig To China New\Graphics\26234784_540085983051034_246703476_n.png">
+                                <image-point name="Top" x="0.5" y="0" />
+                                <image-point name="Down" x="0.5" y="1.03125" />
                                 <image-point name="Left" x="0" y="0.5" />
                                 <image-point name="Right" x="1" y="0.5" />
                                 <image-point name="TopLeft" x="1" y="1" />
@@ -206,29 +229,38 @@
                         <animation framecount="1" loop="0" name="IRON" pingpong="0" repeatcount="1" repeatto="0" sid="189484697062362" speed="5">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Max\Desktop\Dig To China New\Graphics\Dirt_Block_Iron.png">
                                 <image-point name="Top" x="0.5" y="0" />
-                                <image-point name="Down" x="0.5" y="1" />
+                                <image-point name="Down" x="0.5" y="1.03125" />
                                 <image-point name="Left" x="0" y="0.5" />
                                 <image-point name="Right" x="1" y="0.5" />
                                 <image-point name="TopLeft" x="1" y="1" />
                                 <image-point name="TopRight" x="0" y="1" />
                                 <image-point name="Imagepoint 7" x="1" y="0" />
-                                <image-point name="Imagepoint 8" x="1" y="1" />
+                                <image-point name="Imagepoint 8" x="0" y="0" />
                             </frame>
                         </animation>
                         <animation framecount="1" loop="0" name="GOLD" pingpong="0" repeatcount="1" repeatto="0" sid="923684883406371" speed="5">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Max\Desktop\Dig To China New\Graphics\Dirt_Block_Gold.png">
                                 <image-point name="Top" x="0.5" y="0" />
-                                <image-point name="Down" x="0.5" y="1" />
+                                <image-point name="Down" x="0.5" y="1.03125" />
                                 <image-point name="Left" x="0" y="0.5" />
                                 <image-point name="Right" x="1" y="0.5" />
                                 <image-point name="TopLeft" x="1" y="1" />
                                 <image-point name="TopRight" x="0" y="1" />
                                 <image-point name="Imagepoint 7" x="1" y="0" />
-                                <image-point name="Imagepoint 8" x="1" y="1" />
+                                <image-point name="Imagepoint 8" x="0" y="0" />
                             </frame>
                         </animation>
                         <animation framecount="1" loop="0" name="DIAMONDS" pingpong="0" repeatcount="1" repeatto="0" sid="726136873250460" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Max\Desktop\Dig To China New\Graphics\Dirt_Diamonds.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Max\Desktop\Dig To China New\Graphics\Dirt_Diamonds.png">
+                                <image-point name="Top" x="0.5" y="0" />
+                                <image-point name="Down" x="0.5" y="1.03125" />
+                                <image-point name="Left" x="0" y="0.5" />
+                                <image-point name="Right" x="1" y="0.5" />
+                                <image-point name="TopLeft" x="1" y="1" />
+                                <image-point name="TopRight" x="0" y="1" />
+                                <image-point name="Imagepoint 7" x="1" y="0" />
+                                <image-point name="Imagepoint 8" x="0" y="0" />
+                            </frame>
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -293,7 +325,7 @@
                     <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="820452934928379" speed="5">
                         <frame duration="1" hotspotX="0.6" hotspotY="0.5">
                             <image-point name="right arm" x="0.475" y="0.37037" />
-                            <image-point name="left arm" x="0.6875" y="0.37963" />
+                            <image-point name="left arm" x="0.6625" y="0.37963" />
                             <collision-poly>
                                 <point x="0.453125" y="0.111111" />
                                 <point x="0.9" y="0.111111" />
@@ -303,7 +335,7 @@
                         </frame>
                         <frame duration="1" hotspotX="0.6" hotspotY="0.5">
                             <image-point name="right arm" x="0.475" y="0.37037" />
-                            <image-point name="left arm" x="0.6875" y="0.37037" />
+                            <image-point name="left arm" x="0.6625" y="0.37037" />
                             <collision-poly>
                                 <point x="0.453125" y="0.111111" />
                                 <point x="0.9" y="0.111111" />
@@ -313,7 +345,7 @@
                         </frame>
                         <frame duration="1" hotspotX="0.6" hotspotY="0.5">
                             <image-point name="right arm" x="0.475" y="0.407407" />
-                            <image-point name="left arm" x="0.6875" y="0.407407" />
+                            <image-point name="left arm" x="0.6625" y="0.407407" />
                             <collision-poly>
                                 <point x="0.453125" y="0.111111" />
                                 <point x="0.9" y="0.111111" />
@@ -323,7 +355,7 @@
                         </frame>
                         <frame duration="1" hotspotX="0.6" hotspotY="0.5">
                             <image-point name="right arm" x="0.475" y="0.407407" />
-                            <image-point name="left arm" x="0.7" y="0.407407" />
+                            <image-point name="left arm" x="0.6625" y="0.416667" />
                             <collision-poly>
                                 <point x="0.453125" y="0.111111" />
                                 <point x="0.9" y="0.111111" />
@@ -335,7 +367,7 @@
                     <animation framecount="7" loop="0" name="Walk" pingpong="0" repeatcount="1" repeatto="0" sid="893449996140588" speed="10">
                         <frame duration="1" hotspotX="0.45" hotspotY="0.5">
                             <image-point name="right arm" x="0.325" y="0.37037" />
-                            <image-point name="left arm" x="0.5375" y="0.37037" />
+                            <image-point name="left arm" x="0.525" y="0.37037" />
                             <collision-poly>
                                 <point x="0.3" y="0.111111" />
                                 <point x="0.75" y="0.111111" />
@@ -345,7 +377,7 @@
                         </frame>
                         <frame duration="1" hotspotX="0.45" hotspotY="0.5">
                             <image-point name="right arm" x="0.325" y="0.407407" />
-                            <image-point name="left arm" x="0.5375" y="0.388889" />
+                            <image-point name="left arm" x="0.525" y="0.388889" />
                             <collision-poly>
                                 <point x="0.3" y="0.111111" />
                                 <point x="0.75" y="0.111111" />
@@ -355,7 +387,7 @@
                         </frame>
                         <frame duration="1" hotspotX="0.45" hotspotY="0.5">
                             <image-point name="right arm" x="0.325" y="0.37037" />
-                            <image-point name="left arm" x="0.5375" y="0.37037" />
+                            <image-point name="left arm" x="0.525" y="0.37037" />
                             <collision-poly>
                                 <point x="0.3" y="0.111111" />
                                 <point x="0.75" y="0.111111" />
@@ -365,7 +397,7 @@
                         </frame>
                         <frame duration="1" hotspotX="0.45" hotspotY="0.5">
                             <image-point name="right arm" x="0.325" y="0.333333" />
-                            <image-point name="left arm" x="0.55" y="0.333333" />
+                            <image-point name="left arm" x="0.525" y="0.333333" />
                             <collision-poly>
                                 <point x="0.3" y="0.111111" />
                                 <point x="0.75" y="0.111111" />
@@ -375,7 +407,7 @@
                         </frame>
                         <frame duration="1" hotspotX="0.45" hotspotY="0.5">
                             <image-point name="right arm" x="0.325" y="0.37037" />
-                            <image-point name="left arm" x="0.5375" y="0.37037" />
+                            <image-point name="left arm" x="0.525" y="0.37037" />
                             <collision-poly>
                                 <point x="0.3" y="0.111111" />
                                 <point x="0.75" y="0.111111" />
@@ -385,7 +417,7 @@
                         </frame>
                         <frame duration="1" hotspotX="0.45" hotspotY="0.5">
                             <image-point name="right arm" x="0.325" y="0.407407" />
-                            <image-point name="left arm" x="0.5375" y="0.388889" />
+                            <image-point name="left arm" x="0.525" y="0.388889" />
                             <collision-poly>
                                 <point x="0.3" y="0.111111" />
                                 <point x="0.75" y="0.111111" />
@@ -395,7 +427,7 @@
                         </frame>
                         <frame duration="1" hotspotX="0.45" hotspotY="0.5">
                             <image-point name="right arm" x="0.325" y="0.37037" />
-                            <image-point name="left arm" x="0.5375" y="0.361111" />
+                            <image-point name="left arm" x="0.525" y="0.361111" />
                             <collision-poly>
                                 <point x="0.3" y="0.111111" />
                                 <point x="0.75" y="0.111111" />
@@ -521,9 +553,6 @@
                     </behavior-type>
                 </behaviors>
                 <effects>
-                    <effect-type name="Toon">
-                        <effect id="toon" />
-                    </effect-type>
                     <effect-type name="Pixellate">
                         <effect id="pixellate" />
                     </effect-type>
@@ -551,15 +580,24 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="endtoolvignette" sid="302923628595930">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="751258979369841" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Dawid\Desktop\end-tool-vignette.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="DirtDigging" sid="934862256084854">
+                <plugin id="Particles" />
+                <effects>
+                    <effect-type name="Pixellate">
+                        <effect id="pixellate" />
+                    </effect-type>
+                </effects>
+                <texture />
+            </object-type>
         </object-folder>
-        <object-type name="endtoolvignette" sid="302923628595930">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="751258979369841" speed="5">
-                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Dawid\Desktop\end-tool-vignette.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
     </object-folder>
     <families>
         <family name="Blocks" plugin-id="Sprite" sid="597737190612101">
