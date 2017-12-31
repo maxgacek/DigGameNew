@@ -238,42 +238,42 @@
                             <actions>
                                 <action id="0" name="Spawn another object" sid="669470126097964" type="Dirt">
                                     <param id="0" name="Object">WallBottom</param>
-                                    <param id="1" name="Layer">&quot;Layer 1&quot;</param>
+                                    <param id="1" name="Layer">&quot;Walls&quot;</param>
                                     <param id="2" name="Image point">1</param>
                                 </action>
                                 <action id="0" name="Spawn another object" sid="162644566491354" type="Dirt">
                                     <param id="0" name="Object">WallTop</param>
-                                    <param id="1" name="Layer">&quot;Layer 1&quot;</param>
+                                    <param id="1" name="Layer">&quot;Walls&quot;</param>
                                     <param id="2" name="Image point">2</param>
                                 </action>
                                 <action id="0" name="Spawn another object" sid="838327449333143" type="Dirt">
                                     <param id="0" name="Object">Wall_Right</param>
-                                    <param id="1" name="Layer">&quot;Layer 1&quot;</param>
+                                    <param id="1" name="Layer">&quot;Walls&quot;</param>
                                     <param id="2" name="Image point">3</param>
                                 </action>
                                 <action id="0" name="Spawn another object" sid="931044769034438" type="Dirt">
                                     <param id="0" name="Object">Wall_Left</param>
-                                    <param id="1" name="Layer">&quot;Layer 1&quot;</param>
+                                    <param id="1" name="Layer">&quot;Walls&quot;</param>
                                     <param id="2" name="Image point">4</param>
                                 </action>
                                 <action id="0" name="Spawn another object" sid="719229220795425" type="Dirt">
                                     <param id="0" name="Object">TopLeft</param>
-                                    <param id="1" name="Layer">&quot;Layer 1&quot;</param>
+                                    <param id="1" name="Layer">&quot;Walls&quot;</param>
                                     <param id="2" name="Image point">5</param>
                                 </action>
                                 <action id="0" name="Spawn another object" sid="135530540106249" type="Dirt">
                                     <param id="0" name="Object">TopRight2</param>
-                                    <param id="1" name="Layer">&quot;Layer 1&quot;</param>
+                                    <param id="1" name="Layer">&quot;Walls&quot;</param>
                                     <param id="2" name="Image point">7</param>
                                 </action>
                                 <action id="0" name="Spawn another object" sid="595238302872133" type="Dirt">
                                     <param id="0" name="Object">TopLeft2</param>
-                                    <param id="1" name="Layer">&quot;Layer 1&quot;</param>
+                                    <param id="1" name="Layer">&quot;Walls&quot;</param>
                                     <param id="2" name="Image point">6</param>
                                 </action>
                                 <action id="0" name="Spawn another object" sid="525705173605153" type="Dirt">
                                     <param id="0" name="Object">BottomLeft</param>
-                                    <param id="1" name="Layer">&quot;Layer 1&quot;</param>
+                                    <param id="1" name="Layer">&quot;Walls&quot;</param>
                                     <param id="2" name="Image point">8</param>
                                 </action>
                             </actions>

@@ -45,5 +45,19 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="229671787584232" title="Cursor">
+            <sub-events>
+                <event-block sid="814118768212997">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="177723906213809" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set cursor from sprite" sid="890197502556623" type="Mouse">
+                            <param id="0" name="Sprite">Cursor</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
