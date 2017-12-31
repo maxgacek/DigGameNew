@@ -142,6 +142,7 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <variable constant="0" name="Pickaxe_DMG" sid="633289371934704" static="0" type="number">5</variable>
         <event-group description="" sid="386032833998473" title="Arms">
             <sub-events>
                 <event-block sid="493264707919656">
@@ -195,7 +196,7 @@
                                     <actions>
                                         <action id="-12" name="Subtract from" sid="406828565753921" type="Dirt">
                                             <param id="0" name="Instance variable">Hp</param>
-                                            <param id="1" name="Value">1</param>
+                                            <param id="1" name="Value">Pickaxe_DMG</param>
                                         </action>
                                         <action id="0" name="Spawn another object" sid="309006696443497" type="Dirt">
                                             <param id="0" name="Object">DirtParticles</param>
@@ -214,7 +215,7 @@
                                     <actions>
                                         <action id="-12" name="Subtract from" sid="175065566490441" type="Dirt">
                                             <param id="0" name="Instance variable">Hp</param>
-                                            <param id="1" name="Value">1</param>
+                                            <param id="1" name="Value">Pickaxe_DMG</param>
                                         </action>
                                         <action id="0" name="Spawn another object" sid="267639477116330" type="Dirt">
                                             <param id="0" name="Object">DirtParticles</param>
@@ -255,7 +256,7 @@
                             <conditions />
                             <actions>
                                 <action id="0" name="Set text" sid="961792012736491" type="DebugText">
-                                    <param id="0" name="Text">angle(ArmRight.X , ArmRight.Y , Mouse.X , Mouse.Y)</param>
+                                    <param id="0" name="Text">fps</param>
                                 </action>
                             </actions>
                         </event-block>

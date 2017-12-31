@@ -149,3 +149,7 @@
 [1231/022558.638:WARNING:chrome_main_delegate.cc(586)] final extension: .zip
 [1231/022559.622:ERROR:registration_protocol_win.cc(56)] CreateFile: Nie mo¿na odnaleŸæ okreœlonego pliku. (0x2)
 [1231/022606.697:WARNING:chrome_main_delegate.cc(586)] final extension: .zip
+[1231/023934.465:WARNING:chrome_main_delegate.cc(586)] final extension: .zip
+[1231/024042.668:WARNING:chrome_main_delegate.cc(586)] final extension: .zip
+[1231/024345.837:WARNING:chrome_main_delegate.cc(586)] final extension: .zip
+[1231/024831.169:WARNING:chrome_main_delegate.cc(586)] final extension: .zip

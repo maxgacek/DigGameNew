@@ -22,7 +22,7 @@
                             <actions>
                                 <action id="-10" name="Set value" sid="735472472589931" type="Dirt">
                                     <param id="0" name="Instance variable">Type</param>
-                                    <param id="1" name="Value">ceil(random(0,100))</param>
+                                    <param id="1" name="Value">ceil(random(0,500))</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -32,77 +32,197 @@
         </event-group>
         <event-group description="" sid="883095275782226" title="Generator">
             <sub-events>
-                <event-block sid="752701656320016">
-                    <conditions>
-                        <condition id="-4" name="Trigger once while true" sid="729035566267971" type="System" />
-                    </conditions>
-                    <actions />
+                <event-group description="" sid="232488802462830" title="1 Floor">
                     <sub-events>
-                        <event-block sid="887186074006119">
+                        <event-block sid="752701656320016">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="973025145986361" type="Dirt">
-                                    <param id="0" name="Instance variable">Type</param>
-                                    <param id="1" name="Comparison">3</param>
-                                    <param id="2" name="Value">80</param>
-                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="729035566267971" type="System" />
                             </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="869421578439813" type="Dirt">
-                                    <param id="0" name="Animation">&quot;DIRT&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="848342392824793">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="227725010976356" type="Dirt">
-                                    <param id="0" name="Instance variable">Type</param>
-                                    <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Value">80</param>
-                                </condition>
-                                <condition id="-7" name="Compare instance variable" sid="770648001244265" type="Dirt">
-                                    <param id="0" name="Instance variable">Type</param>
-                                    <param id="1" name="Comparison">3</param>
-                                    <param id="2" name="Value">95</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="777370244118694" type="Dirt">
-                                    <param id="0" name="Animation">&quot;IRON&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="800403988052873" type="Dirt">
-                                    <param id="0" name="Instance variable">Hp</param>
-                                    <param id="1" name="Value">20</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="412449855316595">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="831702978349591" type="Dirt">
-                                    <param id="0" name="Instance variable">Type</param>
-                                    <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Value">95</param>
-                                </condition>
-                                <condition id="-7" name="Compare instance variable" sid="951119860162224" type="Dirt">
-                                    <param id="0" name="Instance variable">Type</param>
-                                    <param id="1" name="Comparison">3</param>
-                                    <param id="2" name="Value">100</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="581130984630176" type="Dirt">
-                                    <param id="0" name="Animation">&quot;GOLD&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="512038631266425" type="Dirt">
-                                    <param id="0" name="Instance variable">Hp</param>
-                                    <param id="1" name="Value">30</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="532963699566462">
+                                    <conditions>
+                                        <condition id="-2" name="Compare Y" sid="737496193459674" type="Dirt">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="Y co-ordinate">Dirt.Width * 25</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="887186074006119">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="973025145986361" type="Dirt">
+                                                    <param id="0" name="Instance variable">Type</param>
+                                                    <param id="1" name="Comparison">3</param>
+                                                    <param id="2" name="Value">400</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="869421578439813" type="Dirt">
+                                                    <param id="0" name="Animation">&quot;DIRT&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="848342392824793">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="227725010976356" type="Dirt">
+                                                    <param id="0" name="Instance variable">Type</param>
+                                                    <param id="1" name="Comparison">4</param>
+                                                    <param id="2" name="Value">400</param>
+                                                </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="770648001244265" type="Dirt">
+                                                    <param id="0" name="Instance variable">Type</param>
+                                                    <param id="1" name="Comparison">3</param>
+                                                    <param id="2" name="Value">475</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="777370244118694" type="Dirt">
+                                                    <param id="0" name="Animation">&quot;IRON&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="800403988052873" type="Dirt">
+                                                    <param id="0" name="Instance variable">Hp</param>
+                                                    <param id="1" name="Value">20</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="412449855316595">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="831702978349591" type="Dirt">
+                                                    <param id="0" name="Instance variable">Type</param>
+                                                    <param id="1" name="Comparison">4</param>
+                                                    <param id="2" name="Value">475</param>
+                                                </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="951119860162224" type="Dirt">
+                                                    <param id="0" name="Instance variable">Type</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Value">490</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="581130984630176" type="Dirt">
+                                                    <param id="0" name="Animation">&quot;GOLD&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="512038631266425" type="Dirt">
+                                                    <param id="0" name="Instance variable">Hp</param>
+                                                    <param id="1" name="Value">30</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
-                </event-block>
+                </event-group>
+                <event-group description="" sid="623062652098279" title="2 Floor">
+                    <sub-events>
+                        <event-block sid="847849805848157">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="693359550119584" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="164099858538435">
+                                    <conditions>
+                                        <condition id="-2" name="Compare Y" sid="334860061918145" type="Dirt">
+                                            <param id="0" name="Comparison">4</param>
+                                            <param id="1" name="Y co-ordinate">Dirt.Width * 25</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="413525324531360">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="279133535571706" type="Dirt">
+                                                    <param id="0" name="Instance variable">Type</param>
+                                                    <param id="1" name="Comparison">3</param>
+                                                    <param id="2" name="Value">400</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="528790785847613" type="Dirt">
+                                                    <param id="0" name="Animation">&quot;DIRT&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="921169880393808">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="397439059188828" type="Dirt">
+                                                    <param id="0" name="Instance variable">Type</param>
+                                                    <param id="1" name="Comparison">4</param>
+                                                    <param id="2" name="Value">400</param>
+                                                </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="945565381533592" type="Dirt">
+                                                    <param id="0" name="Instance variable">Type</param>
+                                                    <param id="1" name="Comparison">3</param>
+                                                    <param id="2" name="Value">475</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="451798890479882" type="Dirt">
+                                                    <param id="0" name="Animation">&quot;IRON&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="310113261744666" type="Dirt">
+                                                    <param id="0" name="Instance variable">Hp</param>
+                                                    <param id="1" name="Value">20</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="836103146961669">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="203861077151099" type="Dirt">
+                                                    <param id="0" name="Instance variable">Type</param>
+                                                    <param id="1" name="Comparison">4</param>
+                                                    <param id="2" name="Value">475</param>
+                                                </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="241923350334256" type="Dirt">
+                                                    <param id="0" name="Instance variable">Type</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Value">490</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="363379530410050" type="Dirt">
+                                                    <param id="0" name="Animation">&quot;GOLD&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="514808223695247" type="Dirt">
+                                                    <param id="0" name="Instance variable">Hp</param>
+                                                    <param id="1" name="Value">30</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="773832516078836">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="715431423511960" type="Dirt">
+                                                    <param id="0" name="Instance variable">Type</param>
+                                                    <param id="1" name="Comparison">4</param>
+                                                    <param id="2" name="Value">490</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="190248277490364" type="Dirt">
+                                                    <param id="0" name="Animation">&quot;DIAMONDS&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="201620776788672" type="Dirt">
+                                                    <param id="0" name="Instance variable">Hp</param>
+                                                    <param id="1" name="Value">50</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
             </sub-events>
         </event-group>
         <event-group description="" sid="269823516574915" title="Walls Generator">
@@ -117,22 +237,22 @@
                             <conditions />
                             <actions>
                                 <action id="0" name="Spawn another object" sid="669470126097964" type="Dirt">
-                                    <param id="0" name="Object">RUGUGU_UP_DIRT</param>
+                                    <param id="0" name="Object">WallBottom</param>
                                     <param id="1" name="Layer">&quot;Layer 1&quot;</param>
                                     <param id="2" name="Image point">1</param>
                                 </action>
                                 <action id="0" name="Spawn another object" sid="162644566491354" type="Dirt">
-                                    <param id="0" name="Object">RUGUGU_DOWN_DIRT</param>
+                                    <param id="0" name="Object">WallTop</param>
                                     <param id="1" name="Layer">&quot;Layer 1&quot;</param>
                                     <param id="2" name="Image point">2</param>
                                 </action>
                                 <action id="0" name="Spawn another object" sid="838327449333143" type="Dirt">
-                                    <param id="0" name="Object">RUGUGU_Left_DIRT</param>
+                                    <param id="0" name="Object">Wall_Right</param>
                                     <param id="1" name="Layer">&quot;Layer 1&quot;</param>
                                     <param id="2" name="Image point">3</param>
                                 </action>
                                 <action id="0" name="Spawn another object" sid="931044769034438" type="Dirt">
-                                    <param id="0" name="Object">RUGUGU_Right_DIRT</param>
+                                    <param id="0" name="Object">Wall_Left</param>
                                     <param id="1" name="Layer">&quot;Layer 1&quot;</param>
                                     <param id="2" name="Image point">4</param>
                                 </action>
@@ -164,42 +284,42 @@
                     <sub-events>
                         <event-block sid="372468603992334">
                             <conditions>
-                                <condition id="1" inverted="1" name="Is overlapping another object" sid="784184430324266" type="RUGUGU_DOWN_DIRT">
+                                <condition id="1" inverted="1" name="Is overlapping another object" sid="784184430324266" type="WallTop">
                                     <param id="0" name="Object">Dirt</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Destroy" sid="556074546928471" type="RUGUGU_DOWN_DIRT" />
+                                <action id="-9" name="Destroy" sid="556074546928471" type="WallTop" />
                             </actions>
                         </event-block>
                         <event-block sid="889423083568658">
                             <conditions>
-                                <condition id="1" inverted="1" name="Is overlapping another object" sid="491437541880989" type="RUGUGU_UP_DIRT">
+                                <condition id="1" inverted="1" name="Is overlapping another object" sid="491437541880989" type="WallBottom">
                                     <param id="0" name="Object">Dirt</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Destroy" sid="977323739739419" type="RUGUGU_UP_DIRT" />
+                                <action id="-9" name="Destroy" sid="977323739739419" type="WallBottom" />
                             </actions>
                         </event-block>
                         <event-block sid="210282493172981">
                             <conditions>
-                                <condition id="1" inverted="1" name="Is overlapping another object" sid="575416416599434" type="RUGUGU_Left_DIRT">
+                                <condition id="1" inverted="1" name="Is overlapping another object" sid="575416416599434" type="Wall_Right">
                                     <param id="0" name="Object">Dirt</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Destroy" sid="928100179266480" type="RUGUGU_Left_DIRT" />
+                                <action id="-9" name="Destroy" sid="928100179266480" type="Wall_Right" />
                             </actions>
                         </event-block>
                         <event-block sid="720539105262668">
                             <conditions>
-                                <condition id="1" inverted="1" name="Is overlapping another object" sid="386800322260751" type="RUGUGU_Right_DIRT">
+                                <condition id="1" inverted="1" name="Is overlapping another object" sid="386800322260751" type="Wall_Left">
                                     <param id="0" name="Object">Dirt</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Destroy" sid="896877737214418" type="RUGUGU_Right_DIRT" />
+                                <action id="-9" name="Destroy" sid="896877737214418" type="Wall_Left" />
                             </actions>
                         </event-block>
                         <event-block sid="360420704275331">
