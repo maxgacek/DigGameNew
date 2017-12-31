@@ -26,7 +26,10 @@
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
-    <used-effects />
+    <used-effects>
+        <effect author="Scirra" id="pixellate">Pixellate</effect>
+        <effect author="Brad Larson" id="toon">Toon</effect>
+    </used-effects>
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
@@ -349,7 +352,7 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="735588494491001" speed="5">
                         <frame duration="1" hotspotX="0.0172414" hotspotY="0.697674">
-                            <image-point name="Imagepoint 1" x="0.517241" y="-0.0465116" />
+                            <image-point name="Imagepoint 1" x="0.913793" y="0.116279" />
                         </frame>
                     </animation>
                 </animation-folder>
@@ -504,6 +507,33 @@
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="108130786810327" speed="5">
                     <frame duration="1" hotspotX="0" hotspotY="1" original-source="C:\Users\Max\Desktop\Dig To China New\Graphics\Sides\IMG_31122017_011059_0.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Torch_particles" sid="826729030920707">
+            <plugin id="Particles" />
+            <effects>
+                <effect-type name="Pixellate">
+                    <effect id="pixellate" />
+                </effect-type>
+            </effects>
+            <texture />
+        </object-type>
+        <object-type name="Light_torch" sid="951225888119430">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="128254133800231">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <effects>
+                <effect-type name="Toon">
+                    <effect id="toon" />
+                </effect-type>
+            </effects>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="546772547719090" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>

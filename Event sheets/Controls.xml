@@ -44,7 +44,7 @@
                             <param id="0" name="Angle">-180</param>
                         </action>
                         <action id="-8" name="Set angle" sid="434482035877461" type="ArmLeft">
-                            <param id="0" name="Angle">-180</param>
+                            <param id="0" name="Angle">-140</param>
                         </action>
                     </actions>
                 </event-block>
@@ -91,7 +91,7 @@
                             <param id="0" name="Angle">0</param>
                         </action>
                         <action id="-8" name="Set angle" sid="942328613565420" type="ArmLeft">
-                            <param id="0" name="Angle">0</param>
+                            <param id="0" name="Angle">320</param>
                         </action>
                     </actions>
                 </event-block>
@@ -274,6 +274,14 @@
                                     <param id="0" name="Object">ArmRight</param>
                                     <param id="1" name="Image point (optional)">1</param>
                                 </action>
+                                <action id="-4" name="Set position to another object" sid="675219140023164" type="Torch_particles">
+                                    <param id="0" name="Object">ArmLeft</param>
+                                    <param id="1" name="Image point (optional)">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="251780242950496" type="Light_torch">
+                                    <param id="0" name="Object">Torch_particles</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="689697360818665">
@@ -358,182 +366,5 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <comment></comment>
-        <comment></comment>
-        <event-block sid="699661533289075">
-            <conditions>
-                <condition disabled="1" id="-19" name="On destroyed" sid="907279658894075" type="Dirt" />
-            </conditions>
-            <actions />
-        </event-block>
-        <comment></comment>
-        <event-block sid="106267408964391">
-            <conditions>
-                <condition id="-19" name="On destroyed" sid="418174054719643" type="Dirt" />
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="573367600550484">
-                    <conditions />
-                    <actions>
-                        <action id="0" name="Spawn another object" sid="450534070369048" type="Dirt">
-                            <param id="0" name="Object">RUGUGU_UP_DIRT</param>
-                            <param id="1" name="Layer">&quot;Layer 1&quot;</param>
-                            <param id="2" name="Image point">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="180516056399932">
-                    <conditions />
-                    <actions>
-                        <action id="0" name="Spawn another object" sid="897590406722377" type="Dirt">
-                            <param id="0" name="Object">RUGUGU_DOWN_DIRT</param>
-                            <param id="1" name="Layer">&quot;Layer 1&quot;</param>
-                            <param id="2" name="Image point">2</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="702139560428572">
-                    <conditions />
-                    <actions>
-                        <action id="0" name="Spawn another object" sid="778680735227496" type="Dirt">
-                            <param id="0" name="Object">RUGUGU_Left_DIRT</param>
-                            <param id="1" name="Layer">&quot;Layer 1&quot;</param>
-                            <param id="2" name="Image point">3</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="809654589414406">
-                    <conditions />
-                    <actions>
-                        <action id="0" name="Spawn another object" sid="713571486854116" type="Dirt">
-                            <param id="0" name="Object">RUGUGU_Right_DIRT</param>
-                            <param id="1" name="Layer">&quot;Layer 1&quot;</param>
-                            <param id="2" name="Image point">4</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="676498694801165">
-                    <conditions />
-                    <actions>
-                        <action id="0" name="Spawn another object" sid="233041395917716" type="Dirt">
-                            <param id="0" name="Object">TopLeft</param>
-                            <param id="1" name="Layer">&quot;Layer 1&quot;</param>
-                            <param id="2" name="Image point">5</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="466552958893333">
-                    <conditions />
-                    <actions>
-                        <action id="0" name="Spawn another object" sid="692199143018589" type="Dirt">
-                            <param id="0" name="Object">TopRight2</param>
-                            <param id="1" name="Layer">&quot;Layer 1&quot;</param>
-                            <param id="2" name="Image point">7</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="227030286693947">
-                    <conditions />
-                    <actions>
-                        <action id="0" name="Spawn another object" sid="622871742786804" type="Dirt">
-                            <param id="0" name="Object">TopLeft2</param>
-                            <param id="1" name="Layer">&quot;Layer 1&quot;</param>
-                            <param id="2" name="Image point">6</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="638022597371402">
-                    <conditions />
-                    <actions>
-                        <action id="0" name="Spawn another object" sid="797888922926780" type="Dirt">
-                            <param id="0" name="Object">BottomLeft</param>
-                            <param id="1" name="Layer">&quot;Layer 1&quot;</param>
-                            <param id="2" name="Image point">8</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="413478875051752">
-            <conditions>
-                <condition id="1" inverted="1" name="Is overlapping another object" sid="638842914695522" type="RUGUGU_DOWN_DIRT">
-                    <param id="0" name="Object">Dirt</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="472200020868686" type="RUGUGU_DOWN_DIRT" />
-            </actions>
-        </event-block>
-        <event-block sid="486781596898231">
-            <conditions>
-                <condition id="1" inverted="1" name="Is overlapping another object" sid="113524390667399" type="RUGUGU_UP_DIRT">
-                    <param id="0" name="Object">Dirt</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="293545720977698" type="RUGUGU_UP_DIRT" />
-            </actions>
-        </event-block>
-        <event-block sid="708880606654806">
-            <conditions>
-                <condition id="1" inverted="1" name="Is overlapping another object" sid="672314118135147" type="RUGUGU_Left_DIRT">
-                    <param id="0" name="Object">Dirt</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="507121207731967" type="RUGUGU_Left_DIRT" />
-            </actions>
-        </event-block>
-        <event-block sid="422504656587299">
-            <conditions>
-                <condition id="1" inverted="1" name="Is overlapping another object" sid="607118670644064" type="RUGUGU_Right_DIRT">
-                    <param id="0" name="Object">Dirt</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="675775302878942" type="RUGUGU_Right_DIRT" />
-            </actions>
-        </event-block>
-        <event-block sid="773447201083102">
-            <conditions>
-                <condition id="1" inverted="1" name="Is overlapping another object" sid="492799950984462" type="TopLeft">
-                    <param id="0" name="Object">Dirt</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="608146012090170" type="TopLeft" />
-            </actions>
-        </event-block>
-        <event-block sid="423087342622852">
-            <conditions>
-                <condition id="1" inverted="1" name="Is overlapping another object" sid="921734718678649" type="TopRight2">
-                    <param id="0" name="Object">Dirt</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="278611904196802" type="TopRight2" />
-            </actions>
-        </event-block>
-        <event-block sid="318257906030895">
-            <conditions>
-                <condition id="1" inverted="1" name="Is overlapping another object" sid="761934429532623" type="TopLeft2">
-                    <param id="0" name="Object">Dirt</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="200051653091404" type="TopLeft2" />
-            </actions>
-        </event-block>
-        <event-block sid="322183575067595">
-            <conditions>
-                <condition id="1" inverted="1" name="Is overlapping another object" sid="277150107368771" type="BottomLeft">
-                    <param id="0" name="Object">Dirt</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="180209905964408" type="BottomLeft" />
-            </actions>
-        </event-block>
     </events>
 </c2eventsheet>

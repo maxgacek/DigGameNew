@@ -105,5 +105,146 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="269823516574915" title="Walls Generator">
+            <sub-events>
+                <event-block sid="853130966899762">
+                    <conditions>
+                        <condition id="-19" name="On destroyed" sid="611667681762360" type="Dirt" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="746264192538274">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="669470126097964" type="Dirt">
+                                    <param id="0" name="Object">RUGUGU_UP_DIRT</param>
+                                    <param id="1" name="Layer">&quot;Layer 1&quot;</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="162644566491354" type="Dirt">
+                                    <param id="0" name="Object">RUGUGU_DOWN_DIRT</param>
+                                    <param id="1" name="Layer">&quot;Layer 1&quot;</param>
+                                    <param id="2" name="Image point">2</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="838327449333143" type="Dirt">
+                                    <param id="0" name="Object">RUGUGU_Left_DIRT</param>
+                                    <param id="1" name="Layer">&quot;Layer 1&quot;</param>
+                                    <param id="2" name="Image point">3</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="931044769034438" type="Dirt">
+                                    <param id="0" name="Object">RUGUGU_Right_DIRT</param>
+                                    <param id="1" name="Layer">&quot;Layer 1&quot;</param>
+                                    <param id="2" name="Image point">4</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="719229220795425" type="Dirt">
+                                    <param id="0" name="Object">TopLeft</param>
+                                    <param id="1" name="Layer">&quot;Layer 1&quot;</param>
+                                    <param id="2" name="Image point">5</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="135530540106249" type="Dirt">
+                                    <param id="0" name="Object">TopRight2</param>
+                                    <param id="1" name="Layer">&quot;Layer 1&quot;</param>
+                                    <param id="2" name="Image point">7</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="595238302872133" type="Dirt">
+                                    <param id="0" name="Object">TopLeft2</param>
+                                    <param id="1" name="Layer">&quot;Layer 1&quot;</param>
+                                    <param id="2" name="Image point">6</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="525705173605153" type="Dirt">
+                                    <param id="0" name="Object">BottomLeft</param>
+                                    <param id="1" name="Layer">&quot;Layer 1&quot;</param>
+                                    <param id="2" name="Image point">8</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-group description="" sid="901202794203360" title="Destroy Walls">
+                    <sub-events>
+                        <event-block sid="372468603992334">
+                            <conditions>
+                                <condition id="1" inverted="1" name="Is overlapping another object" sid="784184430324266" type="RUGUGU_DOWN_DIRT">
+                                    <param id="0" name="Object">Dirt</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="556074546928471" type="RUGUGU_DOWN_DIRT" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="889423083568658">
+                            <conditions>
+                                <condition id="1" inverted="1" name="Is overlapping another object" sid="491437541880989" type="RUGUGU_UP_DIRT">
+                                    <param id="0" name="Object">Dirt</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="977323739739419" type="RUGUGU_UP_DIRT" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="210282493172981">
+                            <conditions>
+                                <condition id="1" inverted="1" name="Is overlapping another object" sid="575416416599434" type="RUGUGU_Left_DIRT">
+                                    <param id="0" name="Object">Dirt</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="928100179266480" type="RUGUGU_Left_DIRT" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="720539105262668">
+                            <conditions>
+                                <condition id="1" inverted="1" name="Is overlapping another object" sid="386800322260751" type="RUGUGU_Right_DIRT">
+                                    <param id="0" name="Object">Dirt</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="896877737214418" type="RUGUGU_Right_DIRT" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="360420704275331">
+                            <conditions>
+                                <condition id="1" inverted="1" name="Is overlapping another object" sid="690829155142863" type="TopLeft">
+                                    <param id="0" name="Object">Dirt</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="722752315594353" type="TopLeft" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="307778117268411">
+                            <conditions>
+                                <condition id="1" inverted="1" name="Is overlapping another object" sid="287279445049177" type="TopRight2">
+                                    <param id="0" name="Object">Dirt</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="448087651542052" type="TopRight2" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="697857553655201">
+                            <conditions>
+                                <condition id="1" inverted="1" name="Is overlapping another object" sid="988082704417907" type="TopLeft2">
+                                    <param id="0" name="Object">Dirt</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="163446474260250" type="TopLeft2" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="459606961583166">
+                            <conditions>
+                                <condition id="1" inverted="1" name="Is overlapping another object" sid="258741937293923" type="BottomLeft">
+                                    <param id="0" name="Object">Dirt</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="423294289782406" type="BottomLeft" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
