@@ -487,6 +487,15 @@
                                     <param id="1" name="Layer">1</param>
                                     <param id="2" name="Image point">0</param>
                                 </action>
+                                <action id="0" name="Play" sid="596286596607434" type="Audio">
+                                    <param id="0" name="Audio file">mud02</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;Destroyed&quot;</param>
+                                </action>
+                                <action id="6" name="Stop" sid="847228799147425" type="Audio">
+                                    <param id="0" name="Tag">&quot;Miner&quot;</param>
+                                </action>
                             </actions>
                             <sub-events>
                                 <event-block sid="746264192538274">
@@ -550,6 +559,15 @@
                                     <param id="0" name="Object">DirtParticles</param>
                                     <param id="1" name="Layer">1</param>
                                     <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="0" name="Play" sid="346914126030174" type="Audio">
+                                    <param id="0" name="Audio file">mud02</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;Destroyed&quot;</param>
+                                </action>
+                                <action id="6" name="Stop" sid="682314225374696" type="Audio">
+                                    <param id="0" name="Tag">&quot;Miner&quot;</param>
                                 </action>
                             </actions>
                             <sub-events>

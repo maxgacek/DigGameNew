@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <include>Fade</include>
+        <include>Controls</include>
+        <event-block sid="762656148834811">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="362078451058433" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="229917534317776" type="Function">
+                    <param id="0" name="Name">&quot;Fade_In&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="382444553395954">
+            <conditions>
+                <condition id="-7" name="Compare time" sid="868101497428753" type="System">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="Time (seconds)">4</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="682574174291520" type="Function">
+                    <param id="0" name="Name">&quot;Fade_Out&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="661283503829166">
+            <conditions>
+                <condition id="-10" name="Compare opacity" sid="976943097952800" type="Fade_Out">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Opacity">100</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="880042365964006" type="System">
+                    <param id="0" name="Layout">Game</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

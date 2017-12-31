@@ -172,7 +172,7 @@
                         </action>
                         <action id="0" name="Call function" sid="546541678373349" type="Function">
                             <param id="0" name="Name">&quot;ResourcesAdded&quot;</param>
-                            <param id="1" name="Parameter {n}">Dirt.ID</param>
+                            <param id="1" name="Parameter {n}">Stone.ID</param>
                         </action>
                     </actions>
                 </event-block>
@@ -181,7 +181,7 @@
                         <condition id="-7" name="Compare instance variable" sid="419093559579576" type="Stone">
                             <param id="0" name="Instance variable">ID</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">6</param>
+                            <param id="2" name="Value">7</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -191,7 +191,7 @@
                         </action>
                         <action id="0" name="Call function" sid="283412803461655" type="Function">
                             <param id="0" name="Name">&quot;ResourcesAdded&quot;</param>
-                            <param id="1" name="Parameter {n}">Dirt.ID</param>
+                            <param id="1" name="Parameter {n}">Stone.ID</param>
                         </action>
                     </actions>
                 </event-block>

@@ -10,6 +10,7 @@
     <unique-id>32plxzxazuiq6</unique-id>
     <saved-with-version>24400</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
@@ -28,6 +29,7 @@
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects>
+        <effect author="Scirra" id="brightness">Brightness</effect>
         <effect author="Scirra" id="pixellate">Pixellate</effect>
     </used-effects>
     <configurations>
@@ -39,6 +41,7 @@
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
+    <first-layout>Main Menu</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
@@ -65,6 +68,9 @@
             </object-type>
             <object-type name="Function" sid="482720716756378">
                 <plugin id="Function" />
+            </object-type>
+            <object-type name="Audio" sid="723222669428263">
+                <plugin id="Audio" />
             </object-type>
         </object-folder>
         <object-folder name="Objects">
@@ -446,6 +452,10 @@
             </object-folder>
             <object-type name="Player" sid="728956283713470">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Move" sid="736894836222536" type="boolean" />
+                    <instance-variable name="mma" sid="578719889969930" type="number" />
+                </instance-variables>
                 <behaviors>
                     <behavior-type name="Platform" sid="466575942591755">
                         <behavior id="Platform" />
@@ -752,7 +762,18 @@
                         <behavior id="Fade" />
                     </behavior-type>
                 </behaviors>
-                <texture />
+                <texture original-source="C:\Users\Dawid\Desktop\IMG_31122017_172217_0.png" />
+            </object-type>
+            <object-type name="Amount" sid="707125494598097">
+                <plugin id="SpriteFontPlus" />
+                <instance-variables>
+                    <instance-variable name="Type" sid="483445708226618" type="number" />
+                </instance-variables>
+                <texture original-source="C:\Users\Dawid\Desktop\IMG_31122017_172217_0.png" />
+            </object-type>
+            <object-type name="Timer_Text" sid="609656927121851">
+                <plugin id="SpriteFontPlus" />
+                <texture original-source="C:\Users\Dawid\Desktop\IMG_31122017_172217_0.png" />
             </object-type>
         </object-folder>
         <object-folder name="Shop">
@@ -763,11 +784,11 @@
                 <plugin id="Text" />
             </object-type>
         </object-folder>
-        <object-type name="Sprite" sid="360255386465817">
+        <object-type name="Base_Mat" sid="360255386465817">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="158144338310647" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -779,11 +800,16 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite3" sid="263725557342825">
+        <object-type name="Sell_Button" sid="263725557342825">
             <plugin id="Sprite" />
+            <effects>
+                <effect-type name="Brightness">
+                    <effect id="brightness" />
+                </effect-type>
+            </effects>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="532815802567856" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.504" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -792,9 +818,14 @@
         </object-type>
         <object-type name="Button_Mine" sid="249207843437941">
             <plugin id="Sprite" />
+            <effects>
+                <effect-type name="Brightness">
+                    <effect id="brightness" />
+                </effect-type>
+            </effects>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="581903538812333" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -811,19 +842,108 @@
         </object-type>
         <object-type name="UpgradeBuy" sid="489898017344082">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable comment="0 - Pick 1 - Time 2 - Backpack 3 - Torch" name="UpgradeType" sid="660391978327183" type="number" />
+            </instance-variables>
+            <effects>
+                <effect-type name="Brightness">
+                    <effect id="brightness" />
+                </effect-type>
+            </effects>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="794051135937919" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
                 </animation>
             </animation-folder>
         </object-type>
         <object-type name="UpgradesAmount" sid="398706991837532">
             <plugin id="Text" />
         </object-type>
-        <object-type name="MoneyText" sid="520404278293401">
+        <object-type name="MoneyText_" sid="520404278293401">
             <plugin id="Text" />
         </object-type>
         <object-type name="Upgrade_Cost_Text" sid="517990926426241">
+            <plugin id="SpriteFontPlus" />
+            <instance-variables>
+                <instance-variable name="UpgradeType" sid="595258925971312" type="number" />
+                <instance-variable name="Cost" sid="459609423416808" type="number" />
+            </instance-variables>
+            <texture />
+        </object-type>
+        <object-type name="Sprite4" sid="349683397092798">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="688965980556147" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Base" sid="860259881557742">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="491261141086879" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sell_All_Button" sid="434485085481564">
+            <plugin id="Sprite" />
+            <effects>
+                <effect-type name="Brightness">
+                    <effect id="brightness" />
+                </effect-type>
+            </effects>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="723114519848731" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Base_Upgrade" sid="305933839861767">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="166476771703836" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Money_Text" sid="287431702220537">
+            <plugin id="SpriteFontPlus" />
+            <texture />
+        </object-type>
+        <object-type name="Fade_In" sid="383798117626945">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="516071654268836" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Fade_Out" sid="729848242828106">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="125149021128094" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Background" sid="741040701095156">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="244120823540967" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Dawid\AppData\Local\Temp\dppopzhg.bmp" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite" sid="358421740885154">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="334891590269603" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Base_Text" sid="844847547018804">
             <plugin id="SpriteFontPlus" />
             <texture />
         </object-type>
@@ -839,6 +959,7 @@
     <layout-folder>
         <layout>Game.xml</layout>
         <layout>Shop.xml</layout>
+        <layout>Main Menu.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Main.xml</event-sheet>
@@ -848,14 +969,41 @@
         <event-sheet>Timer.xml</event-sheet>
         <event-sheet>Resources.xml</event-sheet>
         <event-sheet>ShopCode.xml</event-sheet>
+        <event-sheet>Sounds.xml</event-sheet>
+        <event-sheet>Fade.xml</event-sheet>
+        <event-sheet>Event sheet 1.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="1" />
         <global-instance type="Mouse" uid="2" />
         <global-instance type="Function" uid="103" />
+        <global-instance type="Audio" uid="1647">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
     </global-instances>
-    <sounds-folder />
-    <music-folder />
+    <sounds-folder>
+        <file name="mud02.ogg" />
+        <file name="Mud.ogg" />
+        <file name="click3.m4a" />
+        <file name="click3.ogg" />
+    </sounds-folder>
+    <music-folder>
+        <file name="Long Away Home.m4a" />
+        <file name="Long Away Home.ogg" />
+        <file name="sailor_waltz_with_water_effects_c64_style.ogg" />
+        <file name="The Adventure Begins 8-bit remix.ogg" />
+    </music-folder>
     <files-folder>
         <file-folder name="Icons">
             <file name="icon-16.png" />

@@ -3,12 +3,14 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Main</name>
     <events>
+        <include>Fade</include>
+        <include>Sounds</include>
         <include>Resources</include>
         <include>Timer</include>
         <include>Cam</include>
         <include>Generator</include>
         <include>Controls</include>
-        <variable constant="0" name="Money" sid="236521375857586" static="0" type="number">1000</variable>
+        <variable constant="0" name="Money" sid="236521375857586" static="0" type="number">0</variable>
         <variable constant="0" name="Ligthing" sid="701957451325265" static="0" type="number">0</variable>
         <event-group description="" sid="151046669045211" title="Light out when under Dirt">
             <sub-events>
@@ -60,5 +62,56 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="528153664177310">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="847928110750112" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="769331353179818" type="Audio">
+                    <param id="0" name="Audio file">Long Away Home</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">Volume</param>
+                    <param id="1" name="Tag (optional)">&quot;Music_Mine&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="341288699873922">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="520423799621083" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="554890282141760">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="141128529830785" type="System">
+                            <param id="0" name="Variable">Volume</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">-30</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="585219775948067" type="System">
+                            <param id="0" name="Variable">Volume</param>
+                            <param id="1" name="Value"> lerp( Volume , 0 , 0.01)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="333045969920678">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="198492065461153" type="System" />
+            </conditions>
+            <actions>
+                <action id="3" name="Set volume" sid="730459319862230" type="Audio">
+                    <param id="0" name="Tag">&quot;Music_Mine&quot;</param>
+                    <param id="1" name="dB">Volume</param>
+                </action>
+                <action id="0" name="Call function" sid="760045941196423" type="Function">
+                    <param id="0" name="Name">&quot;Fade_In&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Sounds</name>
+    <events>
+        <variable constant="0" name="Sounds" sid="464757756534147" static="0" type="number">0</variable>
+        <variable constant="0" name="Volume" sid="838341843671031" static="0" type="number">-50</variable>
+        <comment></comment>
+        <event-block sid="490437272693484">
+            <conditions>
+                <condition disabled="1" id="0" name="On collision with another object" sid="662791215952035" type="Player">
+                    <param id="0" name="Object">Dirt</param>
+                </condition>
+                <condition behavior="Platform" id="0" name="Is moving" sid="156472375954406" type="Player" />
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="988664390657612" type="Player">
+                    <param id="0" name="Instance variable">Move</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="834825770547127">
+            <conditions>
+                <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="820447924669610" type="Player" />
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="116472946631639" type="Player">
+                    <param id="0" name="Instance variable">Move</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment></comment>
+        <event-block sid="166969572480333">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="468062159799453" type="Player">
+                    <param id="0" name="Instance variable">Move</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="404694412838731">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="784980700502726" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="238857299980174" type="Audio">
+                            <param id="0" name="Audio file">Mud</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">-10</param>
+                            <param id="1" name="Tag (optional)">&quot;Dirt_Step&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="209771321372587">
+            <conditions>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="399099689766669" type="Player">
+                    <param id="0" name="Instance variable">Move</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="713741055987857">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="680051815168462" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Stop" sid="307733526161254" type="Audio">
+                            <param id="0" name="Tag">&quot;Dirt_Step&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment></comment>
+        <event-block disabled="1" sid="227946381190264">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="172367129846354" type="System">
+                    <param id="0" name="Variable">Volume</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action disabled="1" id="3" name="Set volume" sid="428650231978170" type="Audio">
+                    <param id="0" name="Tag">&quot;Music_Mine&quot;</param>
+                    <param id="1" name="dB">lerp(-10,-30,-100)</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

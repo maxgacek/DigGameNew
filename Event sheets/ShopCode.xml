@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>ShopCode</name>
     <events>
+        <include>Fade</include>
         <variable constant="0" name="Upgrade_Pickaxe" sid="472734532973031" static="0" type="number">1</variable>
         <variable constant="0" name="Upgrade_Pickaxe_Cost" sid="970423854543513" static="0" type="number">10</variable>
         <comment></comment>
@@ -25,7 +26,10 @@
                 <action id="0" name="Set text" sid="552483448301387" type="UpgradesAmount">
                     <param id="0" name="Text">&quot;Pickaxe: &quot; &amp; Upgrade_Pickaxe &amp; newline &amp; &#x0D;&#x0A;&quot;Backpack: &quot; &amp; Upgrade_Backpack &amp; newline &amp; &#x0D;&#x0A;&quot;Torch: &quot; &amp; Upgrade_Torch &amp; newline &amp; &#x0D;&#x0A;&quot;Time: &quot; &amp; Upgrade_Time</param>
                 </action>
-                <action id="0" name="Set text" sid="150232309754806" type="MoneyText">
+                <action id="0" name="Set text" sid="150232309754806" type="MoneyText_">
+                    <param id="0" name="Text">Money &amp; &quot;$&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="500245179099327" type="Money_Text">
                     <param id="0" name="Text">Money &amp; &quot;$&quot;</param>
                 </action>
             </actions>
@@ -39,16 +43,31 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-2" name="Go to layout" sid="922800132937421" type="System">
-                    <param id="0" name="Layout">Game</param>
+                <action id="0" name="Play" sid="493399675793270" type="Audio">
+                    <param id="0" name="Audio file">click3</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-10</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
-                <action id="-9" name="Set value" sid="734810340004857" type="System">
-                    <param id="0" name="Variable">Timer</param>
-                    <param id="1" name="Value">20 * Upgrade_Time</param>
+                <action id="-28" name="Set effect parameter" sid="827009590585244" type="Button_Mine">
+                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                    <param id="1" name="Parameter index">0</param>
+                    <param id="2" name="Value">120</param>
                 </action>
-                <action id="-9" name="Set value" sid="435847779965139" type="System">
-                    <param id="0" name="Variable">GameState</param>
-                    <param id="1" name="Value">0</param>
+                <action id="-9" name="Set value" sid="149212117815857" type="System">
+                    <param id="0" name="Variable">Sounds</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="308657766940353" type="System">
+                    <param id="0" name="Seconds">0.2</param>
+                </action>
+                <action id="-28" name="Set effect parameter" sid="223509156583168" type="Button_Mine">
+                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                    <param id="1" name="Parameter index">0</param>
+                    <param id="2" name="Value">100</param>
+                </action>
+                <action id="-16" name="Wait" sid="715269342129265" type="System">
+                    <param id="0" name="Seconds">0.03</param>
                 </action>
             </actions>
         </event-block>
@@ -62,18 +81,40 @@
                             <param id="1" name="Click type">0</param>
                             <param id="2" name="Object clicked">UpgradeBuy</param>
                         </condition>
+                        <condition id="-7" name="Compare instance variable" sid="786267519117954" type="UpgradeBuy">
+                            <param id="0" name="Instance variable">UpgradeType</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="0" name="Play" sid="554518014624044" type="Audio">
+                            <param id="0" name="Audio file">click3</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-10</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="452232220990345" type="UpgradeBuy">
+                            <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                            <param id="1" name="Parameter index">0</param>
+                            <param id="2" name="Value">120</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="783572262330351" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="211794844191723" type="UpgradeBuy">
+                            <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                            <param id="1" name="Parameter index">0</param>
+                            <param id="2" name="Value">100</param>
+                        </action>
+                    </actions>
                     <sub-events>
                         <event-block sid="507372530480390">
                             <conditions>
-                                <condition id="1" name="Is overlapping another object" sid="929150937584061" type="UpgradeBuy">
-                                    <param id="0" name="Object">Upgrade</param>
-                                </condition>
-                                <condition id="-7" name="Compare instance variable" sid="778695594927139" type="Upgrade">
+                                <condition id="-7" name="Compare instance variable" sid="778695594927139" type="UpgradeBuy">
                                     <param id="0" name="Instance variable">UpgradeType</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
+                                    <param id="2" name="Value">0</param>
                                 </condition>
                                 <condition id="-14" name="Compare variable" sid="239902668059797" type="System">
                                     <param id="0" name="Variable">Money</param>
@@ -88,7 +129,7 @@
                                 </action>
                                 <action id="-9" name="Set value" sid="810521413945015" type="System">
                                     <param id="0" name="Variable">Upgrade_Pickaxe_Cost</param>
-                                    <param id="1" name="Value">Upgrade_Pickaxe_Cost * 2</param>
+                                    <param id="1" name="Value">Upgrade_Pickaxe_Cost * 4</param>
                                 </action>
                                 <action id="-10" name="Add to" sid="755735113819951" type="System">
                                     <param id="0" name="Variable">Upgrade_Pickaxe</param>
@@ -99,13 +140,10 @@
                         <comment>Backpack</comment>
                         <event-block sid="663892736933875">
                             <conditions>
-                                <condition id="1" name="Is overlapping another object" sid="666123594451106" type="UpgradeBuy">
-                                    <param id="0" name="Object">Upgrade</param>
-                                </condition>
-                                <condition id="-7" name="Compare instance variable" sid="390581652451181" type="Upgrade">
+                                <condition id="-7" name="Compare instance variable" sid="390581652451181" type="UpgradeBuy">
                                     <param id="0" name="Instance variable">UpgradeType</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">2</param>
+                                    <param id="2" name="Value">1</param>
                                 </condition>
                                 <condition id="-14" name="Compare variable" sid="927879348952476" type="System">
                                     <param id="0" name="Variable">Money</param>
@@ -114,15 +152,28 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-11" name="Subtract from" sid="484287870697097" type="System">
+                                <action id="-28" name="Set effect parameter" sid="855008789456511" type="UpgradeBuy">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">85</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="162969994319979" type="System">
+                                    <param id="0" name="Seconds">0.2</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="886458941714141" type="UpgradeBuy">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">85</param>
+                                </action>
+                                <action disabled="1" id="-11" name="Subtract from" sid="484287870697097" type="System">
                                     <param id="0" name="Variable">Money</param>
                                     <param id="1" name="Value">Upgrade_Backpack_Cost</param>
                                 </action>
-                                <action id="-9" name="Set value" sid="714517053098816" type="System">
+                                <action disabled="1" id="-9" name="Set value" sid="714517053098816" type="System">
                                     <param id="0" name="Variable">Upgrade_Backpack_Cost</param>
-                                    <param id="1" name="Value">Upgrade_Backpack_Cost * 2</param>
+                                    <param id="1" name="Value">Upgrade_Backpack_Cost * 4</param>
                                 </action>
-                                <action id="-10" name="Add to" sid="941104848789975" type="System">
+                                <action disabled="1" id="-10" name="Add to" sid="941104848789975" type="System">
                                     <param id="0" name="Variable">Upgrade_Backpack</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
@@ -131,13 +182,10 @@
                         <comment>Torch</comment>
                         <event-block sid="621407085807176">
                             <conditions>
-                                <condition id="1" name="Is overlapping another object" sid="114062238677380" type="UpgradeBuy">
-                                    <param id="0" name="Object">Upgrade</param>
-                                </condition>
-                                <condition id="-7" name="Compare instance variable" sid="336822133655347" type="Upgrade">
+                                <condition id="-7" name="Compare instance variable" sid="336822133655347" type="UpgradeBuy">
                                     <param id="0" name="Instance variable">UpgradeType</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">3</param>
+                                    <param id="2" name="Value">2</param>
                                 </condition>
                                 <condition id="-14" name="Compare variable" sid="377996393749566" type="System">
                                     <param id="0" name="Variable">Money</param>
@@ -152,7 +200,7 @@
                                 </action>
                                 <action id="-9" name="Set value" sid="915388412612738" type="System">
                                     <param id="0" name="Variable">Upgrade_Torch_Cost</param>
-                                    <param id="1" name="Value">Upgrade_Torch_Cost * 2</param>
+                                    <param id="1" name="Value">Upgrade_Torch_Cost * 4</param>
                                 </action>
                                 <action id="-10" name="Add to" sid="203578968418304" type="System">
                                     <param id="0" name="Variable">Upgrade_Torch</param>
@@ -163,13 +211,10 @@
                         <comment>Time</comment>
                         <event-block sid="840578052965206">
                             <conditions>
-                                <condition id="1" name="Is overlapping another object" sid="773795878589461" type="UpgradeBuy">
-                                    <param id="0" name="Object">Upgrade</param>
-                                </condition>
-                                <condition id="-7" name="Compare instance variable" sid="590799145344889" type="Upgrade">
+                                <condition id="-7" name="Compare instance variable" sid="590799145344889" type="UpgradeBuy">
                                     <param id="0" name="Instance variable">UpgradeType</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">4</param>
+                                    <param id="2" name="Value">3</param>
                                 </condition>
                                 <condition id="-14" name="Compare variable" sid="385783735868368" type="System">
                                     <param id="0" name="Variable">Money</param>
@@ -184,7 +229,7 @@
                                 </action>
                                 <action id="-9" name="Set value" sid="840497533595430" type="System">
                                     <param id="0" name="Variable">Upgrade_Time_Cost</param>
-                                    <param id="1" name="Value">Upgrade_Time_Cost * 2</param>
+                                    <param id="1" name="Value">Upgrade_Time_Cost * 4</param>
                                 </action>
                                 <action id="-10" name="Add to" sid="107118466520026" type="System">
                                     <param id="0" name="Variable">Upgrade_Time</param>
@@ -203,111 +248,59 @@
                     <sub-events>
                         <event-block sid="842687295475209">
                             <conditions>
-                                <condition id="1" name="Is overlapping another object" sid="949523597981269" type="UpgradeBuy">
-                                    <param id="0" name="Object">Upgrade</param>
+                                <condition id="-7" name="Compare instance variable" sid="769433484257892" type="Upgrade_Cost_Text">
+                                    <param id="0" name="Instance variable">UpgradeType</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
                                 </condition>
-                                <condition id="-7" name="Compare instance variable" sid="769433484257892" type="Upgrade">
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="302316111724840" type="Upgrade_Cost_Text">
+                                    <param id="0" name="Text">Upgrade_Pickaxe_Cost &amp; &quot;$&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="559748243877992">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="337022179803538" type="Upgrade_Cost_Text">
                                     <param id="0" name="Instance variable">UpgradeType</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">1</param>
                                 </condition>
                             </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="367400279271329">
-                                    <conditions>
-                                        <condition id="1" name="Is overlapping another object" sid="150462120645426" type="Upgrade">
-                                            <param id="0" name="Object">Upgrade_Cost_Text</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Set text" sid="780217770349651" type="Upgrade_Cost_Text">
-                                            <param id="0" name="Text">Upgrade_Pickaxe_Cost &amp; &quot;$&quot;</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
+                            <actions>
+                                <action id="0" name="Set text" sid="869267434208462" type="Upgrade_Cost_Text">
+                                    <param id="0" name="Text">Upgrade_Backpack_Cost &amp; &quot;$&quot;</param>
+                                </action>
+                            </actions>
                         </event-block>
-                        <event-block sid="559748243877992">
+                        <event-block sid="167872033971451">
                             <conditions>
-                                <condition id="1" name="Is overlapping another object" sid="626165078921179" type="UpgradeBuy">
-                                    <param id="0" name="Object">Upgrade</param>
-                                </condition>
-                                <condition id="-7" name="Compare instance variable" sid="474258045249401" type="Upgrade">
+                                <condition id="-7" name="Compare instance variable" sid="762615908709214" type="Upgrade_Cost_Text">
                                     <param id="0" name="Instance variable">UpgradeType</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">2</param>
                                 </condition>
                             </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="553374299692144">
-                                    <conditions>
-                                        <condition id="1" name="Is overlapping another object" sid="561596773654539" type="Upgrade">
-                                            <param id="0" name="Object">Upgrade_Cost_Text</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Set text" sid="420214121746981" type="Upgrade_Cost_Text">
-                                            <param id="0" name="Text">Upgrade_Backpack_Cost &amp; &quot;$&quot;</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
+                            <actions>
+                                <action id="0" name="Set text" sid="161526363972563" type="Upgrade_Cost_Text">
+                                    <param id="0" name="Text">Upgrade_Torch_Cost &amp; &quot;$&quot;</param>
+                                </action>
+                            </actions>
                         </event-block>
-                        <event-block sid="167872033971451">
+                        <event-block sid="183314992929497">
                             <conditions>
-                                <condition id="1" name="Is overlapping another object" sid="194888243716003" type="UpgradeBuy">
-                                    <param id="0" name="Object">Upgrade</param>
-                                </condition>
-                                <condition id="-7" name="Compare instance variable" sid="817964329632306" type="Upgrade">
+                                <condition id="-7" name="Compare instance variable" sid="332938191382288" type="Upgrade_Cost_Text">
                                     <param id="0" name="Instance variable">UpgradeType</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">3</param>
                                 </condition>
                             </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="546220604102858">
-                                    <conditions>
-                                        <condition id="1" name="Is overlapping another object" sid="623644098266046" type="Upgrade">
-                                            <param id="0" name="Object">Upgrade_Cost_Text</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Set text" sid="699076061992134" type="Upgrade_Cost_Text">
-                                            <param id="0" name="Text">Upgrade_Torch_Cost &amp; &quot;$&quot;</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="183314992929497">
-                            <conditions>
-                                <condition id="1" name="Is overlapping another object" sid="911638580527851" type="UpgradeBuy">
-                                    <param id="0" name="Object">Upgrade</param>
-                                </condition>
-                                <condition id="-7" name="Compare instance variable" sid="426272825498114" type="Upgrade">
-                                    <param id="0" name="Instance variable">UpgradeType</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">4</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="267786118634379">
-                                    <conditions>
-                                        <condition id="1" name="Is overlapping another object" sid="243276361032047" type="Upgrade">
-                                            <param id="0" name="Object">Upgrade_Cost_Text</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Set text" sid="542036649456674" type="Upgrade_Cost_Text">
-                                            <param id="0" name="Text">Upgrade_Time_Cost &amp; &quot;$&quot;</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
+                            <actions>
+                                <action id="0" name="Set text" sid="857983461178684" type="Upgrade_Cost_Text">
+                                    <param id="0" name="Text">Upgrade_Time_Cost &amp; &quot;$&quot;</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -320,10 +313,30 @@
                         <condition id="6" name="On object clicked" sid="819321797648337" type="Mouse">
                             <param id="0" name="Mouse button">0</param>
                             <param id="1" name="Click type">0</param>
-                            <param id="2" name="Object clicked">Sprite3</param>
+                            <param id="2" name="Object clicked">Sell_All_Button</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="-28" name="Set effect parameter" sid="849098891790067" type="Sell_All_Button">
+                            <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                            <param id="1" name="Parameter index">0</param>
+                            <param id="2" name="Value">120</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="838200177409635" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="184000242367715" type="Sell_All_Button">
+                            <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                            <param id="1" name="Parameter index">0</param>
+                            <param id="2" name="Value">100</param>
+                        </action>
+                        <action id="0" name="Play" sid="997154093854366" type="Audio">
+                            <param id="0" name="Audio file">click3</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-10</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
                     <sub-events>
                         <event-block sid="818562079603933">
                             <conditions />
@@ -369,7 +382,7 @@
                             <actions>
                                 <action id="-10" name="Add to" sid="313453904570047" type="System">
                                     <param id="0" name="Variable">Money</param>
-                                    <param id="1" name="Value">Gold * 28</param>
+                                    <param id="1" name="Value">Gold * 32</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="936332347449872" type="System">
                                     <param id="0" name="Variable">Gold</param>
@@ -382,7 +395,7 @@
                             <actions>
                                 <action id="-10" name="Add to" sid="475825934155778" type="System">
                                     <param id="0" name="Variable">Money</param>
-                                    <param id="1" name="Value">Emerald * 32</param>
+                                    <param id="1" name="Value">Emerald * 52</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="275417770497453" type="System">
                                     <param id="0" name="Variable">Emerald</param>
@@ -395,7 +408,7 @@
                             <actions>
                                 <action id="-10" name="Add to" sid="718989740940234" type="System">
                                     <param id="0" name="Variable">Money</param>
-                                    <param id="1" name="Value">Diamonds * 48</param>
+                                    <param id="1" name="Value">Diamonds * 72</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="389610714387001" type="System">
                                     <param id="0" name="Variable">Diamonds</param>
@@ -414,10 +427,30 @@
                         <condition id="6" name="On object clicked" sid="147811555299095" type="Mouse">
                             <param id="0" name="Mouse button">0</param>
                             <param id="1" name="Click type">0</param>
-                            <param id="2" name="Object clicked">Sprite3</param>
+                            <param id="2" name="Object clicked">Sell_Button</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="0" name="Play" sid="282102464978528" type="Audio">
+                            <param id="0" name="Audio file">click3</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-10</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="633170361524449" type="Sell_All_Button">
+                            <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                            <param id="1" name="Parameter index">0</param>
+                            <param id="2" name="Value">120</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="331059129900259" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="896351693192550" type="Sell_All_Button">
+                            <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                            <param id="1" name="Parameter index">0</param>
+                            <param id="2" name="Value">100</param>
+                        </action>
+                    </actions>
                     <sub-events>
                         <event-block sid="733350194059788">
                             <conditions />
@@ -440,5 +473,217 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="642867616905224" title="Amount">
+            <sub-events>
+                <event-block sid="480175020801667">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="532657655051303" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="870082779184860">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="564714324957890" type="Amount">
+                                    <param id="0" name="Instance variable">Type</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="729455254409267" type="Amount">
+                                    <param id="0" name="Text">Coal&#x0D;&#x0A;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="810549163237209">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="759798166000750" type="Amount">
+                                    <param id="0" name="Instance variable">Type</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="375005542071297" type="Amount">
+                                    <param id="0" name="Text">Copper</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="151639927255719">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="561957155339795" type="Amount">
+                                    <param id="0" name="Instance variable">Type</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="390285179287698" type="Amount">
+                                    <param id="0" name="Text">Iron</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="692381076650238">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="154131003774207" type="Amount">
+                                    <param id="0" name="Instance variable">Type</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="113383620907366" type="Amount">
+                                    <param id="0" name="Text">Gold</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="577558379867604">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="237987149329647" type="Amount">
+                                    <param id="0" name="Instance variable">Type</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="359890297014576" type="Amount">
+                                    <param id="0" name="Text">Emerald</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="713868920812005">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="238156995881041" type="Amount">
+                                    <param id="0" name="Instance variable">Type</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="112861504963311" type="Amount">
+                                    <param id="0" name="Text">Diamonds</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="421889707659222" title="Music">
+            <sub-events>
+                <event-block sid="825945559309230">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="139526781944951" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="894048860069365" type="Audio">
+                            <param id="0" name="Audio file">sailor_waltz_with_water_effects_c64_style</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">Volume</param>
+                            <param id="1" name="Tag (optional)">&quot;Music_Shop&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="150356103777623">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="924790897507410" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="374855183879880">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="328834838593104" type="System">
+                                    <param id="0" name="Variable">Volume</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">-20</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="581575548511679" type="System">
+                                    <param id="0" name="Variable">Volume</param>
+                                    <param id="1" name="Value"> lerp( Volume , 0 , 0.01)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="563247899559583">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="616033474612589" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set volume" sid="957273318966716" type="Audio">
+                            <param id="0" name="Tag">&quot;Music_Shop&quot;</param>
+                            <param id="1" name="dB">Volume</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="972588895240634">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="659854379521357" type="System">
+                            <param id="0" name="Variable">Sounds</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="206159764097406" type="System">
+                            <param id="0" name="Variable">Volume</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">-120</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="468629418588172" type="System">
+                            <param id="0" name="Variable">Volume</param>
+                            <param id="1" name="Value"> lerp( volume, -120, 0.01)</param>
+                        </action>
+                        <action id="0" name="Call function" sid="980104278800290" type="Function">
+                            <param id="0" name="Name">&quot;Fade_Out&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="136126424009620">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="410005357158621" type="System">
+                            <param id="0" name="Variable">Volume</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">-60</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="859505905661327" type="System">
+                            <param id="0" name="Variable">Volume</param>
+                            <param id="1" name="Value">-59</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="286235512475562" type="System">
+                            <param id="0" name="Variable">Sounds</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="390068231723569" type="System">
+                            <param id="0" name="Layout">Game</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="916634829855526" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Value">20 * Upgrade_Time</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="815678409627665" type="System">
+                            <param id="0" name="Variable">GameState</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="951039132391199">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="657638061501252" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="701582260684249" type="Function">
+                    <param id="0" name="Name">&quot;Fade_In&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

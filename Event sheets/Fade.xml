@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Fade</name>
+    <events>
+        <comment></comment>
+        <event-block sid="629439527037534">
+            <conditions>
+                <condition id="0" name="On function" sid="617340807399184" type="Function">
+                    <param id="0" name="Name">&quot;Fade_In&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="703013349068619" type="Fade_In">
+                    <param id="0" name="Opacity">Self.Opacity-1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="518347812586549">
+            <conditions>
+                <condition id="0" name="On function" sid="349293546982977" type="Function">
+                    <param id="0" name="Name">&quot;Fade_Out&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="126206746708207" type="Fade_Out">
+                    <param id="0" name="Opacity">Self.Opacity+1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment></comment>
+    </events>
+</c2eventsheet>

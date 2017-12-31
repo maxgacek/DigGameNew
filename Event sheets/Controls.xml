@@ -16,6 +16,11 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">0</param>
                         </condition>
+                        <condition id="-7" name="Compare instance variable" sid="480504917848860" type="Player">
+                            <param id="0" name="Instance variable">mma</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action behavior="Platform" id="7" name="Simulate control" sid="400748011904438" type="Player">
@@ -31,6 +36,11 @@
                         </condition>
                         <condition id="-14" name="Compare variable" sid="456265810923912" type="System">
                             <param id="0" name="Variable">PlayerDigging</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="738672188552568" type="Player">
+                            <param id="0" name="Instance variable">mma</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">0</param>
                         </condition>
@@ -50,6 +60,11 @@
                         <condition id="2" name="Key is down" sid="846970420294482" type="Keyboard">
                             <param id="0" name="Key">65 (A)</param>
                         </condition>
+                        <condition id="-7" name="Compare instance variable" sid="582558986479261" type="Player">
+                            <param id="0" name="Instance variable">mma</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="0" name="Call function" sid="671739609706512" type="Function">
@@ -62,6 +77,11 @@
                     <conditions>
                         <condition id="2" name="Key is down" sid="898202333321400" type="Keyboard">
                             <param id="0" name="Key">68 (D)</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="645236781253271" type="Player">
+                            <param id="0" name="Instance variable">mma</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -80,6 +100,11 @@
                         <condition id="-1" name="Compare X" sid="245239983740359" type="Player">
                             <param id="0" name="Comparison">4</param>
                             <param id="1" name="X co-ordinate">Mouse.X</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="857529132849595" type="Player">
+                            <param id="0" name="Instance variable">mma</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -114,6 +139,11 @@
                                 <condition behavior="Platform" id="10" inverted="1" name="Is by wall" sid="364032722721577" type="Player">
                                     <param id="0" name="Side">1</param>
                                 </condition>
+                                <condition id="-7" name="Compare instance variable" sid="655041538773062" type="Player">
+                                    <param id="0" name="Instance variable">mma</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions />
                             <sub-events>
@@ -141,6 +171,11 @@
                                 </condition>
                                 <condition behavior="Platform" id="10" inverted="1" name="Is by wall" sid="449706587723128" type="Player">
                                     <param id="0" name="Side">0</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="925782529736693" type="Player">
+                                    <param id="0" name="Instance variable">mma</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
                                 </condition>
                             </conditions>
                             <actions />
@@ -170,6 +205,11 @@
                         <condition id="-1" name="Compare X" sid="323360430197742" type="Player">
                             <param id="0" name="Comparison">2</param>
                             <param id="1" name="X co-ordinate">Mouse.X</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="108172056233457" type="Player">
+                            <param id="0" name="Instance variable">mma</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -204,6 +244,11 @@
                                 <condition behavior="Platform" id="10" inverted="1" name="Is by wall" sid="677792488604417" type="Player">
                                     <param id="0" name="Side">0</param>
                                 </condition>
+                                <condition id="-7" name="Compare instance variable" sid="262767553151989" type="Player">
+                                    <param id="0" name="Instance variable">mma</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions />
                             <sub-events>
@@ -231,6 +276,11 @@
                                 </condition>
                                 <condition behavior="Platform" id="10" inverted="1" name="Is by wall" sid="767856891233134" type="Player">
                                     <param id="0" name="Side">1</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="231603531086694" type="Player">
+                                    <param id="0" name="Instance variable">mma</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
                                 </condition>
                             </conditions>
                             <actions />
@@ -298,6 +348,11 @@
                             <conditions>
                                 <condition id="2" name="Mouse button is down" sid="620683899461943" type="Mouse">
                                     <param id="0" name="Mouse button">0</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="419849374977439" type="Player">
+                                    <param id="0" name="Instance variable">mma</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
                                 </condition>
                             </conditions>
                             <actions />
@@ -519,6 +574,11 @@
                         <event-block sid="689697360818665">
                             <conditions>
                                 <condition id="7" inverted="1" name="Is mirrored" sid="148373231508115" type="Player" />
+                                <condition id="-7" name="Compare instance variable" sid="667544259800210" type="Player">
+                                    <param id="0" name="Instance variable">mma</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions />
                             <sub-events>
@@ -556,6 +616,11 @@
                         <event-block sid="267533916289223">
                             <conditions>
                                 <condition id="7" name="Is mirrored" sid="409031460192514" type="Player" />
+                                <condition id="-7" name="Compare instance variable" sid="447016581924090" type="Player">
+                                    <param id="0" name="Instance variable">mma</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions />
                             <sub-events>
@@ -602,6 +667,67 @@
                     <param id="1" name="Image point (optional)">1</param>
                 </action>
             </actions>
+        </event-block>
+        <event-block sid="685947837604450">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="495960779530824" type="System">
+                    <param id="0" name="Variable">PlayerDigging</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="6" name="Stop" sid="986418217139306" type="Audio">
+                    <param id="0" name="Tag">&quot;Miner&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="163723066349855">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="362240409932754" type="System">
+                    <param id="0" name="Variable">PlayerDigging</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="701588073102759" type="Mouse">
+                    <param id="0" name="Object">Dirt</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="854254285806844">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="422770773522886" type="System" />
+                        <condition id="7" name="Cursor is over object" sid="707516420522004" type="Mouse">
+                            <param id="0" name="Object">Dirt</param>
+                        </condition>
+                        <condition id="5" inverted="1" name="Is tag playing" sid="503436916631450" type="Audio">
+                            <param id="0" name="Tag">&quot;Miner&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="153892767390561">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="859335231775808" type="HitBoxLeft">
+                                    <param id="0" name="Object">Dirt</param>
+                                </condition>
+                                <condition id="1" name="Is overlapping another object" sid="388538336994932" type="HitBoxRight">
+                                    <param id="0" name="Object">Dirt</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="227321304705405" type="Audio">
+                                    <param id="0" name="Audio file">mud02</param>
+                                    <param id="2" name="Loop">1</param>
+                                    <param id="3" name="Volume">10</param>
+                                    <param id="1" name="Tag (optional)">&quot;Miner&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>
