@@ -8,6 +8,7 @@
         <include>Cam</include>
         <include>Generator</include>
         <include>Controls</include>
+        <variable constant="0" name="Money" sid="236521375857586" static="0" type="number">1000</variable>
         <variable constant="0" name="Ligthing" sid="701957451325265" static="0" type="number">0</variable>
         <event-group description="" sid="151046669045211" title="Light out when under Dirt">
             <sub-events>
@@ -31,7 +32,7 @@
                                 <condition id="-14" name="Compare variable" sid="293000398161276" type="System">
                                     <param id="0" name="Variable">Ligthing</param>
                                     <param id="1" name="Comparison">2</param>
-                                    <param id="2" name="Value">80</param>
+                                    <param id="2" name="Value">85</param>
                                 </condition>
                             </conditions>
                             <actions>

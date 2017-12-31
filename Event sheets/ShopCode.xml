@@ -1,0 +1,444 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ShopCode</name>
+    <events>
+        <variable constant="0" name="Upgrade_Pickaxe" sid="472734532973031" static="0" type="number">1</variable>
+        <variable constant="0" name="Upgrade_Pickaxe_Cost" sid="970423854543513" static="0" type="number">10</variable>
+        <comment></comment>
+        <variable constant="0" name="Upgrade_Backpack" sid="802196682218591" static="0" type="number">1</variable>
+        <variable constant="0" name="Upgrade_Backpack_Cost" sid="115764092792342" static="0" type="number">10</variable>
+        <comment></comment>
+        <variable constant="0" name="Upgrade_Torch" sid="939674163474790" static="0" type="number">1</variable>
+        <variable constant="0" name="Upgrade_Torch_Cost" sid="952680328648785" static="0" type="number">10</variable>
+        <comment></comment>
+        <variable constant="0" name="Upgrade_Time" sid="655588249001936" static="0" type="number">1</variable>
+        <variable constant="0" name="Upgrade_Time_Cost" sid="377239952801004" static="0" type="number">10</variable>
+        <event-block sid="454864643721613">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="419331283567746" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="401215126509357" type="ResourcesEQ">
+                    <param id="0" name="Text">&quot;Coal: &quot; &amp; Coal &amp; newline &amp;&#x0D;&#x0A;&quot;Copper: &quot; &amp; Copper &amp; newline &amp;&#x0D;&#x0A;&quot;Iron: &quot; &amp; Iron &amp; newline &amp;&#x0D;&#x0A;&quot;Gold: &quot; &amp; Gold &amp; newline &amp;&#x0D;&#x0A;&quot;Emerald: &quot; &amp; Emerald&amp; newline &amp;&#x0D;&#x0A;&quot;Diamonds: &quot; &amp; Diamonds </param>
+                </action>
+                <action id="0" name="Set text" sid="552483448301387" type="UpgradesAmount">
+                    <param id="0" name="Text">&quot;Pickaxe: &quot; &amp; Upgrade_Pickaxe &amp; newline &amp; &#x0D;&#x0A;&quot;Backpack: &quot; &amp; Upgrade_Backpack &amp; newline &amp; &#x0D;&#x0A;&quot;Torch: &quot; &amp; Upgrade_Torch &amp; newline &amp; &#x0D;&#x0A;&quot;Time: &quot; &amp; Upgrade_Time</param>
+                </action>
+                <action id="0" name="Set text" sid="150232309754806" type="MoneyText">
+                    <param id="0" name="Text">Money &amp; &quot;$&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="373099613921904">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="748776106441936" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Button_Mine</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="922800132937421" type="System">
+                    <param id="0" name="Layout">Game</param>
+                </action>
+                <action id="-9" name="Set value" sid="734810340004857" type="System">
+                    <param id="0" name="Variable">Timer</param>
+                    <param id="1" name="Value">20 * Upgrade_Time</param>
+                </action>
+                <action id="-9" name="Set value" sid="435847779965139" type="System">
+                    <param id="0" name="Variable">GameState</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="322058374458213" title="Upgrades">
+            <sub-events>
+                <comment>Pickaxe</comment>
+                <event-block sid="512207214125661">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="824537068042417" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">UpgradeBuy</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="507372530480390">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="929150937584061" type="UpgradeBuy">
+                                    <param id="0" name="Object">Upgrade</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="778695594927139" type="Upgrade">
+                                    <param id="0" name="Instance variable">UpgradeType</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="239902668059797" type="System">
+                                    <param id="0" name="Variable">Money</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">Upgrade_Pickaxe_Cost</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Subtract from" sid="687299410926749" type="System">
+                                    <param id="0" name="Variable">Money</param>
+                                    <param id="1" name="Value">Upgrade_Pickaxe_Cost</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="810521413945015" type="System">
+                                    <param id="0" name="Variable">Upgrade_Pickaxe_Cost</param>
+                                    <param id="1" name="Value">Upgrade_Pickaxe_Cost * 2</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="755735113819951" type="System">
+                                    <param id="0" name="Variable">Upgrade_Pickaxe</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Backpack</comment>
+                        <event-block sid="663892736933875">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="666123594451106" type="UpgradeBuy">
+                                    <param id="0" name="Object">Upgrade</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="390581652451181" type="Upgrade">
+                                    <param id="0" name="Instance variable">UpgradeType</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="927879348952476" type="System">
+                                    <param id="0" name="Variable">Money</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">Upgrade_Backpack_Cost</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Subtract from" sid="484287870697097" type="System">
+                                    <param id="0" name="Variable">Money</param>
+                                    <param id="1" name="Value">Upgrade_Backpack_Cost</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="714517053098816" type="System">
+                                    <param id="0" name="Variable">Upgrade_Backpack_Cost</param>
+                                    <param id="1" name="Value">Upgrade_Backpack_Cost * 2</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="941104848789975" type="System">
+                                    <param id="0" name="Variable">Upgrade_Backpack</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Torch</comment>
+                        <event-block sid="621407085807176">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="114062238677380" type="UpgradeBuy">
+                                    <param id="0" name="Object">Upgrade</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="336822133655347" type="Upgrade">
+                                    <param id="0" name="Instance variable">UpgradeType</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="377996393749566" type="System">
+                                    <param id="0" name="Variable">Money</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">Upgrade_Torch_Cost</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Subtract from" sid="316189682668828" type="System">
+                                    <param id="0" name="Variable">Money</param>
+                                    <param id="1" name="Value">Upgrade_Torch_Cost</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="915388412612738" type="System">
+                                    <param id="0" name="Variable">Upgrade_Torch_Cost</param>
+                                    <param id="1" name="Value">Upgrade_Torch_Cost * 2</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="203578968418304" type="System">
+                                    <param id="0" name="Variable">Upgrade_Torch</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Time</comment>
+                        <event-block sid="840578052965206">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="773795878589461" type="UpgradeBuy">
+                                    <param id="0" name="Object">Upgrade</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="590799145344889" type="Upgrade">
+                                    <param id="0" name="Instance variable">UpgradeType</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="385783735868368" type="System">
+                                    <param id="0" name="Variable">Money</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">Upgrade_Time_Cost</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Subtract from" sid="711887908725848" type="System">
+                                    <param id="0" name="Variable">Money</param>
+                                    <param id="1" name="Value">Upgrade_Time_Cost</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="840497533595430" type="System">
+                                    <param id="0" name="Variable">Upgrade_Time_Cost</param>
+                                    <param id="1" name="Value">Upgrade_Time_Cost * 2</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="107118466520026" type="System">
+                                    <param id="0" name="Variable">Upgrade_Time</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment></comment>
+                <event-block sid="731845842499829">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="780178184591827" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="842687295475209">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="949523597981269" type="UpgradeBuy">
+                                    <param id="0" name="Object">Upgrade</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="769433484257892" type="Upgrade">
+                                    <param id="0" name="Instance variable">UpgradeType</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="367400279271329">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="150462120645426" type="Upgrade">
+                                            <param id="0" name="Object">Upgrade_Cost_Text</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="780217770349651" type="Upgrade_Cost_Text">
+                                            <param id="0" name="Text">Upgrade_Pickaxe_Cost &amp; &quot;$&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="559748243877992">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="626165078921179" type="UpgradeBuy">
+                                    <param id="0" name="Object">Upgrade</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="474258045249401" type="Upgrade">
+                                    <param id="0" name="Instance variable">UpgradeType</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="553374299692144">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="561596773654539" type="Upgrade">
+                                            <param id="0" name="Object">Upgrade_Cost_Text</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="420214121746981" type="Upgrade_Cost_Text">
+                                            <param id="0" name="Text">Upgrade_Backpack_Cost &amp; &quot;$&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="167872033971451">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="194888243716003" type="UpgradeBuy">
+                                    <param id="0" name="Object">Upgrade</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="817964329632306" type="Upgrade">
+                                    <param id="0" name="Instance variable">UpgradeType</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="546220604102858">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="623644098266046" type="Upgrade">
+                                            <param id="0" name="Object">Upgrade_Cost_Text</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="699076061992134" type="Upgrade_Cost_Text">
+                                            <param id="0" name="Text">Upgrade_Torch_Cost &amp; &quot;$&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="183314992929497">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="911638580527851" type="UpgradeBuy">
+                                    <param id="0" name="Object">Upgrade</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="426272825498114" type="Upgrade">
+                                    <param id="0" name="Instance variable">UpgradeType</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="267786118634379">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="243276361032047" type="Upgrade">
+                                            <param id="0" name="Object">Upgrade_Cost_Text</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="542036649456674" type="Upgrade_Cost_Text">
+                                            <param id="0" name="Text">Upgrade_Time_Cost &amp; &quot;$&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="299734678113667" title="Sell Resources">
+            <sub-events>
+                <event-block sid="768655754521707">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="819321797648337" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">Sprite3</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="818562079603933">
+                            <conditions />
+                            <actions>
+                                <action id="-10" name="Add to" sid="826301266743177" type="System">
+                                    <param id="0" name="Variable">Money</param>
+                                    <param id="1" name="Value">Coal * 5</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="284996432519759" type="System">
+                                    <param id="0" name="Variable">Coal</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="663931396352179">
+                            <conditions />
+                            <actions>
+                                <action id="-10" name="Add to" sid="826821039584540" type="System">
+                                    <param id="0" name="Variable">Money</param>
+                                    <param id="1" name="Value">Copper * 8</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="569940904218236" type="System">
+                                    <param id="0" name="Variable">Copper</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="315589569898204">
+                            <conditions />
+                            <actions>
+                                <action id="-10" name="Add to" sid="946892170250806" type="System">
+                                    <param id="0" name="Variable">Money</param>
+                                    <param id="1" name="Value">Iron * 12</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="402605128098405" type="System">
+                                    <param id="0" name="Variable">Iron</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="399157546332259">
+                            <conditions />
+                            <actions>
+                                <action id="-10" name="Add to" sid="313453904570047" type="System">
+                                    <param id="0" name="Variable">Money</param>
+                                    <param id="1" name="Value">Gold * 28</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="936332347449872" type="System">
+                                    <param id="0" name="Variable">Gold</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="767411949113975">
+                            <conditions />
+                            <actions>
+                                <action id="-10" name="Add to" sid="475825934155778" type="System">
+                                    <param id="0" name="Variable">Money</param>
+                                    <param id="1" name="Value">Emerald * 32</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="275417770497453" type="System">
+                                    <param id="0" name="Variable">Emerald</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="855082692498995">
+                            <conditions />
+                            <actions>
+                                <action id="-10" name="Add to" sid="718989740940234" type="System">
+                                    <param id="0" name="Variable">Money</param>
+                                    <param id="1" name="Value">Diamonds * 48</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="389610714387001" type="System">
+                                    <param id="0" name="Variable">Diamonds</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="966992605035596" title="Apply Upgrades">
+            <sub-events>
+                <event-block sid="673867977969733">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="147811555299095" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">Sprite3</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="733350194059788">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="569576885248377" type="System">
+                                    <param id="0" name="Variable">Pickaxe_DMG</param>
+                                    <param id="1" name="Value">Upgrade_Pickaxe</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="874014821118411" type="Light_torch">
+                                    <param id="0" name="Width">320 * (Upgrade_Torch / 2)</param>
+                                    <param id="1" name="Height">320 * (Upgrade_Torch / 2)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="964169242799244" type="System">
+                                    <param id="0" name="Variable">Ligthing</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
