@@ -43,7 +43,7 @@
                                 <condition id="-7" name="Compare instance variable" sid="973025145986361" type="Dirt">
                                     <param id="0" name="Instance variable">Type</param>
                                     <param id="1" name="Comparison">3</param>
-                                    <param id="2" name="Value">75</param>
+                                    <param id="2" name="Value">80</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -58,7 +58,7 @@
                                 <condition id="-7" name="Compare instance variable" sid="227725010976356" type="Dirt">
                                     <param id="0" name="Instance variable">Type</param>
                                     <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Value">75</param>
+                                    <param id="2" name="Value">80</param>
                                 </condition>
                                 <condition id="-7" name="Compare instance variable" sid="770648001244265" type="Dirt">
                                     <param id="0" name="Instance variable">Type</param>

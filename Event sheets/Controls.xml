@@ -3,10 +3,16 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Controls</name>
     <events>
+        <variable constant="0" name="PlayerDigging" sid="378195906636973" static="0" type="number">0</variable>
         <event-block sid="324523145303248">
             <conditions>
                 <condition id="0" name="On function" sid="167043989532931" type="Function">
                     <param id="0" name="Name">&quot;PlayerLeft&quot;</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="443398129891621" type="System">
+                    <param id="0" name="Variable">PlayerDigging</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
                 </condition>
             </conditions>
             <actions>
@@ -19,7 +25,10 @@
                 <action id="7" name="Set mirrored" sid="194692912109911" type="Pickaxe">
                     <param id="0" name="State">0</param>
                 </action>
-                <action id="7" name="Set mirrored" sid="175911312403343" type="ArmRight">
+                <action id="8" name="Set flipped" sid="175911312403343" type="ArmRight">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="8" name="Set flipped" sid="900365308777284" type="ArmLeft">
                     <param id="0" name="State">0</param>
                 </action>
                 <action id="4" name="Set animation" sid="186329206846974" type="Player">
@@ -27,11 +36,30 @@
                     <param id="1" name="From">1</param>
                 </action>
             </actions>
+            <sub-events>
+                <event-block sid="569261439214493">
+                    <conditions />
+                    <actions>
+                        <action id="-8" name="Set angle" sid="508391667806868" type="ArmRight">
+                            <param id="0" name="Angle">-180</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="434482035877461" type="ArmLeft">
+                            <param id="0" name="Angle">-180</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
+        <comment></comment>
         <event-block sid="190254610987324">
             <conditions>
                 <condition id="0" name="On function" sid="864946631456812" type="Function">
                     <param id="0" name="Name">&quot;PlayerRight&quot;</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="456265810923912" type="System">
+                    <param id="0" name="Variable">PlayerDigging</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
                 </condition>
             </conditions>
             <actions>
@@ -44,7 +72,10 @@
                 <action id="7" name="Set mirrored" sid="788716160877555" type="Pickaxe">
                     <param id="0" name="State">1</param>
                 </action>
-                <action id="7" name="Set mirrored" sid="876623810917379" type="ArmRight">
+                <action id="8" name="Set flipped" sid="519547848685156" type="ArmRight">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="8" name="Set flipped" sid="473801742433918" type="ArmLeft">
                     <param id="0" name="State">1</param>
                 </action>
                 <action id="4" name="Set animation" sid="296238439497622" type="Player">
@@ -52,6 +83,19 @@
                     <param id="1" name="From">1</param>
                 </action>
             </actions>
+            <sub-events>
+                <event-block sid="129300157401185">
+                    <conditions />
+                    <actions>
+                        <action id="-8" name="Set angle" sid="424037652490012" type="ArmRight">
+                            <param id="0" name="Angle">0</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="942328613565420" type="ArmLeft">
+                            <param id="0" name="Angle">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-group description="" sid="134776785767488" title="Keyboard">
             <sub-events>
@@ -83,80 +127,138 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="545580762704417" title="Animation Control">
+            <sub-events>
+                <event-block sid="388709256062017">
+                    <conditions>
+                        <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="546237932872607" type="Player" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="805491885268526" type="Player">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-group description="" sid="386032833998473" title="Arms">
             <sub-events>
-                <event-block sid="191261706830003">
-                    <conditions>
-                        <condition id="6" name="On object clicked" sid="892782801452319" type="Mouse">
-                            <param id="0" name="Mouse button">0</param>
-                            <param id="1" name="Click type">0</param>
-                            <param id="2" name="Object clicked">Dirt</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" sid="477815517890097" type="Dirt" />
-                    </actions>
-                </event-block>
                 <event-block sid="493264707919656">
                     <conditions>
-                        <condition id="0" name="On click" sid="306287672672416" type="Mouse">
-                            <param id="0" name="Mouse button">0</param>
-                            <param id="1" name="Click type">0</param>
+                        <condition id="-6" name="Every X seconds" sid="551031875030884" type="System">
+                            <param id="0" name="Interval (seconds)">0.1</param>
                         </condition>
                     </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="369322019133455">
-                            <conditions />
-                            <actions>
-                                <action behavior="Sine" id="0" name="Set active" sid="769493000400032" type="Pickaxe">
-                                    <param id="0" name="State">1</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="458449634722679" type="System">
-                                    <param id="0" name="Seconds">0.25</param>
-                                </action>
-                                <action behavior="Sine" id="0" name="Set active" sid="526437343187245" type="Pickaxe">
-                                    <param id="0" name="State">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block disabled="1" sid="493828134288608">
-                    <conditions>
-                        <condition id="-1" name="Every tick" sid="968293762140786" type="System" />
-                    </conditions>
                     <actions>
-                        <action id="-8" name="Set angle" sid="351347818307057" type="ArmRight">
-                            <param id="0" name="Angle">lerp (angle(Self.X, Self.Y , Mouse.X , Mouse.Y), Self.Angle , 0.001 )</param>
+                        <action id="-4" name="Set position to another object" sid="775543054108421" type="HitBoxLeft">
+                            <param id="0" name="Object">Player</param>
+                            <param id="1" name="Image point (optional)">0</param>
                         </action>
-                        <action disabled="1" id="-8" name="Set angle" sid="835340919299261" type="Pickaxe">
-                            <param id="0" name="Angle">lerp (angle(Self.X, Self.Y , Mouse.X , Mouse.Y), Self.Angle , 0.001 )</param>
+                        <action id="-4" name="Set position to another object" sid="950335325633550" type="HitBoxRight">
+                            <param id="0" name="Object">Player</param>
+                            <param id="1" name="Image point (optional)">0</param>
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block disabled="1" sid="593123297890431">
-                            <conditions />
+                        <event-block sid="369322019133455">
+                            <conditions>
+                                <condition id="7" name="Cursor is over object" sid="306287672672416" type="Mouse">
+                                    <param id="0" name="Object">Dirt</param>
+                                </condition>
+                                <condition id="2" name="Mouse button is down" sid="620683899461943" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                </condition>
+                            </conditions>
                             <actions>
-                                <action id="-4" name="Set position to another object" sid="948873645154868" type="ArmRight">
-                                    <param id="0" name="Object">Player</param>
-                                    <param id="1" name="Image point (optional)">1</param>
-                                </action>
-                                <action id="-4" name="Set position to another object" sid="152916579659708" type="Pickaxe">
-                                    <param id="0" name="Object">ArmRight</param>
-                                    <param id="1" name="Image point (optional)">1</param>
+                                <action id="-9" name="Set value" sid="575465244609612" type="System">
+                                    <param id="0" name="Variable">PlayerDigging</param>
+                                    <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="158732555326236">
+                                    <conditions />
+                                    <actions>
+                                        <action behavior="Sine" id="0" name="Set active" sid="587384427809303" type="Pickaxe">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="597202574000609">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="576043769530242" type="HitBoxLeft">
+                                            <param id="0" name="Object">Dirt</param>
+                                        </condition>
+                                        <condition id="7" name="Is mirrored" sid="873637017096821" type="Player" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-12" name="Subtract from" sid="406828565753921" type="Dirt">
+                                            <param id="0" name="Instance variable">Hp</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="0" name="Spawn another object" sid="309006696443497" type="Dirt">
+                                            <param id="0" name="Object">DirtParticles</param>
+                                            <param id="1" name="Layer">1</param>
+                                            <param id="2" name="Image point">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="444704081750282">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="170736268840762" type="HitBoxRight">
+                                            <param id="0" name="Object">Dirt</param>
+                                        </condition>
+                                        <condition id="7" inverted="1" name="Is mirrored" sid="620037611015017" type="Player" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-12" name="Subtract from" sid="175065566490441" type="Dirt">
+                                            <param id="0" name="Instance variable">Hp</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="0" name="Spawn another object" sid="267639477116330" type="Dirt">
+                                            <param id="0" name="Object">DirtParticles</param>
+                                            <param id="1" name="Layer">1</param>
+                                            <param id="2" name="Image point">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
                 <comment></comment>
+                <event-block sid="524309977783320">
+                    <conditions>
+                        <condition id="2" inverted="1" name="Mouse button is down" sid="981693036539308" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Sine" id="0" name="Set active" sid="269704369706238" type="Pickaxe">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="453259365397782" type="System">
+                            <param id="0" name="Variable">PlayerDigging</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Arm position</comment>
                 <event-block sid="876710171736017">
                     <conditions>
                         <condition id="-1" name="Every tick" sid="761378533705071" type="System" />
                     </conditions>
                     <actions />
                     <sub-events>
+                        <event-block sid="587882265303679">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Set text" sid="961792012736491" type="DebugText">
+                                    <param id="0" name="Text">angle(ArmRight.X , ArmRight.Y , Mouse.X , Mouse.Y)</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="527369222743295">
                             <conditions />
                             <actions>
@@ -164,12 +266,13 @@
                                     <param id="0" name="Object">Player</param>
                                     <param id="1" name="Image point (optional)">1</param>
                                 </action>
+                                <action id="-4" name="Set position to another object" sid="497693012162032" type="ArmLeft">
+                                    <param id="0" name="Object">Player</param>
+                                    <param id="1" name="Image point (optional)">2</param>
+                                </action>
                                 <action id="-4" name="Set position to another object" sid="296097387149973" type="Pickaxe">
                                     <param id="0" name="Object">ArmRight</param>
                                     <param id="1" name="Image point (optional)">1</param>
-                                </action>
-                                <action disabled="1" id="-8" name="Set angle" sid="237658969351130" type="Pickaxe">
-                                    <param id="0" name="Angle">ArmRight.Angle</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -184,12 +287,12 @@
                                         <condition id="-8" name="Compare two values" sid="134030782636110" type="System">
                                             <param id="0" name="First value">angle(ArmRight.X , ArmRight.Y , Mouse.X , Mouse.Y)</param>
                                             <param id="1" name="Comparison">2</param>
-                                            <param id="2" name="Second value">90</param>
+                                            <param id="2" name="Second value">80</param>
                                         </condition>
                                         <condition id="-8" name="Compare two values" sid="783475604361886" type="System">
                                             <param id="0" name="First value">angle(ArmRight.X , ArmRight.Y , Mouse.X , Mouse.Y)</param>
                                             <param id="1" name="Comparison">4</param>
-                                            <param id="2" name="Second value">-90</param>
+                                            <param id="2" name="Second value">0</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -207,7 +310,13 @@
                             <actions />
                             <sub-events>
                                 <event-block sid="582925378891383">
-                                    <conditions />
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="130244031344182" type="System">
+                                            <param id="0" name="First value">angle(ArmRight.X , ArmRight.Y , Mouse.X , Mouse.Y)</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Second value">110</param>
+                                        </condition>
+                                    </conditions>
                                     <actions>
                                         <action id="-8" name="Set angle" sid="841873857732357" type="ArmRight">
                                             <param id="0" name="Angle">lerp (angle(Self.X, Self.Y , Mouse.X , Mouse.Y), Self.Angle , 0.001 )</param>
@@ -216,32 +325,215 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="587882265303679">
-                            <conditions />
-                            <actions>
-                                <action id="0" name="Set text" sid="961792012736491" type="DebugText">
-                                    <param id="0" name="Text">angle(ArmRight.X , ArmRight.Y , Mouse.X , Mouse.Y)</param>
-                                </action>
-                            </actions>
-                        </event-block>
                     </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="545580762704417" title="Animation Control">
+        <event-block sid="112750739163007">
+            <conditions>
+                <condition id="1" inverted="1" name="Is overlapping another object" sid="383764343962478" type="Pickaxe">
+                    <param id="0" name="Object">ArmRight</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="593039120591093" type="Pickaxe">
+                    <param id="0" name="Object">ArmRight</param>
+                    <param id="1" name="Image point (optional)">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="532465981872268" title="Dirt">
             <sub-events>
-                <event-block sid="388709256062017">
+                <event-block sid="690489115893259">
                     <conditions>
-                        <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="546237932872607" type="Player" />
+                        <condition id="-7" name="Compare instance variable" sid="907645185522590" type="Dirt">
+                            <param id="0" name="Instance variable">Hp</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="805491885268526" type="Player">
-                            <param id="0" name="Animation">&quot;Default&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
+                        <action id="-9" name="Destroy" sid="226116742827818" type="Dirt" />
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
+        <comment></comment>
+        <comment></comment>
+        <event-block sid="699661533289075">
+            <conditions>
+                <condition disabled="1" id="-19" name="On destroyed" sid="907279658894075" type="Dirt" />
+            </conditions>
+            <actions />
+        </event-block>
+        <comment></comment>
+        <event-block sid="106267408964391">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="418174054719643" type="Dirt" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="573367600550484">
+                    <conditions />
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="450534070369048" type="Dirt">
+                            <param id="0" name="Object">RUGUGU_UP_DIRT</param>
+                            <param id="1" name="Layer">&quot;Layer 1&quot;</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="180516056399932">
+                    <conditions />
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="897590406722377" type="Dirt">
+                            <param id="0" name="Object">RUGUGU_DOWN_DIRT</param>
+                            <param id="1" name="Layer">&quot;Layer 1&quot;</param>
+                            <param id="2" name="Image point">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="702139560428572">
+                    <conditions />
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="778680735227496" type="Dirt">
+                            <param id="0" name="Object">RUGUGU_Left_DIRT</param>
+                            <param id="1" name="Layer">&quot;Layer 1&quot;</param>
+                            <param id="2" name="Image point">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="809654589414406">
+                    <conditions />
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="713571486854116" type="Dirt">
+                            <param id="0" name="Object">RUGUGU_Right_DIRT</param>
+                            <param id="1" name="Layer">&quot;Layer 1&quot;</param>
+                            <param id="2" name="Image point">4</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="676498694801165">
+                    <conditions />
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="233041395917716" type="Dirt">
+                            <param id="0" name="Object">TopLeft</param>
+                            <param id="1" name="Layer">&quot;Layer 1&quot;</param>
+                            <param id="2" name="Image point">5</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="466552958893333">
+                    <conditions />
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="692199143018589" type="Dirt">
+                            <param id="0" name="Object">TopRight2</param>
+                            <param id="1" name="Layer">&quot;Layer 1&quot;</param>
+                            <param id="2" name="Image point">7</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="227030286693947">
+                    <conditions />
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="622871742786804" type="Dirt">
+                            <param id="0" name="Object">TopLeft2</param>
+                            <param id="1" name="Layer">&quot;Layer 1&quot;</param>
+                            <param id="2" name="Image point">6</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="638022597371402">
+                    <conditions />
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="797888922926780" type="Dirt">
+                            <param id="0" name="Object">BottomLeft</param>
+                            <param id="1" name="Layer">&quot;Layer 1&quot;</param>
+                            <param id="2" name="Image point">8</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="413478875051752">
+            <conditions>
+                <condition id="1" inverted="1" name="Is overlapping another object" sid="638842914695522" type="RUGUGU_DOWN_DIRT">
+                    <param id="0" name="Object">Dirt</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="472200020868686" type="RUGUGU_DOWN_DIRT" />
+            </actions>
+        </event-block>
+        <event-block sid="486781596898231">
+            <conditions>
+                <condition id="1" inverted="1" name="Is overlapping another object" sid="113524390667399" type="RUGUGU_UP_DIRT">
+                    <param id="0" name="Object">Dirt</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="293545720977698" type="RUGUGU_UP_DIRT" />
+            </actions>
+        </event-block>
+        <event-block sid="708880606654806">
+            <conditions>
+                <condition id="1" inverted="1" name="Is overlapping another object" sid="672314118135147" type="RUGUGU_Left_DIRT">
+                    <param id="0" name="Object">Dirt</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="507121207731967" type="RUGUGU_Left_DIRT" />
+            </actions>
+        </event-block>
+        <event-block sid="422504656587299">
+            <conditions>
+                <condition id="1" inverted="1" name="Is overlapping another object" sid="607118670644064" type="RUGUGU_Right_DIRT">
+                    <param id="0" name="Object">Dirt</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="675775302878942" type="RUGUGU_Right_DIRT" />
+            </actions>
+        </event-block>
+        <event-block sid="773447201083102">
+            <conditions>
+                <condition id="1" inverted="1" name="Is overlapping another object" sid="492799950984462" type="TopLeft">
+                    <param id="0" name="Object">Dirt</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="608146012090170" type="TopLeft" />
+            </actions>
+        </event-block>
+        <event-block sid="423087342622852">
+            <conditions>
+                <condition id="1" inverted="1" name="Is overlapping another object" sid="921734718678649" type="TopRight2">
+                    <param id="0" name="Object">Dirt</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="278611904196802" type="TopRight2" />
+            </actions>
+        </event-block>
+        <event-block sid="318257906030895">
+            <conditions>
+                <condition id="1" inverted="1" name="Is overlapping another object" sid="761934429532623" type="TopLeft2">
+                    <param id="0" name="Object">Dirt</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="200051653091404" type="TopLeft2" />
+            </actions>
+        </event-block>
+        <event-block sid="322183575067595">
+            <conditions>
+                <condition id="1" inverted="1" name="Is overlapping another object" sid="277150107368771" type="BottomLeft">
+                    <param id="0" name="Object">Dirt</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="180209905964408" type="BottomLeft" />
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
