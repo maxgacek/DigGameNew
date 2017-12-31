@@ -15,11 +15,12 @@
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Chris Kent" id="SpriteFontPlus" version="1">SpriteFont+</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
     </used-plugins>
     <used-behaviors>
-        <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
@@ -68,7 +69,7 @@
         </object-folder>
         <object-folder name="Objects">
             <object-folder name="Walls">
-                <object-type name="TopLeft" sid="892790945764574">
+                <object-type name="Dirt_TopLeft" sid="892790945764574">
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="599409760930156" speed="5">
@@ -83,7 +84,7 @@
                         </animation>
                     </animation-folder>
                 </object-type>
-                <object-type name="TopLeft2" sid="272261478295923">
+                <object-type name="Dirt_TopLeft2" sid="272261478295923">
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="656058372856025" speed="5">
@@ -98,7 +99,7 @@
                         </animation>
                     </animation-folder>
                 </object-type>
-                <object-type name="Wall_Left" sid="385784851370174">
+                <object-type name="Dirt_Wall_Left" sid="385784851370174">
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="659067451734943" speed="5">
@@ -113,7 +114,7 @@
                         </animation>
                     </animation-folder>
                 </object-type>
-                <object-type name="Wall_Right" sid="874931556267560">
+                <object-type name="Dirt_Wall_Right" sid="874931556267560">
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="245686370632296" speed="5">
@@ -128,7 +129,7 @@
                         </animation>
                     </animation-folder>
                 </object-type>
-                <object-type name="WallBottom" sid="846271317457787">
+                <object-type name="Dirt_WallBottom" sid="846271317457787">
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="585194451253264" speed="5">
@@ -143,7 +144,7 @@
                         </animation>
                     </animation-folder>
                 </object-type>
-                <object-type name="WallTop" sid="350826263481297">
+                <object-type name="Dirt_WallTop" sid="350826263481297">
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="689538889257928" speed="5">
@@ -158,10 +159,115 @@
                         </animation>
                     </animation-folder>
                 </object-type>
-                <object-type name="TopRight2" sid="311624842704305">
+                <object-type name="Dirt_TopRight2" sid="311624842704305">
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="659462614055530" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Max\Desktop\Dig To China New\Graphics\Sides\CornerRightTop.png">
+                                <collision-poly>
+                                    <point x="0" y="0.285714" />
+                                    <point x="0.714286" y="0.285714" />
+                                    <point x="0.714286" y="1" />
+                                    <point x="0" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Stone_Wall_Left2" sid="219320809945673">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="957653048935548" speed="5">
+                            <frame duration="1" hotspotX="0.8" hotspotY="0.5" original-source="C:\Users\Max\Desktop\Dig To China New\Graphics\Sides Stone\IMG_31122017_155400_1.png">
+                                <collision-poly>
+                                    <point x="0.1" y="0.03125" />
+                                    <point x="0.9" y="0.03125" />
+                                    <point x="0.9" y="0.96875" />
+                                    <point x="0.1125" y="0.96875" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Stone_WallBottom2" sid="836011152186897">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="242826264687172" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.25">
+                                <collision-poly>
+                                    <point x="0.03125" y="0.125" />
+                                    <point x="0.96875" y="0.125" />
+                                    <point x="0.96875" y="0.875" />
+                                    <point x="0.03125" y="0.875" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Stone_WallTop2" sid="162791220421834">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="397898128400611" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.75">
+                                <collision-poly>
+                                    <point x="0.03125" y="0.125" />
+                                    <point x="0.96875" y="0.125" />
+                                    <point x="0.96875" y="0.875" />
+                                    <point x="0.03125" y="0.875" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Stone_Wall_Right2" sid="755633176244067">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="385533803834819" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Max\Desktop\Dig To China New\Graphics\Sides\IMG_31122017_004505_0.png">
+                                <collision-poly>
+                                    <point x="0.125" y="0.03125" />
+                                    <point x="0.875" y="0.03125" />
+                                    <point x="0.875" y="0.96875" />
+                                    <point x="0.125" y="0.96875" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Stone_TopLeft3" sid="304463837761070">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="839595225074531" speed="5">
+                            <frame duration="1" hotspotX="0.642857" hotspotY="0.571429" original-source="C:\Users\Max\Desktop\Dig To China New\Graphics\Sides\CornerLeft.png">
+                                <collision-poly>
+                                    <point x="0.142857" y="0.142857" />
+                                    <point x="0.857143" y="0.142857" />
+                                    <point x="0.857143" y="0.857143" />
+                                    <point x="0.142857" y="0.857143" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="STONEETopLeft3" sid="195317609204426">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="470524557732437" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Max\Desktop\Dig To China New\Graphics\Sides\CornerRightBottom.png">
+                                <collision-poly>
+                                    <point x="0.357143" y="0" />
+                                    <point x="1" y="0" />
+                                    <point x="1" y="0.642857" />
+                                    <point x="0.357143" y="0.642857" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Stone_TopRight3" sid="214205104309916">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="397732948401377" speed="5">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Max\Desktop\Dig To China New\Graphics\Sides\CornerRightTop.png">
                                 <collision-poly>
                                     <point x="0" y="0.285714" />
@@ -180,13 +286,11 @@
                     <instance-variables>
                         <instance-variable name="Hp" sid="821038107181686" type="number" />
                         <instance-variable name="Type" sid="889799996949009" type="number" />
+                        <instance-variable name="ID" sid="252300074280241" type="number" />
                     </instance-variables>
                     <behaviors>
                         <behavior-type name="Solid" sid="838464809522936">
                             <behavior id="solid" />
-                        </behavior-type>
-                        <behavior-type name="Physics" sid="837139016943952">
-                            <behavior id="Physics" />
                         </behavior-type>
                     </behaviors>
                     <animation-folder>
@@ -238,53 +342,6 @@
                                 <image-point name="Imagepoint 8" x="0" y="0" />
                             </frame>
                         </animation>
-                        <animation framecount="1" loop="0" name="GOLD" pingpong="0" repeatcount="1" repeatto="0" sid="923684883406371" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Max\Desktop\Dig To China New\Graphics\Dirt_Block_Gold.png">
-                                <image-point name="Top" x="0.5" y="0" />
-                                <image-point name="Down" x="0.5" y="1.03125" />
-                                <image-point name="Left" x="0" y="0.5" />
-                                <image-point name="Right" x="1" y="0.5" />
-                                <image-point name="TopLeft" x="1" y="1" />
-                                <image-point name="TopRight" x="0" y="1" />
-                                <image-point name="Imagepoint 7" x="1" y="0" />
-                                <image-point name="Imagepoint 8" x="0" y="0" />
-                            </frame>
-                        </animation>
-                        <animation framecount="1" loop="0" name="DIAMONDS" pingpong="0" repeatcount="1" repeatto="0" sid="726136873250460" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Max\Desktop\Dig To China New\Graphics\Dirt_Diamonds.png">
-                                <image-point name="Top" x="0.5" y="0" />
-                                <image-point name="Down" x="0.5" y="1.03125" />
-                                <image-point name="Left" x="0" y="0.5" />
-                                <image-point name="Right" x="1" y="0.5" />
-                                <image-point name="TopLeft" x="1" y="1" />
-                                <image-point name="TopRight" x="0" y="1" />
-                                <image-point name="Imagepoint 7" x="1" y="0" />
-                                <image-point name="Imagepoint 8" x="0" y="0" />
-                            </frame>
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="Dirt_Stone" sid="723790227191807">
-                    <plugin id="Sprite" />
-                    <instance-variables>
-                        <instance-variable name="Hp" sid="515158628580335" type="number" />
-                        <instance-variable name="Type" sid="210148831910646" type="number" />
-                    </instance-variables>
-                    <behaviors>
-                        <behavior-type name="Solid" sid="265060402403388">
-                            <behavior id="solid" />
-                        </behavior-type>
-                    </behaviors>
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="DIRT" pingpong="0" repeatcount="1" repeatto="0" sid="434541669993785" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Max\Desktop\Dig To China New\Graphics\Dirt_Block_Conect.png" />
-                        </animation>
-                        <animation framecount="1" loop="0" name="IRON" pingpong="0" repeatcount="1" repeatto="0" sid="553783074035612" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Max\Desktop\Dig To China New\Graphics\Dirt_Block_Iron.png" />
-                        </animation>
-                        <animation framecount="1" loop="0" name="GOLD" pingpong="0" repeatcount="1" repeatto="0" sid="973118364228410" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Max\Desktop\Dig To China New\Graphics\Dirt_Block_Gold.png" />
-                        </animation>
                     </animation-folder>
                 </object-type>
                 <object-type name="Stone" sid="267652577888985">
@@ -292,6 +349,7 @@
                     <instance-variables>
                         <instance-variable name="Hp" sid="108532774488701" type="number" />
                         <instance-variable name="Type" sid="196530239904090" type="number" />
+                        <instance-variable name="ID" sid="952990308076985" type="number" />
                     </instance-variables>
                     <behaviors>
                         <behavior-type name="Solid" sid="935012480558990">
@@ -299,14 +357,89 @@
                         </behavior-type>
                     </behaviors>
                     <animation-folder>
-                        <animation framecount="1" loop="0" name="DIRT" pingpong="0" repeatcount="1" repeatto="0" sid="945102025539238" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Max\Desktop\Dig To China New\Graphics\Stone_Block.png" />
+                        <animation framecount="1" loop="0" name="STONE" pingpong="0" repeatcount="1" repeatto="0" sid="945102025539238" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Max\Desktop\Dig To China New\Graphics\Stone_Block.png">
+                                <image-point name="Imagepoint 1" x="0.5" y="0" />
+                                <image-point name="Imagepoint 2" x="0.5" y="1" />
+                                <image-point name="Imagepoint 3" x="0" y="0.5" />
+                                <image-point name="Imagepoint 4" x="1" y="0.5" />
+                                <image-point name="Imagepoint 5" x="1" y="1" />
+                                <image-point name="Imagepoint 6" x="0" y="1" />
+                                <image-point name="Imagepoint 7" x="1" y="0" />
+                                <image-point name="Imagepoint 8" x="0" y="0" />
+                            </frame>
                         </animation>
                         <animation framecount="1" loop="0" name="IRON" pingpong="0" repeatcount="1" repeatto="0" sid="935567194499357" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Max\Desktop\Dig To China New\Graphics\Stone_Block_Iron.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Max\Desktop\Dig To China New\Graphics\Stone_Block_Iron.png">
+                                <image-point name="Imagepoint 1" x="0.5" y="0" />
+                                <image-point name="Imagepoint 2" x="0.5" y="1" />
+                                <image-point name="Imagepoint 3" x="0" y="0.5" />
+                                <image-point name="Imagepoint 4" x="1" y="0.5" />
+                                <image-point name="Imagepoint 5" x="1" y="1" />
+                                <image-point name="Imagepoint 6" x="0" y="1" />
+                                <image-point name="Imagepoint 7" x="1" y="0" />
+                                <image-point name="Imagepoint 8" x="0" y="0" />
+                            </frame>
                         </animation>
                         <animation framecount="1" loop="0" name="GOLD" pingpong="0" repeatcount="1" repeatto="0" sid="916249382297926" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Max\Desktop\Dig To China New\Graphics\Stone_Block_Gold.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Max\Desktop\Dig To China New\Graphics\Stone_Block_Gold.png">
+                                <image-point name="Imagepoint 1" x="0.5" y="0" />
+                                <image-point name="Imagepoint 2" x="0.5" y="1" />
+                                <image-point name="Imagepoint 3" x="0" y="0.5" />
+                                <image-point name="Imagepoint 4" x="1" y="0.5" />
+                                <image-point name="Imagepoint 5" x="1" y="1" />
+                                <image-point name="Imagepoint 6" x="0" y="1" />
+                                <image-point name="Imagepoint 7" x="1" y="0" />
+                                <image-point name="Imagepoint 8" x="0" y="0" />
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="DIAMOND" pingpong="0" repeatcount="1" repeatto="0" sid="672649319469383" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Max\Desktop\Dig To China New\Graphics\Dirt_Diamonds.png">
+                                <image-point name="Imagepoint 1" x="0.5" y="0" />
+                                <image-point name="Imagepoint 2" x="0.5" y="1" />
+                                <image-point name="Imagepoint 3" x="0" y="0.5" />
+                                <image-point name="Imagepoint 4" x="1" y="0.5" />
+                                <image-point name="Imagepoint 5" x="1" y="1" />
+                                <image-point name="Imagepoint 6" x="0" y="1" />
+                                <image-point name="Imagepoint 7" x="1" y="0" />
+                                <image-point name="Imagepoint 8" x="0" y="0" />
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="COAL" pingpong="0" repeatcount="1" repeatto="0" sid="545719851991884" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Max\Desktop\Dig To China New\Graphics\IMG_31122017_151533_0.png">
+                                <image-point name="Imagepoint 1" x="0.5" y="0" />
+                                <image-point name="Imagepoint 2" x="0.5" y="1" />
+                                <image-point name="Imagepoint 3" x="0" y="0.5" />
+                                <image-point name="Imagepoint 4" x="1" y="0.5" />
+                                <image-point name="Imagepoint 5" x="1" y="1" />
+                                <image-point name="Imagepoint 6" x="0" y="1" />
+                                <image-point name="Imagepoint 7" x="1" y="0" />
+                                <image-point name="Imagepoint 8" x="0" y="0" />
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="COPPER" pingpong="0" repeatcount="1" repeatto="0" sid="524166761269905" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Max\Desktop\Dig To China New\Graphics\IMG_31122017_151538_0.png">
+                                <image-point name="Imagepoint 1" x="0.5" y="0" />
+                                <image-point name="Imagepoint 2" x="0.5" y="1" />
+                                <image-point name="Imagepoint 3" x="0" y="0.5" />
+                                <image-point name="Imagepoint 4" x="1" y="0.5" />
+                                <image-point name="Imagepoint 5" x="1" y="1" />
+                                <image-point name="Imagepoint 6" x="0" y="1" />
+                                <image-point name="Imagepoint 7" x="1" y="0" />
+                                <image-point name="Imagepoint 8" x="0" y="0" />
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="EMERALD" pingpong="0" repeatcount="1" repeatto="0" sid="779771698078314" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Max\Desktop\Dig To China New\Graphics\IMG_31122017_151544_0.png">
+                                <image-point name="Imagepoint 1" x="0.5" y="0" />
+                                <image-point name="Imagepoint 2" x="0.5" y="1" />
+                                <image-point name="Imagepoint 3" x="0" y="0.5" />
+                                <image-point name="Imagepoint 4" x="1" y="0.5" />
+                                <image-point name="Imagepoint 5" x="1" y="1" />
+                                <image-point name="Imagepoint 6" x="0" y="1" />
+                                <image-point name="Imagepoint 7" x="1" y="0" />
+                                <image-point name="Imagepoint 8" x="0" y="0" />
+                            </frame>
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -530,7 +663,7 @@
                 <plugin id="TiledBg" />
                 <texture original-source="C:\Users\Max\Desktop\Dig To China New\Graphics\background.png" />
             </object-type>
-            <object-type name="BottomLeft" sid="895798262021089">
+            <object-type name="Dirt_BottomLeft" sid="895798262021089">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="308911017810185" speed="5">
@@ -597,19 +730,43 @@
                 </effects>
                 <texture />
             </object-type>
+            <object-type name="Stone_BottomLeft2" sid="410630223176850">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="436855564501822" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Max\Desktop\Dig To China New\Graphics\Sides\CornerLeftTop.png">
+                            <collision-poly>
+                                <point x="0.285714" y="0.285714" />
+                                <point x="1" y="0.285714" />
+                                <point x="1" y="1" />
+                                <point x="0.285714" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
+        <object-type name="ResourcesText" sid="489723448113634">
+            <plugin id="SpriteFontPlus" />
+            <behaviors>
+                <behavior-type name="Fade" sid="406478474171053">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
     </object-folder>
     <families>
         <family name="Blocks" plugin-id="Sprite" sid="597737190612101">
             <members>
                 <member>Dirt</member>
-                <member>Dirt_Stone</member>
                 <member>Stone</member>
             </members>
         </family>
     </families>
     <layout-folder>
-        <layout>Layout 1.xml</layout>
+        <layout>Game.xml</layout>
+        <layout>Shop.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Main.xml</event-sheet>

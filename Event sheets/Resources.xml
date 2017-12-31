@@ -3,8 +3,303 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Resources</name>
     <events>
-        <variable constant="0" name="Diamonds" sid="220174687260938" static="0" type="number">0</variable>
-        <variable constant="0" name="Gold" sid="104880595922334" static="0" type="number">0</variable>
+        <variable constant="0" name="Coal" sid="982054441790390" static="0" type="number">0</variable>
+        <variable constant="0" name="Copper" sid="952712520569789" static="0" type="number">0</variable>
         <variable constant="0" name="Iron" sid="876228485792832" static="0" type="number">0</variable>
+        <variable constant="0" name="Gold" sid="104880595922334" static="0" type="number">0</variable>
+        <variable constant="0" name="Emerald" sid="324211041476309" static="0" type="number">0</variable>
+        <variable constant="0" name="Diamonds" sid="220174687260938" static="0" type="number">0</variable>
+        <event-block sid="263336544760455">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="206166888017634" type="Dirt" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="836524641718118">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="400555121162946" type="Dirt">
+                            <param id="0" name="Instance variable">ID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="485579333924772" type="System">
+                            <param id="0" name="Variable">Coal</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="808923445795985" type="Function">
+                            <param id="0" name="Name">&quot;ResourcesAdded&quot;</param>
+                            <param id="1" name="Parameter {n}">Dirt.ID</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="671087074648939">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="589715639554205" type="Dirt">
+                            <param id="0" name="Instance variable">ID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="931100910697358" type="System">
+                            <param id="0" name="Variable">Copper</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="422362124265996" type="Function">
+                            <param id="0" name="Name">&quot;ResourcesAdded&quot;</param>
+                            <param id="1" name="Parameter {n}">Dirt.ID</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="828233144759808">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="611134690385737" type="Dirt">
+                            <param id="0" name="Instance variable">ID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="532293909561701" type="System">
+                            <param id="0" name="Variable">Iron</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="959856626811492" type="Function">
+                            <param id="0" name="Name">&quot;ResourcesAdded&quot;</param>
+                            <param id="1" name="Parameter {n}">Dirt.ID</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment></comment>
+        <event-block sid="820821525361731">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="838159650595731" type="Stone" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="214088189395254">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="409381552808179" type="Stone">
+                            <param id="0" name="Instance variable">ID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="589463786628951" type="System">
+                            <param id="0" name="Variable">Coal</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="698553615202448" type="Function">
+                            <param id="0" name="Name">&quot;ResourcesAdded&quot;</param>
+                            <param id="1" name="Parameter {n}">Dirt.ID</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="330285165363831">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="854561622911068" type="Stone">
+                            <param id="0" name="Instance variable">ID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="296421355238851" type="System">
+                            <param id="0" name="Variable">Copper</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="314663948394443" type="Function">
+                            <param id="0" name="Name">&quot;ResourcesAdded&quot;</param>
+                            <param id="1" name="Parameter {n}">Dirt.ID</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="288455327095387">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="653142747641387" type="Stone">
+                            <param id="0" name="Instance variable">ID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="464950532549310" type="System">
+                            <param id="0" name="Variable">Iron</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="185894871851465" type="Function">
+                            <param id="0" name="Name">&quot;ResourcesAdded&quot;</param>
+                            <param id="1" name="Parameter {n}">Dirt.ID</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="355622024710760">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="669788410282637" type="Stone">
+                            <param id="0" name="Instance variable">ID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="202471649065809" type="System">
+                            <param id="0" name="Variable">Gold</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="108678848758670" type="Function">
+                            <param id="0" name="Name">&quot;ResourcesAdded&quot;</param>
+                            <param id="1" name="Parameter {n}">Dirt.ID</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="247896326408095">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="378155596276595" type="Stone">
+                            <param id="0" name="Instance variable">ID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="992929796743004" type="System">
+                            <param id="0" name="Variable">Emerald</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="546541678373349" type="Function">
+                            <param id="0" name="Name">&quot;ResourcesAdded&quot;</param>
+                            <param id="1" name="Parameter {n}">Dirt.ID</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="830354779696497">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="419093559579576" type="Stone">
+                            <param id="0" name="Instance variable">ID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">6</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="952313283129921" type="System">
+                            <param id="0" name="Variable">Diamonds</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="283412803461655" type="Function">
+                            <param id="0" name="Name">&quot;ResourcesAdded&quot;</param>
+                            <param id="1" name="Parameter {n}">Dirt.ID</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment></comment>
+        <event-block sid="396722488266293">
+            <conditions>
+                <condition id="0" name="On function" sid="342546857760697" type="Function">
+                    <param id="0" name="Name">&quot;ResourcesAdded&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="878596909274694">
+                    <conditions />
+                    <actions>
+                        <action behavior="Fade" id="1" name="Start fade" sid="813620977421810" type="ResourcesText" />
+                        <action behavior="Fade" id="0" name="Restart fade" sid="533194450576966" type="ResourcesText" />
+                    </actions>
+                    <sub-events>
+                        <event-block sid="589996413828927">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="475272598631016" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="118449692998563" type="ResourcesText">
+                                    <param id="0" name="Text">&quot;Added: Coal&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="236720661005850">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="670333827358771" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="778973823604981" type="ResourcesText">
+                                    <param id="0" name="Text">&quot;Added: Copper&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="361391214700092">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="529355505562198" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="973441815899448" type="ResourcesText">
+                                    <param id="0" name="Text">&quot;Added: Iron&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="587338804060557">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="356566361650202" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="567979521380832" type="ResourcesText">
+                                    <param id="0" name="Text">&quot;Added: Gold&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="420293220227896">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="977633224341095" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="870587774120010" type="ResourcesText">
+                                    <param id="0" name="Text">&quot;Added: Emerald&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="426812269997816">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="271211444785427" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">6</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="724320140693004" type="ResourcesText">
+                                    <param id="0" name="Text">&quot;Added: Diamond&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
     </events>
 </c2eventsheet>

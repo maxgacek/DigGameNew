@@ -302,78 +302,158 @@
                             </conditions>
                             <actions />
                             <sub-events>
-                                <event-block sid="597202574000609">
-                                    <conditions>
-                                        <condition id="7" name="Cursor is over object" sid="306287672672416" type="Mouse">
-                                            <param id="0" name="Object">Dirt</param>
-                                        </condition>
-                                        <condition id="1" name="Is overlapping another object" sid="576043769530242" type="HitBoxLeft">
-                                            <param id="0" name="Object">Dirt</param>
-                                        </condition>
-                                        <condition id="7" name="Is mirrored" sid="873637017096821" type="Player" />
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="Sine" id="0" name="Set active" sid="587384427809303" type="Pickaxe">
-                                            <param id="0" name="State">1</param>
-                                        </action>
-                                        <action id="-9" name="Set value" sid="575465244609612" type="System">
-                                            <param id="0" name="Variable">PlayerDigging</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                    </actions>
+                                <event-group description="" sid="418444112501183" title="Dirt_Mouse">
                                     <sub-events>
-                                        <event-block sid="494711802848776">
-                                            <conditions />
+                                        <event-block sid="597202574000609">
+                                            <conditions>
+                                                <condition id="7" name="Cursor is over object" sid="306287672672416" type="Mouse">
+                                                    <param id="0" name="Object">Dirt</param>
+                                                </condition>
+                                                <condition id="1" name="Is overlapping another object" sid="576043769530242" type="HitBoxLeft">
+                                                    <param id="0" name="Object">Dirt</param>
+                                                </condition>
+                                                <condition id="7" name="Is mirrored" sid="873637017096821" type="Player" />
+                                            </conditions>
                                             <actions>
-                                                <action id="-12" name="Subtract from" sid="406828565753921" type="Dirt">
-                                                    <param id="0" name="Instance variable">Hp</param>
-                                                    <param id="1" name="Value">Pickaxe_DMG</param>
+                                                <action behavior="Sine" id="0" name="Set active" sid="587384427809303" type="Pickaxe">
+                                                    <param id="0" name="State">1</param>
                                                 </action>
-                                                <action id="0" name="Spawn another object" sid="309006696443497" type="Dirt">
-                                                    <param id="0" name="Object">DirtDigging</param>
-                                                    <param id="1" name="Layer">&quot;Blocks&quot;</param>
-                                                    <param id="2" name="Image point">0</param>
+                                                <action id="-9" name="Set value" sid="575465244609612" type="System">
+                                                    <param id="0" name="Variable">PlayerDigging</param>
+                                                    <param id="1" name="Value">1</param>
                                                 </action>
                                             </actions>
+                                            <sub-events>
+                                                <event-block sid="494711802848776">
+                                                    <conditions />
+                                                    <actions>
+                                                        <action id="-12" name="Subtract from" sid="406828565753921" type="Dirt">
+                                                            <param id="0" name="Instance variable">Hp</param>
+                                                            <param id="1" name="Value">Pickaxe_DMG</param>
+                                                        </action>
+                                                        <action id="0" name="Spawn another object" sid="309006696443497" type="Dirt">
+                                                            <param id="0" name="Object">DirtDigging</param>
+                                                            <param id="1" name="Layer">&quot;Blocks&quot;</param>
+                                                            <param id="2" name="Image point">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
-                                    </sub-events>
-                                </event-block>
-                                <event-block sid="444704081750282">
-                                    <conditions>
-                                        <condition id="7" name="Cursor is over object" sid="544761451615114" type="Mouse">
-                                            <param id="0" name="Object">Dirt</param>
-                                        </condition>
-                                        <condition id="1" name="Is overlapping another object" sid="170736268840762" type="HitBoxRight">
-                                            <param id="0" name="Object">Dirt</param>
-                                        </condition>
-                                        <condition id="7" inverted="1" name="Is mirrored" sid="620037611015017" type="Player" />
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="Sine" id="0" name="Set active" sid="446956162656538" type="Pickaxe">
-                                            <param id="0" name="State">1</param>
-                                        </action>
-                                        <action id="-9" name="Set value" sid="538034274072483" type="System">
-                                            <param id="0" name="Variable">PlayerDigging</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                    </actions>
-                                    <sub-events>
-                                        <event-block sid="367668209783295">
-                                            <conditions />
+                                        <event-block sid="444704081750282">
+                                            <conditions>
+                                                <condition id="7" name="Cursor is over object" sid="544761451615114" type="Mouse">
+                                                    <param id="0" name="Object">Dirt</param>
+                                                </condition>
+                                                <condition id="1" name="Is overlapping another object" sid="170736268840762" type="HitBoxRight">
+                                                    <param id="0" name="Object">Dirt</param>
+                                                </condition>
+                                                <condition id="7" inverted="1" name="Is mirrored" sid="620037611015017" type="Player" />
+                                            </conditions>
                                             <actions>
-                                                <action id="-12" name="Subtract from" sid="175065566490441" type="Dirt">
-                                                    <param id="0" name="Instance variable">Hp</param>
-                                                    <param id="1" name="Value">Pickaxe_DMG</param>
+                                                <action behavior="Sine" id="0" name="Set active" sid="446956162656538" type="Pickaxe">
+                                                    <param id="0" name="State">1</param>
                                                 </action>
-                                                <action id="0" name="Spawn another object" sid="267639477116330" type="Dirt">
-                                                    <param id="0" name="Object">DirtDigging</param>
-                                                    <param id="1" name="Layer">&quot;Blocks&quot;</param>
-                                                    <param id="2" name="Image point">0</param>
+                                                <action id="-9" name="Set value" sid="538034274072483" type="System">
+                                                    <param id="0" name="Variable">PlayerDigging</param>
+                                                    <param id="1" name="Value">1</param>
                                                 </action>
                                             </actions>
+                                            <sub-events>
+                                                <event-block sid="367668209783295">
+                                                    <conditions />
+                                                    <actions>
+                                                        <action id="-12" name="Subtract from" sid="175065566490441" type="Dirt">
+                                                            <param id="0" name="Instance variable">Hp</param>
+                                                            <param id="1" name="Value">Pickaxe_DMG</param>
+                                                        </action>
+                                                        <action id="0" name="Spawn another object" sid="267639477116330" type="Dirt">
+                                                            <param id="0" name="Object">DirtDigging</param>
+                                                            <param id="1" name="Layer">&quot;Blocks&quot;</param>
+                                                            <param id="2" name="Image point">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                     </sub-events>
-                                </event-block>
+                                </event-group>
+                                <event-group description="" sid="645116426038305" title="DirtStone_Mouse">
+                                    <sub-events>
+                                        <event-block sid="980548075515756">
+                                            <conditions>
+                                                <condition id="7" name="Cursor is over object" sid="752060606239323" type="Mouse">
+                                                    <param id="0" name="Object">Stone</param>
+                                                </condition>
+                                                <condition id="1" name="Is overlapping another object" sid="990130067532049" type="HitBoxLeft">
+                                                    <param id="0" name="Object">Stone</param>
+                                                </condition>
+                                                <condition id="7" name="Is mirrored" sid="601597440661382" type="Player" />
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Sine" id="0" name="Set active" sid="899146611984218" type="Pickaxe">
+                                                    <param id="0" name="State">1</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="359810616213632" type="System">
+                                                    <param id="0" name="Variable">PlayerDigging</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="448179610764196">
+                                                    <conditions />
+                                                    <actions>
+                                                        <action id="-12" name="Subtract from" sid="565156805010334" type="Stone">
+                                                            <param id="0" name="Instance variable">Hp</param>
+                                                            <param id="1" name="Value">Pickaxe_DMG</param>
+                                                        </action>
+                                                        <action id="0" name="Spawn another object" sid="855821545107302" type="Stone">
+                                                            <param id="0" name="Object">DirtDigging</param>
+                                                            <param id="1" name="Layer">&quot;Blocks&quot;</param>
+                                                            <param id="2" name="Image point">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="815286989183753">
+                                            <conditions>
+                                                <condition id="7" name="Cursor is over object" sid="317919626544995" type="Mouse">
+                                                    <param id="0" name="Object">Stone</param>
+                                                </condition>
+                                                <condition id="1" name="Is overlapping another object" sid="810738366041444" type="HitBoxRight">
+                                                    <param id="0" name="Object">Stone</param>
+                                                </condition>
+                                                <condition id="7" inverted="1" name="Is mirrored" sid="497021962479223" type="Player" />
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Sine" id="0" name="Set active" sid="151236951039810" type="Pickaxe">
+                                                    <param id="0" name="State">1</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="728247432818662" type="System">
+                                                    <param id="0" name="Variable">PlayerDigging</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="658963588160512">
+                                                    <conditions />
+                                                    <actions>
+                                                        <action id="-12" name="Subtract from" sid="661951449581112" type="Stone">
+                                                            <param id="0" name="Instance variable">Hp</param>
+                                                            <param id="1" name="Value">Pickaxe_DMG</param>
+                                                        </action>
+                                                        <action id="0" name="Spawn another object" sid="137674703328642" type="Stone">
+                                                            <param id="0" name="Object">DirtDigging</param>
+                                                            <param id="1" name="Layer">&quot;Blocks&quot;</param>
+                                                            <param id="2" name="Image point">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-group>
                             </sub-events>
                         </event-block>
                     </sub-events>
@@ -383,9 +463,6 @@
                     <conditions>
                         <condition id="2" inverted="1" name="Mouse button is down" sid="981693036539308" type="Mouse">
                             <param id="0" name="Mouse button">0</param>
-                        </condition>
-                        <condition id="7" inverted="1" name="Cursor is over object" sid="910529085735639" type="Mouse">
-                            <param id="0" name="Object">Dirt</param>
                         </condition>
                     </conditions>
                     <actions>
