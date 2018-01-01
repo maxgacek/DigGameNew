@@ -10,7 +10,7 @@
         <include>Cam</include>
         <include>Generator</include>
         <include>Controls</include>
-        <variable constant="0" name="Money" sid="236521375857586" static="0" type="number">0</variable>
+        <variable constant="0" name="Money" sid="236521375857586" static="0" type="number">1000</variable>
         <variable constant="0" name="Ligthing" sid="701957451325265" static="0" type="number">0</variable>
         <event-group description="" sid="151046669045211" title="Light out when under Dirt">
             <sub-events>

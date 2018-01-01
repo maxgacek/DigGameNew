@@ -988,7 +988,7 @@
                     <effect-instances>
                         <effect-instance type="Brightness">
                             <parameters>
-                                <brightness>0.85</brightness>
+                                <brightness>1</brightness>
                             </parameters>
                         </effect-instance>
                     </effect-instances>
@@ -1020,7 +1020,7 @@
                     <effect-instances>
                         <effect-instance type="Brightness">
                             <parameters>
-                                <brightness>1</brightness>
+                                <brightness>0.85</brightness>
                             </parameters>
                         </effect-instance>
                     </effect-instances>

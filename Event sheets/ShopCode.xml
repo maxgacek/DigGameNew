@@ -73,7 +73,6 @@
         </event-block>
         <event-group description="" sid="322058374458213" title="Upgrades">
             <sub-events>
-                <comment>Pickaxe</comment>
                 <event-block sid="512207214125661">
                     <conditions>
                         <condition id="6" name="On object clicked" sid="824537068042417" type="Mouse">
@@ -84,7 +83,7 @@
                         <condition id="-7" name="Compare instance variable" sid="786267519117954" type="UpgradeBuy">
                             <param id="0" name="Instance variable">UpgradeType</param>
                             <param id="1" name="Comparison">1</param>
-                            <param id="2" name="Value">1</param>
+                            <param id="2" name="Value">2</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -109,6 +108,7 @@
                         </action>
                     </actions>
                     <sub-events>
+                        <comment>Pickaxe</comment>
                         <event-block sid="507372530480390">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="778695594927139" type="UpgradeBuy">
@@ -137,7 +137,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <comment>Backpack</comment>
+                        <comment>Time</comment>
                         <event-block sid="663892736933875">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="390581652451181" type="UpgradeBuy">
@@ -148,38 +148,25 @@
                                 <condition id="-14" name="Compare variable" sid="927879348952476" type="System">
                                     <param id="0" name="Variable">Money</param>
                                     <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Value">Upgrade_Backpack_Cost</param>
+                                    <param id="2" name="Value">Upgrade_Time_Cost</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-28" name="Set effect parameter" sid="855008789456511" type="UpgradeBuy">
-                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
-                                    <param id="1" name="Parameter index">0</param>
-                                    <param id="2" name="Value">85</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="162969994319979" type="System">
-                                    <param id="0" name="Seconds">0.2</param>
-                                </action>
-                                <action id="-28" name="Set effect parameter" sid="886458941714141" type="UpgradeBuy">
-                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
-                                    <param id="1" name="Parameter index">0</param>
-                                    <param id="2" name="Value">85</param>
-                                </action>
-                                <action disabled="1" id="-11" name="Subtract from" sid="484287870697097" type="System">
+                                <action id="-11" name="Subtract from" sid="296099907062355" type="System">
                                     <param id="0" name="Variable">Money</param>
-                                    <param id="1" name="Value">Upgrade_Backpack_Cost</param>
+                                    <param id="1" name="Value">Upgrade_Time_Cost</param>
                                 </action>
-                                <action disabled="1" id="-9" name="Set value" sid="714517053098816" type="System">
-                                    <param id="0" name="Variable">Upgrade_Backpack_Cost</param>
-                                    <param id="1" name="Value">Upgrade_Backpack_Cost * 4</param>
+                                <action id="-9" name="Set value" sid="863074433551216" type="System">
+                                    <param id="0" name="Variable">Upgrade_Time_Cost</param>
+                                    <param id="1" name="Value">Upgrade_Time_Cost * 4</param>
                                 </action>
-                                <action disabled="1" id="-10" name="Add to" sid="941104848789975" type="System">
-                                    <param id="0" name="Variable">Upgrade_Backpack</param>
+                                <action id="-10" name="Add to" sid="895134508606540" type="System">
+                                    <param id="0" name="Variable">Upgrade_Time</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <comment>Torch</comment>
+                        <comment>Backpack</comment>
                         <event-block sid="621407085807176">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="336822133655347" type="UpgradeBuy">
@@ -187,7 +174,36 @@
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">2</param>
                                 </condition>
-                                <condition id="-14" name="Compare variable" sid="377996393749566" type="System">
+                                <condition id="-14" name="Compare variable" sid="272082841110956" type="System">
+                                    <param id="0" name="Variable">Money</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">Upgrade_Backpack_Cost</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Subtract from" sid="398250018320370" type="System">
+                                    <param id="0" name="Variable">Money</param>
+                                    <param id="1" name="Value">Upgrade_Backpack_Cost</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="278239193964248" type="System">
+                                    <param id="0" name="Variable">Upgrade_Backpack_Cost</param>
+                                    <param id="1" name="Value">Upgrade_Backpack_Cost * 4</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="979293951612432" type="System">
+                                    <param id="0" name="Variable">Upgrade_Backpack</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Torch</comment>
+                        <event-block sid="840578052965206">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="590799145344889" type="UpgradeBuy">
+                                    <param id="0" name="Instance variable">UpgradeType</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="799724147001974" type="System">
                                     <param id="0" name="Variable">Money</param>
                                     <param id="1" name="Comparison">5</param>
                                     <param id="2" name="Value">Upgrade_Torch_Cost</param>
@@ -204,35 +220,6 @@
                                 </action>
                                 <action id="-10" name="Add to" sid="203578968418304" type="System">
                                     <param id="0" name="Variable">Upgrade_Torch</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <comment>Time</comment>
-                        <event-block sid="840578052965206">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="590799145344889" type="UpgradeBuy">
-                                    <param id="0" name="Instance variable">UpgradeType</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">3</param>
-                                </condition>
-                                <condition id="-14" name="Compare variable" sid="385783735868368" type="System">
-                                    <param id="0" name="Variable">Money</param>
-                                    <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Value">Upgrade_Time_Cost</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-11" name="Subtract from" sid="711887908725848" type="System">
-                                    <param id="0" name="Variable">Money</param>
-                                    <param id="1" name="Value">Upgrade_Time_Cost</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="840497533595430" type="System">
-                                    <param id="0" name="Variable">Upgrade_Time_Cost</param>
-                                    <param id="1" name="Value">Upgrade_Time_Cost * 4</param>
-                                </action>
-                                <action id="-10" name="Add to" sid="107118466520026" type="System">
-                                    <param id="0" name="Variable">Upgrade_Time</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
@@ -269,8 +256,8 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Set text" sid="869267434208462" type="Upgrade_Cost_Text">
-                                    <param id="0" name="Text">Upgrade_Backpack_Cost &amp; &quot;$&quot;</param>
+                                <action id="0" name="Set text" sid="857983461178684" type="Upgrade_Cost_Text">
+                                    <param id="0" name="Text">Upgrade_Time_Cost &amp; &quot;$&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -283,8 +270,8 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Set text" sid="161526363972563" type="Upgrade_Cost_Text">
-                                    <param id="0" name="Text">Upgrade_Torch_Cost &amp; &quot;$&quot;</param>
+                                <action id="0" name="Set text" sid="869267434208462" type="Upgrade_Cost_Text">
+                                    <param id="0" name="Text">Upgrade_Backpack_Cost &amp; &quot;$&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -297,8 +284,8 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Set text" sid="857983461178684" type="Upgrade_Cost_Text">
-                                    <param id="0" name="Text">Upgrade_Time_Cost &amp; &quot;$&quot;</param>
+                                <action id="0" name="Set text" sid="161526363972563" type="Upgrade_Cost_Text">
+                                    <param id="0" name="Text">Upgrade_Torch_Cost &amp; &quot;$&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
