@@ -73,7 +73,7 @@
                                                 </action>
                                                 <action id="-10" name="Set value" sid="800403988052873" type="Dirt">
                                                     <param id="0" name="Instance variable">Hp</param>
-                                                    <param id="1" name="Value">10</param>
+                                                    <param id="1" name="Value">8</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -103,7 +103,7 @@
                                                 </action>
                                                 <action id="-10" name="Set value" sid="512038631266425" type="Dirt">
                                                     <param id="0" name="Instance variable">Hp</param>
-                                                    <param id="1" name="Value">20</param>
+                                                    <param id="1" name="Value">16</param>
                                                 </action>
                                                 <action id="-10" name="Set value" sid="438081063515576" type="Dirt">
                                                     <param id="0" name="Instance variable">ID</param>
@@ -137,7 +137,7 @@
                                                 </action>
                                                 <action id="-10" name="Set value" sid="310568482531778" type="Dirt">
                                                     <param id="0" name="Instance variable">Hp</param>
-                                                    <param id="1" name="Value">30</param>
+                                                    <param id="1" name="Value">24</param>
                                                 </action>
                                                 <action id="-10" name="Set value" sid="493956333481386" type="Dirt">
                                                     <param id="0" name="Instance variable">ID</param>
@@ -166,7 +166,7 @@
                                                 </action>
                                                 <action id="-10" name="Set value" sid="833814671455214" type="Dirt">
                                                     <param id="0" name="Instance variable">Hp</param>
-                                                    <param id="1" name="Value">40</param>
+                                                    <param id="1" name="Value">34</param>
                                                 </action>
                                                 <action id="-10" name="Set value" sid="270090652416412" type="Dirt">
                                                     <param id="0" name="Instance variable">ID</param>
@@ -267,7 +267,7 @@
                                                 </action>
                                                 <action id="-10" name="Set value" sid="514808223695247" type="Stone">
                                                     <param id="0" name="Instance variable">Hp</param>
-                                                    <param id="1" name="Value">30</param>
+                                                    <param id="1" name="Value">28</param>
                                                 </action>
                                                 <action id="-10" name="Set value" sid="134408868986786" type="Stone">
                                                     <param id="0" name="Instance variable">ID</param>
@@ -301,7 +301,7 @@
                                                 </action>
                                                 <action id="-10" name="Set value" sid="201620776788672" type="Stone">
                                                     <param id="0" name="Instance variable">Hp</param>
-                                                    <param id="1" name="Value">40</param>
+                                                    <param id="1" name="Value">38</param>
                                                 </action>
                                                 <action id="-10" name="Set value" sid="882195573949058" type="Stone">
                                                     <param id="0" name="Instance variable">ID</param>
@@ -335,7 +335,7 @@
                                                 </action>
                                                 <action id="-10" name="Set value" sid="151827580313504" type="Stone">
                                                     <param id="0" name="Instance variable">Hp</param>
-                                                    <param id="1" name="Value">50</param>
+                                                    <param id="1" name="Value">44</param>
                                                 </action>
                                                 <action id="-10" name="Set value" sid="587698822166845" type="Stone">
                                                     <param id="0" name="Instance variable">ID</param>
@@ -398,7 +398,7 @@
                                                 </action>
                                                 <action id="-10" name="Set value" sid="571179560322893" type="Stone">
                                                     <param id="0" name="Instance variable">Hp</param>
-                                                    <param id="1" name="Value">60</param>
+                                                    <param id="1" name="Value">58</param>
                                                 </action>
                                                 <action id="-10" name="Set value" sid="933336949807015" type="Stone">
                                                     <param id="0" name="Instance variable">ID</param>

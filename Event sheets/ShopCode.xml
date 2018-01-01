@@ -20,15 +20,6 @@
                 <condition id="-1" name="Every tick" sid="419331283567746" type="System" />
             </conditions>
             <actions>
-                <action id="0" name="Set text" sid="401215126509357" type="ResourcesEQ">
-                    <param id="0" name="Text">&quot;Coal: &quot; &amp; Coal &amp; newline &amp;&#x0D;&#x0A;&quot;Copper: &quot; &amp; Copper &amp; newline &amp;&#x0D;&#x0A;&quot;Iron: &quot; &amp; Iron &amp; newline &amp;&#x0D;&#x0A;&quot;Gold: &quot; &amp; Gold &amp; newline &amp;&#x0D;&#x0A;&quot;Emerald: &quot; &amp; Emerald&amp; newline &amp;&#x0D;&#x0A;&quot;Diamonds: &quot; &amp; Diamonds </param>
-                </action>
-                <action id="0" name="Set text" sid="552483448301387" type="UpgradesAmount">
-                    <param id="0" name="Text">&quot;Pickaxe: &quot; &amp; Upgrade_Pickaxe &amp; newline &amp; &#x0D;&#x0A;&quot;Backpack: &quot; &amp; Upgrade_Backpack &amp; newline &amp; &#x0D;&#x0A;&quot;Torch: &quot; &amp; Upgrade_Torch &amp; newline &amp; &#x0D;&#x0A;&quot;Time: &quot; &amp; Upgrade_Time</param>
-                </action>
-                <action id="0" name="Set text" sid="150232309754806" type="MoneyText_">
-                    <param id="0" name="Text">Money &amp; &quot;$&quot;</param>
-                </action>
                 <action id="0" name="Set text" sid="500245179099327" type="Money_Text">
                     <param id="0" name="Text">Money &amp; &quot;$&quot;</param>
                 </action>
@@ -49,10 +40,9 @@
                     <param id="3" name="Volume">-10</param>
                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
-                <action id="-28" name="Set effect parameter" sid="827009590585244" type="Button_Mine">
-                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
-                    <param id="1" name="Parameter index">0</param>
-                    <param id="2" name="Value">120</param>
+                <action id="4" name="Set animation" sid="942919949561119" type="Button_Mine">
+                    <param id="0" name="Animation">&quot;Click&quot;</param>
+                    <param id="1" name="From">1</param>
                 </action>
                 <action id="-9" name="Set value" sid="149212117815857" type="System">
                     <param id="0" name="Variable">Sounds</param>
@@ -61,13 +51,9 @@
                 <action id="-16" name="Wait" sid="308657766940353" type="System">
                     <param id="0" name="Seconds">0.2</param>
                 </action>
-                <action id="-28" name="Set effect parameter" sid="223509156583168" type="Button_Mine">
-                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
-                    <param id="1" name="Parameter index">0</param>
-                    <param id="2" name="Value">100</param>
-                </action>
-                <action id="-16" name="Wait" sid="715269342129265" type="System">
-                    <param id="0" name="Seconds">0.03</param>
+                <action id="4" name="Set animation" sid="348965030155843" type="Button_Mine">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
                 </action>
             </actions>
         </event-block>
@@ -78,9 +64,9 @@
                         <condition id="6" name="On object clicked" sid="824537068042417" type="Mouse">
                             <param id="0" name="Mouse button">0</param>
                             <param id="1" name="Click type">0</param>
-                            <param id="2" name="Object clicked">UpgradeBuy</param>
+                            <param id="2" name="Object clicked">Button_Upgrade</param>
                         </condition>
-                        <condition id="-7" name="Compare instance variable" sid="786267519117954" type="UpgradeBuy">
+                        <condition id="-7" name="Compare instance variable" sid="786267519117954" type="Button_Upgrade">
                             <param id="0" name="Instance variable">UpgradeType</param>
                             <param id="1" name="Comparison">1</param>
                             <param id="2" name="Value">2</param>
@@ -93,25 +79,23 @@
                             <param id="3" name="Volume">-10</param>
                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
-                        <action id="-28" name="Set effect parameter" sid="452232220990345" type="UpgradeBuy">
-                            <param id="0" name="Effect">&quot;Brightness&quot;</param>
-                            <param id="1" name="Parameter index">0</param>
-                            <param id="2" name="Value">120</param>
+                        <action id="4" name="Set animation" sid="742341398332431" type="Button_Upgrade">
+                            <param id="0" name="Animation">&quot;Click&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
                         <action id="-16" name="Wait" sid="783572262330351" type="System">
                             <param id="0" name="Seconds">0.2</param>
                         </action>
-                        <action id="-28" name="Set effect parameter" sid="211794844191723" type="UpgradeBuy">
-                            <param id="0" name="Effect">&quot;Brightness&quot;</param>
-                            <param id="1" name="Parameter index">0</param>
-                            <param id="2" name="Value">100</param>
+                        <action id="4" name="Set animation" sid="689323968162180" type="Button_Upgrade">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
                     </actions>
                     <sub-events>
                         <comment>Pickaxe</comment>
                         <event-block sid="507372530480390">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="778695594927139" type="UpgradeBuy">
+                                <condition id="-7" name="Compare instance variable" sid="778695594927139" type="Button_Upgrade">
                                     <param id="0" name="Instance variable">UpgradeType</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">0</param>
@@ -140,7 +124,7 @@
                         <comment>Time</comment>
                         <event-block sid="663892736933875">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="390581652451181" type="UpgradeBuy">
+                                <condition id="-7" name="Compare instance variable" sid="390581652451181" type="Button_Upgrade">
                                     <param id="0" name="Instance variable">UpgradeType</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">1</param>
@@ -169,7 +153,7 @@
                         <comment>Backpack</comment>
                         <event-block sid="621407085807176">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="336822133655347" type="UpgradeBuy">
+                                <condition id="-7" name="Compare instance variable" sid="336822133655347" type="Button_Upgrade">
                                     <param id="0" name="Instance variable">UpgradeType</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">2</param>
@@ -198,7 +182,7 @@
                         <comment>Torch</comment>
                         <event-block sid="840578052965206">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="590799145344889" type="UpgradeBuy">
+                                <condition id="-7" name="Compare instance variable" sid="590799145344889" type="Button_Upgrade">
                                     <param id="0" name="Instance variable">UpgradeType</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">3</param>
@@ -300,28 +284,26 @@
                         <condition id="6" name="On object clicked" sid="819321797648337" type="Mouse">
                             <param id="0" name="Mouse button">0</param>
                             <param id="1" name="Click type">0</param>
-                            <param id="2" name="Object clicked">Sell_All_Button</param>
+                            <param id="2" name="Object clicked">Button_Sell</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-28" name="Set effect parameter" sid="849098891790067" type="Sell_All_Button">
-                            <param id="0" name="Effect">&quot;Brightness&quot;</param>
-                            <param id="1" name="Parameter index">0</param>
-                            <param id="2" name="Value">120</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="838200177409635" type="System">
-                            <param id="0" name="Seconds">0.2</param>
-                        </action>
-                        <action id="-28" name="Set effect parameter" sid="184000242367715" type="Sell_All_Button">
-                            <param id="0" name="Effect">&quot;Brightness&quot;</param>
-                            <param id="1" name="Parameter index">0</param>
-                            <param id="2" name="Value">100</param>
-                        </action>
                         <action id="0" name="Play" sid="997154093854366" type="Audio">
                             <param id="0" name="Audio file">click3</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">-10</param>
                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="885906873508481" type="Button_Sell">
+                            <param id="0" name="Animation">&quot;Clicked&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="838200177409635" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="519179011623964" type="Button_Sell">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -411,10 +393,10 @@
             <sub-events>
                 <event-block sid="673867977969733">
                     <conditions>
-                        <condition id="6" name="On object clicked" sid="147811555299095" type="Mouse">
+                        <condition id="6" name="On object clicked" sid="351419595213019" type="Mouse">
                             <param id="0" name="Mouse button">0</param>
                             <param id="1" name="Click type">0</param>
-                            <param id="2" name="Object clicked">Sell_Button</param>
+                            <param id="2" name="Object clicked">Button_Mine</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -424,18 +406,8 @@
                             <param id="3" name="Volume">-10</param>
                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
-                        <action id="-28" name="Set effect parameter" sid="633170361524449" type="Sell_All_Button">
-                            <param id="0" name="Effect">&quot;Brightness&quot;</param>
-                            <param id="1" name="Parameter index">0</param>
-                            <param id="2" name="Value">120</param>
-                        </action>
                         <action id="-16" name="Wait" sid="331059129900259" type="System">
                             <param id="0" name="Seconds">0.2</param>
-                        </action>
-                        <action id="-28" name="Set effect parameter" sid="896351693192550" type="Sell_All_Button">
-                            <param id="0" name="Effect">&quot;Brightness&quot;</param>
-                            <param id="1" name="Parameter index">0</param>
-                            <param id="2" name="Value">100</param>
                         </action>
                     </actions>
                     <sub-events>
