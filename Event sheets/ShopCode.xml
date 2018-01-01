@@ -34,24 +34,24 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="0" name="Play" sid="493399675793270" type="Audio">
+                <action id="0" name="Play" sid="571945718356739" type="Audio">
                     <param id="0" name="Audio file">click3</param>
                     <param id="2" name="Loop">0</param>
                     <param id="3" name="Volume">-10</param>
                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
-                <action id="4" name="Set animation" sid="942919949561119" type="Button_Mine">
+                <action id="4" name="Set animation" sid="450050049381460" type="Button_Mine">
                     <param id="0" name="Animation">&quot;Click&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
-                <action id="-9" name="Set value" sid="149212117815857" type="System">
+                <action id="-9" name="Set value" sid="331013289940289" type="System">
                     <param id="0" name="Variable">Sounds</param>
                     <param id="1" name="Value">1</param>
                 </action>
-                <action id="-16" name="Wait" sid="308657766940353" type="System">
+                <action id="-16" name="Wait" sid="883245988052571" type="System">
                     <param id="0" name="Seconds">0.2</param>
                 </action>
-                <action id="4" name="Set animation" sid="348965030155843" type="Button_Mine">
+                <action id="4" name="Set animation" sid="450743195607900" type="Button_Mine">
                     <param id="0" name="Animation">&quot;Default&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
@@ -72,25 +72,7 @@
                             <param id="2" name="Value">2</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="0" name="Play" sid="554518014624044" type="Audio">
-                            <param id="0" name="Audio file">click3</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">-10</param>
-                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="742341398332431" type="Button_Upgrade">
-                            <param id="0" name="Animation">&quot;Click&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="783572262330351" type="System">
-                            <param id="0" name="Seconds">0.2</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="689323968162180" type="Button_Upgrade">
-                            <param id="0" name="Animation">&quot;Default&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
+                    <actions />
                     <sub-events>
                         <comment>Pickaxe</comment>
                         <event-block sid="507372530480390">
@@ -120,6 +102,30 @@
                                     <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="413989474139369">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Play" sid="759344462594775" type="Audio">
+                                            <param id="0" name="Audio file">click3</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">-10</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="600539549417931" type="Button_Upgrade">
+                                            <param id="0" name="Animation">&quot;Click&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="271916865306057" type="System">
+                                            <param id="0" name="Seconds">0.2</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="449184017634164" type="Button_Upgrade">
+                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <comment>Time</comment>
                         <event-block sid="663892736933875">
@@ -149,6 +155,30 @@
                                     <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="416308946194035">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Play" sid="445033850578841" type="Audio">
+                                            <param id="0" name="Audio file">click3</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">-10</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="535615301986615" type="Button_Upgrade">
+                                            <param id="0" name="Animation">&quot;Click&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="982642558369503" type="System">
+                                            <param id="0" name="Seconds">0.2</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="429295873888932" type="Button_Upgrade">
+                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <comment>Backpack</comment>
                         <event-block sid="621407085807176">
@@ -178,6 +208,30 @@
                                     <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="481457234669163">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Play" sid="828830449202474" type="Audio">
+                                            <param id="0" name="Audio file">click3</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">-10</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="620936665293236" type="Button_Upgrade">
+                                            <param id="0" name="Animation">&quot;Click&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="713474248226535" type="System">
+                                            <param id="0" name="Seconds">0.2</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="704693200182456" type="Button_Upgrade">
+                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <comment>Torch</comment>
                         <event-block sid="840578052965206">
@@ -207,6 +261,30 @@
                                     <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="391259509540850">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Play" sid="827743506143975" type="Audio">
+                                            <param id="0" name="Audio file">click3</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">-10</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="429904768581091" type="Button_Upgrade">
+                                            <param id="0" name="Animation">&quot;Click&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="390100465215161" type="System">
+                                            <param id="0" name="Seconds">0.2</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="606759113698852" type="Button_Upgrade">
+                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -272,6 +350,172 @@
                                     <param id="0" name="Text">Upgrade_Torch_Cost &amp; &quot;$&quot;</param>
                                 </action>
                             </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="320275300734839">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="659196751360593" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>Pickaxe</comment>
+                        <event-block sid="207245250523827">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="971868615871606" type="Button_Upgrade">
+                                    <param id="0" name="Instance variable">UpgradeType</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="293324067312520">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="593371573995508" type="System">
+                                            <param id="0" name="Variable">Money</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">Upgrade_Pickaxe_Cost</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-28" name="Set effect parameter" sid="493002806686397" type="Button_Upgrade">
+                                            <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                            <param id="1" name="Parameter index">0</param>
+                                            <param id="2" name="Value">100</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="544685099941403">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="621684005556351" type="System">
+                                            <param id="0" name="Variable">Money</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">Upgrade_Pickaxe_Cost</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-28" name="Set effect parameter" sid="276372956090256" type="Button_Upgrade">
+                                            <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                            <param id="1" name="Parameter index">0</param>
+                                            <param id="2" name="Value">85</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>Time</comment>
+                        <event-block sid="939235732830254">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="925415533425366" type="Button_Upgrade">
+                                    <param id="0" name="Instance variable">UpgradeType</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="469657014927410">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="668286301008994" type="System">
+                                            <param id="0" name="Variable">Money</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">Upgrade_Time_Cost</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-28" name="Set effect parameter" sid="644723216174983" type="Button_Upgrade">
+                                            <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                            <param id="1" name="Parameter index">0</param>
+                                            <param id="2" name="Value">100</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="607390185874960">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="251568568093874" type="System">
+                                            <param id="0" name="Variable">Money</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">Upgrade_Time_Cost</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-28" name="Set effect parameter" sid="860680863520603" type="Button_Upgrade">
+                                            <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                            <param id="1" name="Parameter index">0</param>
+                                            <param id="2" name="Value">85</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>Backpack</comment>
+                        <event-block sid="673228713475668">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="557380625366901" type="Button_Upgrade">
+                                    <param id="0" name="Instance variable">UpgradeType</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="940722087655955">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="525020559988545" type="System">
+                                            <param id="0" name="Variable">Money</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">Upgrade_Backpack_Cost</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>Torch</comment>
+                        <event-block sid="847783623979235">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="553496146901108" type="Button_Upgrade">
+                                    <param id="0" name="Instance variable">UpgradeType</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="246546948155330">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="315215740746303" type="System">
+                                            <param id="0" name="Variable">Money</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">Upgrade_Torch_Cost</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-28" name="Set effect parameter" sid="672629670272941" type="Button_Upgrade">
+                                            <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                            <param id="1" name="Parameter index">0</param>
+                                            <param id="2" name="Value">100</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="366008564112661">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="874365494027548" type="System">
+                                            <param id="0" name="Variable">Money</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">Upgrade_Torch_Cost</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-28" name="Set effect parameter" sid="458358396687889" type="Button_Upgrade">
+                                            <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                            <param id="1" name="Parameter index">0</param>
+                                            <param id="2" name="Value">85</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>

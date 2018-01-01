@@ -206,7 +206,7 @@
                         <character-width>40</character-width>
                         <character-height>48</character-height>
                         <character-set>!*#$%&amp;&apos;()*+,-`/0123456789:;&lt;=&gt;?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~</character-set>
-                        <text>Not available yet</text>
+                        <text>Not  available  yet</text>
                         <scale>0.4</scale>
                         <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Left</horizontal-alignment>
@@ -238,7 +238,7 @@
                         <character-width>40</character-width>
                         <character-height>48</character-height>
                         <character-set>!*#$%&amp;&apos;()*+,-`/0123456789:;&lt;=&gt;?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~</character-set>
-                        <text>increasing lighting area</text>
+                        <text>increases    lighting  area</text>
                         <scale>0.4</scale>
                         <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Left</horizontal-alignment>
@@ -270,7 +270,7 @@
                         <character-width>40</character-width>
                         <character-height>48</character-height>
                         <character-set>!*#$%&amp;&apos;()*+,-`/0123456789:;&lt;=&gt;?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~</character-set>
-                        <text>increasing   mining time</text>
+                        <text>increases  mining  time</text>
                         <scale>0.4</scale>
                         <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Left</horizontal-alignment>
@@ -302,7 +302,7 @@
                         <character-width>40</character-width>
                         <character-height>48</character-height>
                         <character-set>!*#$%&amp;&apos;()*+,-`/0123456789:;&lt;=&gt;?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~</character-set>
-                        <text>Gives you better pickaxe</text>
+                        <text>Gives  you  better  pickaxe</text>
                         <scale>0.4</scale>
                         <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Left</horizontal-alignment>
