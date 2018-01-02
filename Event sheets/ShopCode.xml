@@ -14,7 +14,7 @@
         <variable constant="0" name="Upgrade_Torch_Cost" sid="952680328648785" static="0" type="number">10</variable>
         <comment></comment>
         <variable constant="0" name="Upgrade_Time" sid="655588249001936" static="0" type="number">1</variable>
-        <variable constant="0" name="Upgrade_Time_Cost" sid="377239952801004" static="0" type="number">10</variable>
+        <variable constant="0" name="Upgrade_Time_Cost" sid="377239952801004" static="0" type="number">20</variable>
         <event-block sid="454864643721613">
             <conditions>
                 <condition id="-1" name="Every tick" sid="419331283567746" type="System" />
@@ -95,11 +95,11 @@
                                 </action>
                                 <action id="-9" name="Set value" sid="810521413945015" type="System">
                                     <param id="0" name="Variable">Upgrade_Pickaxe_Cost</param>
-                                    <param id="1" name="Value">Upgrade_Pickaxe_Cost * 4</param>
+                                    <param id="1" name="Value">Upgrade_Pickaxe_Cost * 2</param>
                                 </action>
                                 <action id="-10" name="Add to" sid="755735113819951" type="System">
                                     <param id="0" name="Variable">Upgrade_Pickaxe</param>
-                                    <param id="1" name="Value">1</param>
+                                    <param id="1" name="Value">0.20</param>
                                 </action>
                             </actions>
                             <sub-events>
@@ -148,7 +148,7 @@
                                 </action>
                                 <action id="-9" name="Set value" sid="863074433551216" type="System">
                                     <param id="0" name="Variable">Upgrade_Time_Cost</param>
-                                    <param id="1" name="Value">Upgrade_Time_Cost * 4</param>
+                                    <param id="1" name="Value">Upgrade_Time_Cost * 3</param>
                                 </action>
                                 <action id="-10" name="Add to" sid="895134508606540" type="System">
                                     <param id="0" name="Variable">Upgrade_Time</param>
