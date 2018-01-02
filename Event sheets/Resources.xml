@@ -24,6 +24,10 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="0" name="Call function" sid="372952671296386" type="Function">
+                            <param id="0" name="Name">&quot;Physics.derbis.create&quot;</param>
+                            <param id="1" name="Parameter {n}">1{###}0{###}3{###}Dirt.UID</param>
+                        </action>
                         <action id="-10" name="Add to" sid="485579333924772" type="System">
                             <param id="0" name="Variable">Coal</param>
                             <param id="1" name="Value">1</param>
@@ -33,7 +37,14 @@
                             <param id="1" name="Parameter {n}">Dirt.ID</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="533004409155645">
+                            <conditions />
+                            <actions />
+                        </event-block>
+                    </sub-events>
                 </event-block>
+                <comment></comment>
                 <event-block sid="671087074648939">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="589715639554205" type="Dirt">
@@ -43,6 +54,10 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="0" name="Call function" sid="870834147198641" type="Function">
+                            <param id="0" name="Name">&quot;Physics.derbis.create&quot;</param>
+                            <param id="1" name="Parameter {n}">2{###}0{###}3{###}Dirt.UID</param>
+                        </action>
                         <action id="-10" name="Add to" sid="931100910697358" type="System">
                             <param id="0" name="Variable">Copper</param>
                             <param id="1" name="Value">1</param>
@@ -94,9 +109,9 @@
                             <param id="0" name="Variable">Coal</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="0" name="Call function" sid="698553615202448" type="Function">
+                        <action id="0" name="Call function" sid="535003360723803" type="Function">
                             <param id="0" name="Name">&quot;ResourcesAdded&quot;</param>
-                            <param id="1" name="Parameter {n}">Dirt.ID</param>
+                            <param id="1" name="Parameter {n}">Stone.ID</param>
                         </action>
                     </actions>
                 </event-block>
@@ -113,9 +128,9 @@
                             <param id="0" name="Variable">Copper</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="0" name="Call function" sid="314663948394443" type="Function">
+                        <action id="0" name="Call function" sid="983745849166748" type="Function">
                             <param id="0" name="Name">&quot;ResourcesAdded&quot;</param>
-                            <param id="1" name="Parameter {n}">Dirt.ID</param>
+                            <param id="1" name="Parameter {n}">Stone.ID</param>
                         </action>
                     </actions>
                 </event-block>
@@ -132,9 +147,9 @@
                             <param id="0" name="Variable">Iron</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="0" name="Call function" sid="185894871851465" type="Function">
+                        <action id="0" name="Call function" sid="181101251343351" type="Function">
                             <param id="0" name="Name">&quot;ResourcesAdded&quot;</param>
-                            <param id="1" name="Parameter {n}">Dirt.ID</param>
+                            <param id="1" name="Parameter {n}">Stone.ID</param>
                         </action>
                     </actions>
                 </event-block>
@@ -151,9 +166,9 @@
                             <param id="0" name="Variable">Gold</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="0" name="Call function" sid="108678848758670" type="Function">
+                        <action id="0" name="Call function" sid="341024163298397" type="Function">
                             <param id="0" name="Name">&quot;ResourcesAdded&quot;</param>
-                            <param id="1" name="Parameter {n}">Dirt.ID</param>
+                            <param id="1" name="Parameter {n}">Stone.ID</param>
                         </action>
                     </actions>
                 </event-block>
@@ -296,6 +311,98 @@
                                     <param id="0" name="Text">&quot;Added: Diamond&quot;</param>
                                 </action>
                             </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment></comment>
+        <comment></comment>
+        <event-block sid="107134427906515">
+            <conditions>
+                <condition id="0" name="On function" sid="580012234458860" type="Function">
+                    <param id="0" name="Name">&quot;Physics.derbis.create&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="686419540801702">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="379544093235482" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="640371665391012">
+                            <conditions>
+                                <condition id="-12" name="Repeat" sid="578184428734155" type="System">
+                                    <param id="0" name="Count">ceil(random(Function.Param(1) , Function.Param(2) ))</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="277429735604837">
+                                    <conditions>
+                                        <condition id="-33" name="Pick by comparison" sid="138665813273138" type="System">
+                                            <param id="0" name="Object">Dirt</param>
+                                            <param id="1" name="Expression">Dirt.UID</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">Function.Param(3)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="494242359021664" type="System">
+                                            <param id="0" name="Object to create">Derbis_Coal</param>
+                                            <param id="1" name="Layer">&quot;Entities&quot;</param>
+                                            <param id="2" name="X">Dirt.X</param>
+                                            <param id="3" name="Y">Dirt.Y</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="298012379214861">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="110818202540484" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="959129766662528">
+                            <conditions>
+                                <condition id="-12" name="Repeat" sid="177201506470662" type="System">
+                                    <param id="0" name="Count">ceil(random(Function.Param(1) , Function.Param(2) ))</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="141817395678242">
+                                    <conditions>
+                                        <condition id="-33" name="Pick by comparison" sid="867681231045675" type="System">
+                                            <param id="0" name="Object">Dirt</param>
+                                            <param id="1" name="Expression">Dirt.UID</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">Function.Param(3)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="723916243156093" type="System">
+                                            <param id="0" name="Object to create">Derbis_Copper</param>
+                                            <param id="1" name="Layer">&quot;Entities&quot;</param>
+                                            <param id="2" name="X">Dirt.X</param>
+                                            <param id="3" name="Y">Dirt.Y</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>

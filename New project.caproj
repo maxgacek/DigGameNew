@@ -22,6 +22,7 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
@@ -298,6 +299,9 @@
                         <behavior-type name="Solid" sid="838464809522936">
                             <behavior id="solid" />
                         </behavior-type>
+                        <behavior-type name="Physics" sid="154704779549316">
+                            <behavior id="Physics" />
+                        </behavior-type>
                     </behaviors>
                     <animation-folder>
                         <animation framecount="1" loop="0" name="DIRT" pingpong="0" repeatcount="1" repeatto="0" sid="924082366041184" speed="5">
@@ -449,6 +453,115 @@
                         </animation>
                     </animation-folder>
                 </object-type>
+            </object-folder>
+            <object-folder name="Physics">
+                <object-folder name="Derbis">
+                    <object-type name="Derbis_Coal" sid="421645532275646">
+                        <plugin id="Sprite" />
+                        <behaviors>
+                            <behavior-type name="Physics" sid="969370334729406">
+                                <behavior id="Physics" />
+                            </behavior-type>
+                        </behaviors>
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="931127972345273" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                    <collision-poly>
+                                        <point x="0.607143" y="0" />
+                                        <point x="0.982143" y="0.5" />
+                                        <point x="0.526786" y="0.977273" />
+                                        <point x="0" y="0.448864" />
+                                        <point x="0.116071" y="0.204545" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="Derbis_Copper" sid="569979633001028">
+                        <plugin id="Sprite" />
+                        <behaviors>
+                            <behavior-type name="Physics" sid="750926167917866">
+                                <behavior id="Physics" />
+                            </behavior-type>
+                        </behaviors>
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="755105660171507" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                    <collision-poly>
+                                        <point x="0.659091" y="0" />
+                                        <point x="1" y="0.5" />
+                                        <point x="0.556819" y="0.977273" />
+                                        <point x="0.164773" y="0.755682" />
+                                        <point x="0.0681813" y="0.255681" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="Derbis_Iron" sid="422988997600113">
+                        <plugin id="Sprite" />
+                        <behaviors>
+                            <behavior-type name="Physics" sid="677848482929582">
+                                <behavior id="Physics" />
+                            </behavior-type>
+                        </behaviors>
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="586705271458718" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                    <collision-poly>
+                                        <point x="0.681818" y="0" />
+                                        <point x="1" y="0.5" />
+                                        <point x="0.730115" y="0.982955" />
+                                        <point x="0.0909093" y="0.715909" />
+                                        <point x="0.0710222" y="0.267045" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="Derbis_Gold" sid="108621943143482">
+                        <plugin id="Sprite" />
+                        <behaviors>
+                            <behavior-type name="Physics" sid="633661857923402">
+                                <behavior id="Physics" />
+                            </behavior-type>
+                        </behaviors>
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="638397632281929" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                    <collision-poly>
+                                        <point x="0.681818" y="0" />
+                                        <point x="1" y="0.5" />
+                                        <point x="0.730115" y="0.982955" />
+                                        <point x="0.0909093" y="0.715909" />
+                                        <point x="0.0710222" y="0.267045" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="Derbis_Emerald" sid="119447033207818">
+                        <plugin id="Sprite" />
+                        <behaviors>
+                            <behavior-type name="Physics" sid="754366283556927">
+                                <behavior id="Physics" />
+                            </behavior-type>
+                        </behaviors>
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="659239399117296" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                    <collision-poly>
+                                        <point x="0.681818" y="0" />
+                                        <point x="1" y="0.5" />
+                                        <point x="0.730115" y="0.982955" />
+                                        <point x="0.0909093" y="0.715909" />
+                                        <point x="0.0710222" y="0.267045" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                </object-folder>
             </object-folder>
             <object-type name="Player" sid="728956283713470">
                 <plugin id="Sprite" />
@@ -960,6 +1073,14 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Sprite3" sid="625205543534426">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="546306055890307" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Blocks" plugin-id="Sprite" sid="597737190612101">
@@ -985,6 +1106,7 @@
         <event-sheet>Sounds.xml</event-sheet>
         <event-sheet>Fade.xml</event-sheet>
         <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>Physics.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="1" />
