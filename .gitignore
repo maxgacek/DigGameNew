@@ -6,3 +6,4 @@
 #Temporary files
 *.capx.backup*
 *.capx.autosave*
+debug\.log
