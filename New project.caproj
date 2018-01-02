@@ -793,6 +793,10 @@
                 <plugin id="SpriteFontPlus" />
                 <texture original-source="C:\Users\Dawid\Desktop\IMG_31122017_172217_0.png" />
             </object-type>
+            <object-type name="BackgroundShop" sid="266016560332508">
+                <plugin id="TiledBg" />
+                <texture original-source="C:\Users\Max\Desktop\Dig To China New\Graphics\background.png" />
+            </object-type>
         </object-folder>
         <object-folder name="Shop">
             <object-type name="Base" sid="860259881557742">
@@ -945,6 +949,14 @@
                     <frame duration="1" hotspotX="0.515625" hotspotY="0.421875" />
                     <frame duration="1" hotspotX="0.515625" hotspotY="0.421875" />
                     <frame duration="1" hotspotX="0.515625" hotspotY="0.421875" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite2" sid="882969341850754">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="883048426619182" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
                 </animation>
             </animation-folder>
         </object-type>
