@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Main</name>
     <events>
+        <include>Physics</include>
         <include>Fade</include>
         <include>Sounds</include>
         <include>Resources</include>

@@ -24,13 +24,9 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-10" name="Add to" sid="485579333924772" type="System">
-                            <param id="0" name="Variable">Coal</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="0" name="Call function" sid="808923445795985" type="Function">
-                            <param id="0" name="Name">&quot;ResourcesAdded&quot;</param>
-                            <param id="1" name="Parameter {n}">Dirt.ID</param>
+                        <action id="0" name="Call function" sid="372952671296386" type="Function">
+                            <param id="0" name="Name">&quot;Physics.derbis.create&quot;</param>
+                            <param id="1" name="Parameter {n}">Dirt.ID{###}0{###}3{###}Dirt.UID</param>
                         </action>
                     </actions>
                 </event-block>
@@ -43,13 +39,9 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-10" name="Add to" sid="931100910697358" type="System">
-                            <param id="0" name="Variable">Copper</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="0" name="Call function" sid="422362124265996" type="Function">
-                            <param id="0" name="Name">&quot;ResourcesAdded&quot;</param>
-                            <param id="1" name="Parameter {n}">Dirt.ID</param>
+                        <action id="0" name="Call function" sid="982725964467645" type="Function">
+                            <param id="0" name="Name">&quot;Physics.derbis.create&quot;</param>
+                            <param id="1" name="Parameter {n}">Dirt.ID{###}0{###}3{###}Dirt.UID</param>
                         </action>
                     </actions>
                 </event-block>
@@ -62,13 +54,9 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-10" name="Add to" sid="532293909561701" type="System">
-                            <param id="0" name="Variable">Iron</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="0" name="Call function" sid="959856626811492" type="Function">
-                            <param id="0" name="Name">&quot;ResourcesAdded&quot;</param>
-                            <param id="1" name="Parameter {n}">Dirt.ID</param>
+                        <action id="0" name="Call function" sid="732392331846046" type="Function">
+                            <param id="0" name="Name">&quot;Physics.derbis.create&quot;</param>
+                            <param id="1" name="Parameter {n}">Dirt.ID{###}0{###}3{###}Dirt.UID</param>
                         </action>
                     </actions>
                 </event-block>
@@ -90,13 +78,9 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-10" name="Add to" sid="589463786628951" type="System">
-                            <param id="0" name="Variable">Coal</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="0" name="Call function" sid="698553615202448" type="Function">
-                            <param id="0" name="Name">&quot;ResourcesAdded&quot;</param>
-                            <param id="1" name="Parameter {n}">Dirt.ID</param>
+                        <action id="0" name="Call function" sid="474954486665636" type="Function">
+                            <param id="0" name="Name">&quot;Physics.derbis.create&quot;</param>
+                            <param id="1" name="Parameter {n}">Stone.ID{###}0{###}3{###}Stone.UID</param>
                         </action>
                     </actions>
                 </event-block>
@@ -109,13 +93,9 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-10" name="Add to" sid="296421355238851" type="System">
-                            <param id="0" name="Variable">Copper</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="0" name="Call function" sid="314663948394443" type="Function">
-                            <param id="0" name="Name">&quot;ResourcesAdded&quot;</param>
-                            <param id="1" name="Parameter {n}">Dirt.ID</param>
+                        <action id="0" name="Call function" sid="919659855705800" type="Function">
+                            <param id="0" name="Name">&quot;Physics.derbis.create&quot;</param>
+                            <param id="1" name="Parameter {n}">Stone.ID{###}0{###}3{###}Stone.UID</param>
                         </action>
                     </actions>
                 </event-block>
@@ -128,13 +108,9 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-10" name="Add to" sid="464950532549310" type="System">
-                            <param id="0" name="Variable">Iron</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="0" name="Call function" sid="185894871851465" type="Function">
-                            <param id="0" name="Name">&quot;ResourcesAdded&quot;</param>
-                            <param id="1" name="Parameter {n}">Dirt.ID</param>
+                        <action id="0" name="Call function" sid="941543921994748" type="Function">
+                            <param id="0" name="Name">&quot;Physics.derbis.create&quot;</param>
+                            <param id="1" name="Parameter {n}">Stone.ID{###}0{###}3{###}Stone.UID</param>
                         </action>
                     </actions>
                 </event-block>
@@ -147,13 +123,9 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-10" name="Add to" sid="202471649065809" type="System">
-                            <param id="0" name="Variable">Gold</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="0" name="Call function" sid="108678848758670" type="Function">
-                            <param id="0" name="Name">&quot;ResourcesAdded&quot;</param>
-                            <param id="1" name="Parameter {n}">Dirt.ID</param>
+                        <action id="0" name="Call function" sid="786058555684627" type="Function">
+                            <param id="0" name="Name">&quot;Physics.derbis.create&quot;</param>
+                            <param id="1" name="Parameter {n}">Stone.ID{###}0{###}3{###}Stone.UID</param>
                         </action>
                     </actions>
                 </event-block>
@@ -166,13 +138,9 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-10" name="Add to" sid="992929796743004" type="System">
-                            <param id="0" name="Variable">Emerald</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="0" name="Call function" sid="546541678373349" type="Function">
-                            <param id="0" name="Name">&quot;ResourcesAdded&quot;</param>
-                            <param id="1" name="Parameter {n}">Stone.ID</param>
+                        <action id="0" name="Call function" sid="586089134786196" type="Function">
+                            <param id="0" name="Name">&quot;Physics.derbis.create&quot;</param>
+                            <param id="1" name="Parameter {n}">Stone.ID{###}0{###}3{###}Stone.UID</param>
                         </action>
                     </actions>
                 </event-block>
@@ -181,17 +149,13 @@
                         <condition id="-7" name="Compare instance variable" sid="419093559579576" type="Stone">
                             <param id="0" name="Instance variable">ID</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">7</param>
+                            <param id="2" name="Value">6</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-10" name="Add to" sid="952313283129921" type="System">
-                            <param id="0" name="Variable">Diamonds</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="0" name="Call function" sid="283412803461655" type="Function">
-                            <param id="0" name="Name">&quot;ResourcesAdded&quot;</param>
-                            <param id="1" name="Parameter {n}">Stone.ID</param>
+                        <action id="0" name="Call function" sid="530091598899450" type="Function">
+                            <param id="0" name="Name">&quot;Physics.derbis.create&quot;</param>
+                            <param id="1" name="Parameter {n}">Stone.ID{###}0{###}3{###}Stone.UID</param>
                         </action>
                     </actions>
                 </event-block>
