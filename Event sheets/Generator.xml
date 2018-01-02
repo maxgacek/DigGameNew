@@ -205,6 +205,10 @@
                                                     <param id="0" name="Animation">&quot;STONE&quot;</param>
                                                     <param id="1" name="From">1</param>
                                                 </action>
+                                                <action id="-10" name="Set value" sid="282988760992319" type="Stone">
+                                                    <param id="0" name="Instance variable">Hp</param>
+                                                    <param id="1" name="Value">30</param>
+                                                </action>
                                             </actions>
                                         </event-block>
                                     </sub-events>
@@ -233,7 +237,7 @@
                                                 </action>
                                                 <action id="-10" name="Set value" sid="310113261744666" type="Stone">
                                                     <param id="0" name="Instance variable">Hp</param>
-                                                    <param id="1" name="Value">20</param>
+                                                    <param id="1" name="Value">32</param>
                                                 </action>
                                                 <action id="-10" name="Set value" sid="578504812938163" type="Stone">
                                                     <param id="0" name="Instance variable">ID</param>
@@ -267,7 +271,7 @@
                                                 </action>
                                                 <action id="-10" name="Set value" sid="514808223695247" type="Stone">
                                                     <param id="0" name="Instance variable">Hp</param>
-                                                    <param id="1" name="Value">28</param>
+                                                    <param id="1" name="Value">36</param>
                                                 </action>
                                                 <action id="-10" name="Set value" sid="134408868986786" type="Stone">
                                                     <param id="0" name="Instance variable">ID</param>
@@ -301,7 +305,7 @@
                                                 </action>
                                                 <action id="-10" name="Set value" sid="201620776788672" type="Stone">
                                                     <param id="0" name="Instance variable">Hp</param>
-                                                    <param id="1" name="Value">38</param>
+                                                    <param id="1" name="Value">40</param>
                                                 </action>
                                                 <action id="-10" name="Set value" sid="882195573949058" type="Stone">
                                                     <param id="0" name="Instance variable">ID</param>
@@ -335,7 +339,7 @@
                                                 </action>
                                                 <action id="-10" name="Set value" sid="151827580313504" type="Stone">
                                                     <param id="0" name="Instance variable">Hp</param>
-                                                    <param id="1" name="Value">44</param>
+                                                    <param id="1" name="Value">54</param>
                                                 </action>
                                                 <action id="-10" name="Set value" sid="587698822166845" type="Stone">
                                                     <param id="0" name="Instance variable">ID</param>
@@ -369,7 +373,7 @@
                                                 </action>
                                                 <action id="-10" name="Set value" sid="918225206631612" type="Stone">
                                                     <param id="0" name="Instance variable">Hp</param>
-                                                    <param id="1" name="Value">50</param>
+                                                    <param id="1" name="Value">60</param>
                                                 </action>
                                                 <action id="-10" name="Set value" sid="315006292022729" type="Stone">
                                                     <param id="0" name="Instance variable">ID</param>
@@ -398,7 +402,7 @@
                                                 </action>
                                                 <action id="-10" name="Set value" sid="571179560322893" type="Stone">
                                                     <param id="0" name="Instance variable">Hp</param>
-                                                    <param id="1" name="Value">58</param>
+                                                    <param id="1" name="Value">68</param>
                                                 </action>
                                                 <action id="-10" name="Set value" sid="933336949807015" type="Stone">
                                                     <param id="0" name="Instance variable">ID</param>
