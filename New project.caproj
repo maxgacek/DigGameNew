@@ -21,6 +21,7 @@
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
@@ -1065,6 +1066,19 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="hud_BackPack" sid="261953594396265">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="784580685387021">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="434754369066868" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Blocks" plugin-id="Sprite" sid="597737190612101">
@@ -1082,6 +1096,9 @@
                 <member>Derbis_Gold</member>
                 <member>Derbis_Iron</member>
             </members>
+            <instance-variables>
+                <instance-variable name="collected" sid="243991627638173" type="number" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="Physics2" sid="577610601327535">
                     <behavior id="Physics" />
