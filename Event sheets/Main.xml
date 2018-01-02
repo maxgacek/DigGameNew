@@ -50,13 +50,37 @@
         </event-group>
         <event-group description="" sid="229671787584232" title="Cursor">
             <sub-events>
-                <event-block sid="814118768212997">
+                <event-block sid="770211923176904">
                     <conditions>
-                        <condition id="-1" name="Every tick" sid="177723906213809" type="System" />
+                        <condition id="-1" name="Every tick" sid="866402743048330" type="System" />
                     </conditions>
                     <actions>
-                        <action id="1" name="Set cursor from sprite" sid="890197502556623" type="Mouse">
+                        <action id="1" name="Set cursor from sprite" sid="163272216389109" type="Mouse">
                             <param id="0" name="Sprite">Cursor</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="307355552850514">
+                    <conditions>
+                        <condition id="1" name="On any click" sid="941443494259239" type="Mouse" />
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="4" name="Set animation" sid="827370096923860" type="Cursor">
+                            <param id="0" name="Animation">&quot;Click&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="723064672432809">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="805629284351145" type="Cursor">
+                            <param id="0" name="Animation">&quot;Click&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="4" name="Set animation" sid="804503722536857" type="Cursor">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>

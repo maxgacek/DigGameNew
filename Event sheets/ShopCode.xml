@@ -888,5 +888,43 @@
                 </action>
             </actions>
         </event-block>
+        <event-group description="" sid="462891753403587" title="Cursor2">
+            <sub-events>
+                <event-block sid="147183403863237">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="916420916405781" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set cursor from sprite" sid="179011076590416" type="Mouse">
+                            <param id="0" name="Sprite">Cursor</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="705899898503036">
+                    <conditions>
+                        <condition id="1" name="On any click" sid="396360065617092" type="Mouse" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="435515044949841" type="Cursor">
+                            <param id="0" name="Animation">&quot;Click&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="752132662552839">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="632692658362004" type="Cursor">
+                            <param id="0" name="Animation">&quot;Click&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="548991367769435" type="Cursor">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
