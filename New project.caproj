@@ -458,11 +458,6 @@
                 <object-folder name="Derbis">
                     <object-type name="Derbis_Coal" sid="421645532275646">
                         <plugin id="Sprite" />
-                        <behaviors>
-                            <behavior-type name="Physics" sid="969370334729406">
-                                <behavior id="Physics" />
-                            </behavior-type>
-                        </behaviors>
                         <animation-folder>
                             <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="931127972345273" speed="5">
                                 <frame duration="1" hotspotX="0.5" hotspotY="0.5">
@@ -479,11 +474,6 @@
                     </object-type>
                     <object-type name="Derbis_Copper" sid="569979633001028">
                         <plugin id="Sprite" />
-                        <behaviors>
-                            <behavior-type name="Physics" sid="750926167917866">
-                                <behavior id="Physics" />
-                            </behavior-type>
-                        </behaviors>
                         <animation-folder>
                             <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="755105660171507" speed="5">
                                 <frame duration="1" hotspotX="0.5" hotspotY="0.5">
@@ -500,11 +490,6 @@
                     </object-type>
                     <object-type name="Derbis_Iron" sid="422988997600113">
                         <plugin id="Sprite" />
-                        <behaviors>
-                            <behavior-type name="Physics" sid="677848482929582">
-                                <behavior id="Physics" />
-                            </behavior-type>
-                        </behaviors>
                         <animation-folder>
                             <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="586705271458718" speed="5">
                                 <frame duration="1" hotspotX="0.5" hotspotY="0.5">
@@ -521,11 +506,6 @@
                     </object-type>
                     <object-type name="Derbis_Gold" sid="108621943143482">
                         <plugin id="Sprite" />
-                        <behaviors>
-                            <behavior-type name="Physics" sid="633661857923402">
-                                <behavior id="Physics" />
-                            </behavior-type>
-                        </behaviors>
                         <animation-folder>
                             <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="638397632281929" speed="5">
                                 <frame duration="1" hotspotX="0.5" hotspotY="0.5">
@@ -542,11 +522,6 @@
                     </object-type>
                     <object-type name="Derbis_Emerald" sid="119447033207818">
                         <plugin id="Sprite" />
-                        <behaviors>
-                            <behavior-type name="Physics" sid="754366283556927">
-                                <behavior id="Physics" />
-                            </behavior-type>
-                        </behaviors>
                         <animation-folder>
                             <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="659239399117296" speed="5">
                                 <frame duration="1" hotspotX="0.5" hotspotY="0.5">
@@ -556,6 +531,23 @@
                                         <point x="0.730115" y="0.982955" />
                                         <point x="0.0909093" y="0.715909" />
                                         <point x="0.0710222" y="0.267045" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="Derbis_Diamond" sid="669513101167233">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="118287698265039" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                    <collision-poly>
+                                        <point x="0.446022" y="0.244318" />
+                                        <point x="0.852273" y="0.164773" />
+                                        <point x="0.703126" y="0.545455" />
+                                        <point x="0.806819" y="0.991478" />
+                                        <point x="0.215909" y="0.917614" />
+                                        <point x="0.0482949" y="0.130681" />
                                     </collision-poly>
                                 </frame>
                             </animation>
@@ -1073,14 +1065,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite3" sid="625205543534426">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="546306055890307" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
     </object-folder>
     <families>
         <family name="Blocks" plugin-id="Sprite" sid="597737190612101">
@@ -1088,6 +1072,21 @@
                 <member>Dirt</member>
                 <member>Stone</member>
             </members>
+        </family>
+        <family name="Physics_Derbis" plugin-id="Sprite" sid="959059003747579">
+            <members>
+                <member>Derbis_Coal</member>
+                <member>Derbis_Copper</member>
+                <member>Derbis_Diamond</member>
+                <member>Derbis_Emerald</member>
+                <member>Derbis_Gold</member>
+                <member>Derbis_Iron</member>
+            </members>
+            <behaviors>
+                <behavior-type name="Physics2" sid="577610601327535">
+                    <behavior id="Physics" />
+                </behavior-type>
+            </behaviors>
         </family>
     </families>
     <layout-folder>

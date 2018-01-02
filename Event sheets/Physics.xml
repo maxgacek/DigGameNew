@@ -2,5 +2,150 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Physics</name>
-    <events />
+    <events>
+        <event-block sid="365443396756204">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="119317523302907" type="Player">
+                    <param id="0" name="Object">Derbis_Coal</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="939519403486493">
+                    <conditions />
+                    <actions>
+                        <action id="-9" name="Destroy" sid="514105022077501" type="Derbis_Coal" />
+                        <action id="-10" name="Add to" sid="506483987964079" type="System">
+                            <param id="0" name="Variable">Coal</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="316986920238204" type="Function">
+                            <param id="0" name="Name">&quot;ResourcesAdded&quot;</param>
+                            <param id="1" name="Parameter {n}">Dirt.ID</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="806011943106600">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="827699004059308" type="Player">
+                    <param id="0" name="Object">Derbis_Copper</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="643721372248429">
+                    <conditions />
+                    <actions>
+                        <action id="-9" name="Destroy" sid="965002041234275" type="Derbis_Copper" />
+                        <action id="-10" name="Add to" sid="837786292615458" type="System">
+                            <param id="0" name="Variable">Copper</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="678011818662317" type="Function">
+                            <param id="0" name="Name">&quot;ResourcesAdded&quot;</param>
+                            <param id="1" name="Parameter {n}">Dirt.ID</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="379313833145273">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="378313244548944" type="Player">
+                    <param id="0" name="Object">Derbis_Iron</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="214399326212069">
+                    <conditions />
+                    <actions>
+                        <action id="-9" name="Destroy" sid="247612731318904" type="Derbis_Iron" />
+                        <action id="-10" name="Add to" sid="959268276653065" type="System">
+                            <param id="0" name="Variable">Iron</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="947844399133642" type="Function">
+                            <param id="0" name="Name">&quot;ResourcesAdded&quot;</param>
+                            <param id="1" name="Parameter {n}">Dirt.ID</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="453084070277691">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="104271322007425" type="Player">
+                    <param id="0" name="Object">Derbis_Gold</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="137591123583982">
+                    <conditions />
+                    <actions>
+                        <action id="-9" name="Destroy" sid="243914469228823" type="Derbis_Gold" />
+                        <action id="-10" name="Add to" sid="304137345577732" type="System">
+                            <param id="0" name="Variable">Gold</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="705113266639731" type="Function">
+                            <param id="0" name="Name">&quot;ResourcesAdded&quot;</param>
+                            <param id="1" name="Parameter {n}">Stone.ID</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="607854873488826">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="138079131057886" type="Player">
+                    <param id="0" name="Object">Derbis_Emerald</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="267660239488638">
+                    <conditions />
+                    <actions>
+                        <action id="-9" name="Destroy" sid="606440986279896" type="Derbis_Emerald" />
+                        <action id="-10" name="Add to" sid="481599524093751" type="System">
+                            <param id="0" name="Variable">Emerald</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="164043057649127" type="Function">
+                            <param id="0" name="Name">&quot;ResourcesAdded&quot;</param>
+                            <param id="1" name="Parameter {n}">Stone.ID</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="979314685670433">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="852602627461044" type="Player">
+                    <param id="0" name="Object">Derbis_Diamond</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="588304142555057">
+                    <conditions />
+                    <actions>
+                        <action id="-9" name="Destroy" sid="429521298107484" type="Derbis_Diamond" />
+                        <action id="-10" name="Add to" sid="427242813573782" type="System">
+                            <param id="0" name="Variable">Diamonds</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="990368163597195" type="Function">
+                            <param id="0" name="Name">&quot;ResourcesAdded&quot;</param>
+                            <param id="1" name="Parameter {n}">Stone.ID</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
 </c2eventsheet>
