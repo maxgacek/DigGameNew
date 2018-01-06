@@ -926,5 +926,23 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="274701831675399" title="Saving Group">
+            <sub-events>
+                <event-block sid="812589779073254">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="308791569864783" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">Button_Mine</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-36" name="Save" sid="412028001127551" type="System">
+                            <param id="0" name="Slot">&quot;save1&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

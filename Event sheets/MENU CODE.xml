@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>Event sheet 1</name>
+    <name>MENU CODE</name>
     <events>
         <include>Fade</include>
         <include>Controls</include>
@@ -37,11 +37,27 @@
                     <param id="1" name="Opacity">100</param>
                 </condition>
             </conditions>
-            <actions>
-                <action id="-2" name="Go to layout" sid="880042365964006" type="System">
-                    <param id="0" name="Layout">Game</param>
-                </action>
-            </actions>
+            <actions />
+            <sub-events>
+                <event-block sid="973814427375457">
+                    <conditions />
+                    <actions>
+                        <action id="-37" name="Load" sid="792278832039279" type="System">
+                            <param id="0" name="Slot">&quot;save1&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="472734076630909">
+                    <conditions>
+                        <condition id="-30" name="On load failed" sid="392002073546627" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="880042365964006" type="System">
+                            <param id="0" name="Layout">Game</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>
