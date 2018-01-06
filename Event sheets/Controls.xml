@@ -145,41 +145,61 @@
         </event-group>
         <event-group description="" sid="134776785767488" title="Keyboard">
             <sub-events>
-                <event-block sid="494923227284674">
+                <event-block any="1" sid="494923227284674">
                     <conditions>
                         <condition id="2" name="Key is down" sid="846970420294482" type="Keyboard">
                             <param id="0" name="Key">65 (A)</param>
                         </condition>
-                        <condition id="-7" name="Compare instance variable" sid="582558986479261" type="Player">
-                            <param id="0" name="Instance variable">mma</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
+                        <condition id="2" name="Key is down" sid="992011799926962" type="Keyboard">
+                            <param id="0" name="Key">37 (Left arrow)</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="671739609706512" type="Function">
-                            <param id="0" name="Name">&quot;PlayerLeft&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="104537539589835">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="582558986479261" type="Player">
+                                    <param id="0" name="Instance variable">mma</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="671739609706512" type="Function">
+                                    <param id="0" name="Name">&quot;PlayerLeft&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
-                <event-block sid="397149448799772">
+                <event-block any="1" sid="397149448799772">
                     <conditions>
                         <condition id="2" name="Key is down" sid="898202333321400" type="Keyboard">
                             <param id="0" name="Key">68 (D)</param>
                         </condition>
-                        <condition id="-7" name="Compare instance variable" sid="645236781253271" type="Player">
-                            <param id="0" name="Instance variable">mma</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
+                        <condition id="2" name="Key is down" sid="800625552793556" type="Keyboard">
+                            <param id="0" name="Key">39 (Right arrow)</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="829875595652410" type="Function">
-                            <param id="0" name="Name">&quot;PlayerRight&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="360493892989542">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="645236781253271" type="Player">
+                                    <param id="0" name="Instance variable">mma</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="829875595652410" type="Function">
+                                    <param id="0" name="Name">&quot;PlayerRight&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
@@ -797,17 +817,29 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block any="1" sid="153892767390561">
+                        <event-block sid="153892767390561">
                             <conditions>
                                 <condition id="1" name="Is overlapping another object" sid="859335231775808" type="HitBoxLeft">
-                                    <param id="0" name="Object">Dirt</param>
-                                </condition>
-                                <condition id="1" name="Is overlapping another object" sid="388538336994932" type="HitBoxRight">
                                     <param id="0" name="Object">Dirt</param>
                                 </condition>
                             </conditions>
                             <actions>
                                 <action id="0" name="Play" sid="227321304705405" type="Audio">
+                                    <param id="0" name="Audio file">mud02</param>
+                                    <param id="2" name="Loop">1</param>
+                                    <param id="3" name="Volume">10</param>
+                                    <param id="1" name="Tag (optional)">&quot;Miner&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="962940723189552">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="388538336994932" type="HitBoxRight">
+                                    <param id="0" name="Object">Dirt</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="311535583819185" type="Audio">
                                     <param id="0" name="Audio file">mud02</param>
                                     <param id="2" name="Loop">1</param>
                                     <param id="3" name="Volume">10</param>

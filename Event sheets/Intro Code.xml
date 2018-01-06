@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Intro Code</name>
+    <events>
+        <variable constant="0" name="IntroSate" sid="674026321378837" static="0" type="number">0</variable>
+        <event-group description="" sid="898587080988083" title="Intro Transition">
+            <sub-events>
+                <event-block sid="458789424120516">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="578279058826644" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="937405055807974">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="824879090168596" type="System">
+                                    <param id="0" name="Variable">IntroSate</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="837444415695788">
+                                    <conditions>
+                                        <condition id="-10" name="Compare opacity" sid="561765038486761" type="Fade_Intro">
+                                            <param id="0" name="Comparison">4</param>
+                                            <param id="1" name="Opacity">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Set opacity" sid="833796285856777" type="Fade_Intro">
+                                            <param id="0" name="Opacity">Fade_Intro.Opacity - 1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="441880803255422">
+                                    <conditions>
+                                        <condition id="-10" name="Compare opacity" sid="663524456204363" type="Fade_Intro">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Opacity">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="200849457127902" type="System">
+                                            <param id="0" name="Variable">IntroSate</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="370194716109670">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="518854682015289" type="System">
+                                    <param id="0" name="Variable">IntroSate</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="497023985278874">
+                                    <conditions>
+                                        <condition id="-10" name="Compare opacity" sid="895232125484731" type="Fade_Intro">
+                                            <param id="0" name="Comparison">3</param>
+                                            <param id="1" name="Opacity">100</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Set opacity" sid="370420782395461" type="Fade_Intro">
+                                            <param id="0" name="Opacity">Fade_Intro.Opacity + 1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="332360372232363">
+                                    <conditions>
+                                        <condition id="-10" name="Compare opacity" sid="677938428460998" type="Fade_Intro">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Opacity">100</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="431146136751619" type="System">
+                                            <param id="0" name="Variable">IntroSate</param>
+                                            <param id="1" name="Value">2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="788749487237310">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="321776539449102" type="System">
+                                    <param id="0" name="Variable">IntroSate</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="648032176497455">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-2" name="Go to layout" sid="100904767244700" type="System">
+                                            <param id="0" name="Layout">Main Menu</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="147729152552052">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="648763863553626" type="Keyboard">
+                            <param id="0" name="Key">46 (Delete)</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="154862272565880">
+                            <conditions />
+                            <actions>
+                                <action id="3" name="Clear storage" sid="571865930199459" type="LocalStorage" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

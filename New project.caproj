@@ -44,7 +44,7 @@
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
-    <first-layout>Main Menu</first-layout>
+    <first-layout>Intro</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
@@ -1083,6 +1083,22 @@
         <object-type name="LocalStorage" sid="201335424576115">
             <plugin id="LocalStorage" />
         </object-type>
+        <object-type name="BluMaxNewBig" sid="119731335258857">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="526711776917651" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Max\Dropbox\BluMax Graphics and Logos\BluMax new big.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Fade_Intro" sid="745722712759363">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="133950946803745" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Blocks" plugin-id="Sprite" sid="597737190612101">
@@ -1114,6 +1130,7 @@
         <layout>Game.xml</layout>
         <layout>Shop.xml</layout>
         <layout>Main Menu.xml</layout>
+        <layout>Intro.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Main.xml</event-sheet>
@@ -1127,6 +1144,7 @@
         <event-sheet>Fade.xml</event-sheet>
         <event-sheet>MENU CODE.xml</event-sheet>
         <event-sheet>Physics.xml</event-sheet>
+        <event-sheet>Intro Code.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="1" />
